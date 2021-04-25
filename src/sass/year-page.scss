@@ -1,0 +1,105 @@
+@import "variables";
+.year-page {
+    &__choose {
+        display: flex;
+        align-items: center;
+        & > span {
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.1px;
+            color: $main-color;
+            white-space: nowrap;
+            margin: 0 20px 0 0;
+        }
+        .select-style {
+            width: 100%;
+        }
+    }
+    &__subtitle {
+        display: block;
+        margin: 0 0 25px 0;
+        font-size: 32px;
+        line-height: 45px;
+        letter-spacing: 0.2px;
+        color: $dark-color;
+    }
+    &__wrap {
+        margin: 30px 0 0 0;
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -20px -10px;
+    }
+    &__item {
+        width: calc(100% / 3);
+        padding: 20px 10px;
+    }
+    &__section + &__section{
+        margin: 80px 0 0 0;
+    }
+}
+
+@media (max-width: 1539px) {
+    .year-page__content {
+        margin: -20px -7px;
+    }
+    .year-page__item {
+        padding: 20px 7px;
+    }
+}
+
+@media (max-width: 1299px) {
+    .year-page__content {
+        margin: -15px -5px;
+    }
+    .year-page__item {
+        width: 50%;
+        padding: 15px 5px;
+    }
+}
+
+@media (max-width: 959px) {
+    .year-page__subtitle {
+        font-size: 28px;
+        line-height: 39px;
+        letter-spacing: 0.1px;
+    }
+    .year-page__content {
+        margin: -20px -10px;
+    }
+    .year-page__item {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 779px) {
+    .year-page__subtitle {
+        text-align: center;
+    }
+    .year-page__content {
+        margin: -20px -9px;
+    }
+    .year-page__item {
+        padding: 20px 9px;
+    }
+}
+
+@media(max-width: 639px) {
+    .year-page__content {
+        margin: -10px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .year-page__item {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .year-page__choose {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .year-page__choose .select-style {
+        margin: 10px 0 0 0;
+    }
+}

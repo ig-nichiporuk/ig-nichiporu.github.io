@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="format-detection" content="telephone=no">
+		<title>Year-page</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css?v.1">
+		<link rel="stylesheet" href="../css/year-page.css">
+		<script src="js/jquery-3.6.0.js"></script>
+		<script src="js/scroll-lock.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/header.js"></script>
+	</head>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="content">
+	<div class="container">
+		<div class="content__wrap">
+			<div class="content__block-breadcrumbs mob">
+				@@include('../components/breadcrumbs.html')
+			</div>
+			<div class="content__nav">
+				<div class="content__nav-stamping">
+					@@include('../components/stamping.html')
+				</div>
+				<div class="content__nav-sidebar">
+					@@include('../components/sidebar.html')
+				</div>
+			</div>
+			<div class="content__block">
+				<div class="content__block-breadcrumbs">
+					@@include('../components/breadcrumbs.html')
+				</div>
+				<div class="content__block-title">
+					<h1 class="text-medium">Каталог монет Польши 1930 года</h1>
+				</div>
+				<div class="content__block-wrap">
+					<div class="year-page">
+						<div class="year-page__choose">
+							<span class="text-medium">Выберите категорию:</span>
+							<div class="select-style js-dropdown-wrap">
+								<span class="select-style__btn js-dropdown-btn">Все</span>
+								<ul class="select-style__body js-dropdown-body">
+									<li class="select-style__item js-info-btn active" data-info="expensive">
+										<span class="select-style__option">Серебрянные</span>
+									</li>
+									<li class="select-style__item js-info-btn active" data-info="expensive">
+										<span class="select-style__option">Бронзовые</span>
+									</li>
+									<li class="select-style__item js-info-btn" data-info="popular">
+										<span class="select-style__option">Для обращения</span>
+									</li>
+									<li class="select-style__item js-info-btn" data-info="news">
+										<span class="select-style__option">Пробные</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="year-page__wrap">
+							<div class="year-page__section">
+								<h2 class="year-page__subtitle text-medium">Серебряные монеты 1930 года (II Республика)</h2>
+								<div class="year-page__content">
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+								</div>
+							</div>
+							<div class="year-page__section">
+								<h2 class="year-page__subtitle text-medium">Бронзовые монеты</h2>
+								<div class="year-page__content">
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+								</div>
+							</div>
+							<div class="year-page__section">
+								<h2 class="year-page__subtitle text-medium">Монеты “для обращения” </h2>
+								<div class="year-page__content">
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+									<div class="year-page__item">
+										@@include('../components/card-two-images.html')
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		@@include('../components/dop-info.html')
+
+	</div>
+</main>
+
+
+@@include('../components/footer.html')
+
+</body>
+</html>

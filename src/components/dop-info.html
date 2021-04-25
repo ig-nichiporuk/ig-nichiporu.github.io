@@ -1,0 +1,122 @@
+<div class="dop-info">
+	<div class="dop-info__btns">
+		<span class="dop-info__btn active js-info-btn" data-info="expensive">Самые дорогие</span>
+		<span class="dop-info__btn js-info-btn" data-info="popular">Самые популярные</span>
+		<span class="dop-info__btn js-info-btn" data-info="news">Статьи</span>
+	</div>
+	<div class="dop-info__btns mob select-style js-dropdown-wrap">
+		<span class="select-style__btn js-dropdown-btn">Самые популярные</span>
+		<ul class="select-style__body js-dropdown-body">
+			<li class="select-style__item js-info-btn active" data-info="expensive">
+				<span class="select-style__option">Самые дорогие</span>
+			</li>
+			<li class="select-style__item js-info-btn" data-info="popular">
+				<span class="select-style__option">Самые популярные</span>
+			</li>
+			<li class="select-style__item js-info-btn" data-info="news">
+				<span class="select-style__option">Статьи</span>
+			</li>
+		</ul>
+	</div>
+	<div class="dop-info__content js-info-content">
+		<div class="dop-info__content-block js-info-block" data-block="expensive-block">
+			<h2 class="dop-info__title text-medium">Самые дорогие монеты мира</h2>
+			<div class="dop-info__content-wrap">
+				<div class="dop-info__content-info">
+					<div class="dop-info__content-item">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-mob">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-mob">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-780">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-780">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-960">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-960">
+						@@include('../components/card.html')
+					</div>
+				</div>
+			</div>
+			<div class="dop-info__content-show js-info-show-cards">
+				<span >Показать все</span>
+			</div>
+		</div>
+		<div class="dop-info__content-block hidden js-info-block" data-block="popular-block">
+			<h2 class="dop-info__title text-medium">Самые популярные монеты мира</h2>
+			<div class="dop-info__content-wrap">
+				<div class="dop-info__content-info">
+					<div class="dop-info__content-item">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-mob">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-mob">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-780">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-780">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-960">
+						@@include('../components/card.html')
+					</div>
+					<div class="dop-info__content-item hidden-960">
+						@@include('../components/card.html')
+					</div>
+				</div>
+			</div>
+			<div class="dop-info__content-show js-info-show-cards">
+				<span>Показать все</span>
+			</div>
+		</div>
+		<div class="dop-info__content-block hidden js-info-block" data-block="news-block">
+				<h2 class="dop-info__title text-medium">Статьи</h2>
+				<div class="dop-info__news-wrap">
+					<div class="dop-info__news-item">
+						@@include('../components/news.html')
+					</div>
+					<div class="dop-info__news-item">
+						@@include('../components/news.html')
+					</div>
+					<div class="dop-info__news-item">
+						@@include('../components/news.html')
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+
+
+<script>
+	$('.js-info-btn').on('click', function () {
+		if(!$(this).hasClass('active')){
+			$('.js-info-block').addClass('hidden');
+			$('.js-info-btn').removeClass('active');
+			$(this).addClass('active');
+			$('.js-info-content').find("div[data-block='" + $(this).attr('data-info') +"-block']").removeClass('hidden');
+		}
+	});
+	$('.js-info-show-cards').on('click', function () {
+
+		$(this).closest('.js-info-block').find('[class *= hidden-]').addClass('show');
+		$(this).addClass('hidden');
+	});
+</script>

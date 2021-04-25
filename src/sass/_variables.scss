@@ -1,0 +1,30 @@
+$main-color: #172345;
+$dark-color: #32325D;
+$gray-color: #C4C4C4;
+$gray-text: #A8A8A8;
+$green-color: #517D58;
+
+$dropdown-bd-color: #F0F0F0;
+
+$bdrs-6: 6px;
+$bdrs-4: 4px;
+
+$trans-time: .2s;
+$delay-time: .2s;
+
+
+@mixin hover-bgc {
+    background-color: rgba(81, 125, 88, .15);
+}
+
+@mixin transition {
+    transition: transform $trans-time linear;
+}
+@mixin svg-rotate {
+    transform: rotate(0);
+    @include transition;
+}
+@mixin svg-rotate-open {
+    transform: rotate(-180deg);
+    @include transition;
+}
