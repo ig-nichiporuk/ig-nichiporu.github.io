@@ -267,7 +267,6 @@ svg {
             }
         }
         &-wrap {
-            padding: 30px 40px 40px;
             margin: 30px 0 0 0;
             background-color: #fff;
             border-radius: $bdrs-6;
@@ -286,9 +285,6 @@ svg {
         }
         &__block {
             padding: 0 0 0 30px;
-            &-wrap {
-                padding: 25px 30px 40px;
-            }
         }
     }
 
@@ -301,9 +297,6 @@ svg {
     .content{
         &__block {
             padding: 0 0 0 20px;
-            &-wrap {
-                padding: 20px 20px 40px;
-            }
             &-title {
                 h1 {
                     font-size: 32px;
@@ -353,7 +346,6 @@ svg {
     }
     .content{
         &__block {
-            &-wrap {}
             &-title {
                 h1 {
                     font-size: 28px;
@@ -374,7 +366,6 @@ svg {
         &__block {
             &-wrap {
                 margin: 25px 0 0 0;
-                padding: 20px 15px 40px;
             }
         }
     }

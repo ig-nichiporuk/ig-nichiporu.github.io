@@ -109,7 +109,7 @@
     }
 }
 
-@media (max-width: 959px) and (min-width: 480px) {
+@media (max-width: 959px) and (min-width: 640px) {
     .stamping__wrap {
         align-items: center;
         padding: 15px 15px 15px 20px;
@@ -126,7 +126,7 @@
     }
     .stamping__country-year {
         margin: 0 0 0 20px;
-        line-height: 24px;
+        line-height: 27px;
     }
 }
 

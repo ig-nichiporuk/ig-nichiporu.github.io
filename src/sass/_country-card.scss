@@ -1,0 +1,54 @@
+@import "variables";
+.country-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: $bdrs-6;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.08), 0px 0.5px 4px rgba(0, 0, 0, 0.04);
+    &__img {
+        display: flex;
+        align-items: flex-start;
+        height: 295px;
+        border-top-right-radius: $bdrs-6;
+        border-top-left-radius: $bdrs-6;
+        overflow: hidden;
+    }
+    .no-img &__img {
+        background-color: #F6F6F6;
+        img {
+            margin: auto;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 50px 0 15px 0;
+        img {
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translate3d(-50%, 0, 0);
+            width: 90px;
+            height: 90px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+        }
+    }
+    &__year,
+    &__title {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 0.1px;
+    }
+    &__title {
+        margin: 5px 0 0 0;
+        color: $main-color;
+    }
+}
