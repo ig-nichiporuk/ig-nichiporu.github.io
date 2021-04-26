@@ -26,6 +26,7 @@ $(document).ready(function() {
 			&& $('.js-catalog-menu').has(e.target).length === 0
 			&& $('.js-catalog-wrap').has(e.target).length === 0) {
 			close_catalog_menu();
+			enableScroll();
 		}
 		if(!$('.js-finder-wrap').is(e.target) && !$('.js-finder-body').is(e.target)
 			&& $('.js-finder-wrap').has(e.target).length === 0
@@ -51,7 +52,7 @@ $(document).ready(function() {
 		else {
 			$(this).addClass('open');
 			// $('.js-catalog').slideDown(400);
-			$('.js-catalog').addClass('open');
+			$('.js-catalog').removeClass('close').addClass('open');
 		}
 	})
 
@@ -93,19 +94,33 @@ $(document).ready(function() {
 	});
 
 
-	$( window ).resize(function() {
-		if($(window).width() > 779) {
+
+	function mob_control() {
+		if($(window).width() > 780) {
 			$('.js-countries-list').addClass('open');
 			$('.js-countries-sublist').removeClass('open');
+
 		}
 		else {
 			$('.js-countries-list').removeClass('open');
+			$('.js-catalog-menu-mob').on('click',function () {
+				if($(this).hasClass('open')){
+					disableScroll();
+				}
+				else {
+					enableScroll();
+				}
+			});
 		}
 		if($(window).width() > 639 && $('.js-finder-animate-block').hasClass('open')) {
 			$('.js-finder-animate-block').removeClass('open');
 			$('body').removeClass('overlay-open mob-finder-open');
 			enableScroll();
 		}
+	}
+	mob_control();
+	$( window ).resize(function() {
+		mob_control();
 
 	});
 

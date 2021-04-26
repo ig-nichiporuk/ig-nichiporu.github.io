@@ -1461,9 +1461,18 @@
 			$(this).next().slideUp(200, 'linear');
 		}
 		else {
-			$("[data-button='" + data + "']").removeClass('open');
-			$("[data-button='" + data + "']").next().slideUp(200, 'linear');
+			switch (true) {
+				case data === 'main-btn':
+					$('.js-slider-btn').removeClass('open');
+					$('.js-slider-btn').next().slideUp(200, 'linear');
+					break;
+				case data === 'main-sub-btn':
+					$("[data-button='" + data + "']").removeClass('open');
+					$("[data-button='" + data + "']").next().slideUp(200, 'linear');
+					break;
+			}
 			$(this).addClass('open').next().slideDown(200, 'linear');
+
 		}
 	});
 
