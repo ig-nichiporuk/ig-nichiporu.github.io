@@ -172,6 +172,7 @@ svg {
         background: #FFFFFF;
         box-shadow: inset 0 0 0 1px #EDEDED;
         padding: 12px 50px 12px 20px;
+        color: #C4C4C4;
         &:before {
             content: '';
             position: absolute;
@@ -218,10 +219,14 @@ svg {
     color: $green-color;
     cursor: pointer;
     transition: background-color .1s linear, color .1s linear;
-    &:hover, &:active {
+    &:not(.btn-gray):hover, &:not(.btn-gray):active {
         color: #fff;
         background-color: $green-color;
         transition: background-color .1s linear, color .1s linear;
+    }
+    &.btn-gray {
+        color: $gray-text;
+        box-shadow: inset 0 0 0 1.5px $gray-text;
     }
 }
 

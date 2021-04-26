@@ -1,0 +1,166 @@
+@import "variables";
+.fast-find,
+.statistic {
+    width: 100%;
+    max-width: 530px;
+    background: #fff;
+    box-shadow: inset 0 0 0 6px #EDEDED,
+                0px 22px 31px rgba(0, 0, 0, 0.07),
+                0px 3px 4px rgba(0, 0, 0, 0.035);
+    border-radius: $bdrs-6;
+}
+.fast-find{
+    padding: 70px 50px;
+    &__title {
+        display: block;
+        font-size: 32px;
+        line-height: 45px;
+        letter-spacing: 0.2px;
+        color: $dark-color;
+        margin: 0 0 30px 0;
+    }
+    &__form {
+        input {
+            display: none;
+        }
+        &-item {
+            & > span {
+                display: block;
+                position: relative;
+                margin-bottom: 10px;
+                font-size: 18px;
+                line-height: 25px;
+                font-weight: 500;
+                letter-spacing: 0.2px;
+                color: $dark-color;
+                &:before {
+                    content: '1';
+                    position: absolute;
+                    top: 50%;
+                    left: -50px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    transform: translate3d(0, -50%, 0);
+                    font-size: 18px;
+                    line-height: 30px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: 0.2px;
+                    color: #FFFFFF;
+                    background-color: $main-color;
+                }
+            }
+            &.disabled  > span:before {
+                background-color: #D4D3D3;
+            }
+            & > span,
+            & > .select-style {
+                margin-left: 50px;
+            }
+            &.disabled {
+                pointer-events: none;
+            }
+        }
+        &-item + &-item {
+            & > span {
+                &:before {
+                    content: '2';
+                }
+            }
+        }
+        &-item + &-item,
+        &-btn {
+            margin: 30px 0 0 0;
+        }
+        &-btn {
+            width: 100%;
+        }
+    }
+}
+.statistic {
+    padding: 40px 45px ;
+    &__list {
+        font-size: 15px;
+        line-height: 20px;
+        color: $main-color;
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            box-shadow: inset 0 -1px 0 0 #EDEDED;
+            .right {
+                font-weight: 500;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+}
+
+.main-page {
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__content {
+        height: 1160px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-rows: repeat(2, 241px);
+        grid-template-areas:
+                "title form"
+                "statistic form";
+        align-items: flex-start;
+        padding: 200px 0 0 0;
+    }
+    &__title {
+        grid-area: title;
+        & > * {
+            display: block;
+            letter-spacing: 0.1px;
+            color: #FFE5B1;
+        }
+        .title {
+            font-size: 100px;
+            line-height: 121px;
+        }
+        .desc {
+            margin: 10px 0 0 0;
+            font-size: 32px;
+            line-height: 45px;
+        }
+    }
+    &__form {
+        display: flex;
+        justify-content: flex-end;
+        grid-area: form;
+    }
+    &__statistic {
+        grid-area: statistic;
+    }
+    &__cookies {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 839px;
+        margin: auto auto 30px;
+        padding: 20px;
+        background: #fff;
+        border-radius: $bdrs-6;
+        p{
+            font-size: 12px;
+            line-height: 17px;
+            color: $main-color;
+        }
+        .btn-style {
+            flex-grow: 1;
+            margin: 0 0 0 20px;
+            border-radius: 4px;
+            font-size: 12px;
+            line-height: 30px;
+
+        }
+    }
+}
