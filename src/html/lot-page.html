@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Lot-page</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="css/photoswipe/photoswipe.css">
+	<link rel="stylesheet" href="css/photoswipe/default-skin.css">
+	<link rel="stylesheet" href="css/slick-slider/slick.css">
+	<link rel="stylesheet" href="css/slick-slider/slick-theme.css">
+
+	<link rel="stylesheet" href="css/style.css?v.1">
+	<link rel="stylesheet" href="css/lot-page.css">
+
+
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/scroll-lock.min.js"></script>
+
+
+	<script src="../js/photoswipe/photoswipe.min.js"></script>
+	<script src="../js/photoswipe/photoswipe-ui-default.min.js"></script>
+	<script src="../js/photoswipe/jqPhotoSwipe.min.js"></script>
+	<script src="../js/slick-slider/slick-slider.min.js"></script>
+
+
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/lot-page.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+
+</div>
+<main class="lot-page">
+	<div class="container">
+		@@include('../components/breadcrumbs.html')
+		<div class="lot-page__content">
+			<div class="lot-page__header">
+				<div class="lot-page__header-logo">
+					<span>Логотип</span>
+				</div>
+				<div class="lot-page__header-info">
+					<span class="auction">Аукцион</span>
+					<span class="title text-medium">Antykwariat Numizmatyczny - Niemczyk Michal (Auction 18)</span>
+					<span class="date">Дата проведения: 10 декабря 2021</span>
+				</div>
+			</div>
+			<div class="lot-page__body">
+				<div class="lot-page__slider">
+					<div class="lot-page__slider-wrap js-product__photo-for">
+						<a href="img/lot-coin.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+						<a href="img/lot-coin-back.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin-back.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+						<a href="img/lot-coin.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+						<a href="img/lot-coin-back.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin-back.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+						<a href="img/lot-coin.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+						<a href="img/lot-coin-back.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin-back.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+					</div>
+				</div>
+				<div class="lot-page__info">
+					<span class="title text-medium">Лот №25459</span>
+					<ul class="list">
+						<li class="list__item">
+							<span class="left">Название монеты</span>
+							<span class="right text-medium">Орт (18 грошей) 1698</span>
+						</li>
+						<li class="list__item">
+							<span class="left">Описание</span>
+							<span class="right text-medium">-</span>
+						</li>
+						<li class="list__item">
+							<span class="left">Дата проведения торгов</span>
+							<span class="right text-medium">10 декабря 2020 г.</span>
+						</li>
+						<li class="list__item">
+							<span class="left">Сохранность</span>
+							<span class="right text-medium">6540</span>
+						</li>
+						<li class="list__item">
+							<span class="left">Цена</span>
+							<span class="right text-medium">
+								2452 EUR
+								<div class="helper dropdown js-dropdown-wrap">
+									<svg class="helper__btn dropdown__btn js-dropdown-btn">
+									    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+									</svg>
+									<div class="helper__body dropdown__body js-dropdown-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+									</div>
+								</div>
+							</span>
+						</li>
+						<li class="list__item">
+							<span class="left">Оценка</span>
+							<span class="right text-medium">
+								2452 EUR
+								<div class="helper dropdown js-dropdown-wrap">
+									<svg class="helper__btn dropdown__btn js-dropdown-btn">
+									    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+									</svg>
+									<div class="helper__body dropdown__body js-dropdown-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+									</div>
+								</div>
+							</span>
+						</li>
+					</ul>
+					<a href="#" class="btn-style">Подробнее</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('../components/footer.html')
+
+</body>
+
+
+</html>

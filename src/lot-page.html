@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Lot-page</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="css/photoswipe/photoswipe.css">
+	<link rel="stylesheet" href="css/photoswipe/default-skin.css">
+	<link rel="stylesheet" href="css/slick-slider/slick.css">
+	<link rel="stylesheet" href="css/slick-slider/slick-theme.css">
+
+	<link rel="stylesheet" href="css/style.css?v.1">
+	<link rel="stylesheet" href="css/lot-page.css">
+
+
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/scroll-lock.min.js"></script>
+
+
+	<script src="../js/photoswipe/photoswipe.min.js"></script>
+	<script src="../js/photoswipe/photoswipe-ui-default.min.js"></script>
+	<script src="../js/photoswipe/jqPhotoSwipe.min.js"></script>
+	<script src="../js/slick-slider/slick-slider.min.js"></script>
+
+
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/lot-page.js"></script>
+</head>
+<body>
+<div class="overlay js-overlay"></div>
+<header>
+	<div class="header">
+		<div class="container">
+			<div class="header__wrap">
+				<a href="#" class="header__logo">
+					<svg>
+						<use xlink:href="img/sprite-color.svg#logo"></use>
+					</svg>
+				</a>
+				<span class="header__menu js-catalog-menu">Каталог</span>
+				<div class="header__finder">
+					<div class="header__finder-wrap js-finder-wrap">
+						<div class="header__finder-input">
+							<input class="js-finder-input" type="text" placeholder="Поиск по каталогу">
+							<a href="#" class="header__finder-sort">
+								<svg class="header__finder-sort_icon">
+									<use xlink:href="img/sprite-mono.svg#settings"></use>
+								</svg>
+							</a>
+						</div>
+						<a href="#" class="header__finder-btn">
+							<svg class="header__finder-btn_icon">
+								<use xlink:href="img/sprite-mono.svg#search"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="header__finder-body js-finder-body">
+						<ul class="header__finder-list">
+							<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+							<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+							<li><a href="#">1835-1872 Золотая монета</a></li>
+							<li><a href="#">1835</a></li>
+							<li><a href="#">1835</a></li>
+						</ul>
+						<a href="#" class="header__finder-more-settings">Расширенный поиск</a>
+					</div>
+				</div>
+
+				<!--mobile finder block-->
+				<div class="header__finder mob">
+					<div class="header__finder-wrap js-finder-wrap">
+
+
+						<div class="header__finder-animate js-finder-animate-block">
+							<svg class="find-icon">
+								<use xlink:href="img/sprite-mono.svg#search"></use>
+							</svg>
+							<input class="js-finder-input" type="text" placeholder="Поиск по каталогу">
+							<svg class="close-icon js-finder-animate-close">
+								<use xlink:href="img/sprite-mono.svg#close"></use>
+							</svg>
+							<div class="header__finder-body js-finder-body">
+								<ul class="header__finder-list">
+									<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+									<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+									<li><a href="#">1835-1872 Золотая монета</a></li>
+									<li><a href="#">1835</a></li>
+									<li><a href="#">1835</a></li>
+								</ul>
+								<a href="#" class="header__finder-more-settings">Расширенный поиск</a>
+							</div>
+						</div>
+						<svg class="header__finder-btn_icon js-finder-open-input">
+							<use xlink:href="img/sprite-mono.svg#search"></use>
+						</svg>
+					</div>
+
+
+				</div>
+				<!--mobile finder block end-->
+
+				<a href="#" class="header__link">Поддержка</a>
+				<div class="header__currency dropdown js-dropdown-wrap">
+					<span class="header__currency-btn dropdown__btn js-dropdown-btn">
+						USD
+						<svg class="arrow">
+						    <use xlink:href="img/sprite-mono.svg#arrow-down"></use>
+						</svg>
+					</span>
+					<ul class="header__currency-list dropdown__body js-dropdown-body">
+						<li><a href="#">USD</a></li>
+						<li><a href="#">EUR</a></li>
+						<li><a href="#">GBP</a></li>
+						<li><a href="#">CHF</a></li>
+						<li><a href="#">PLN</a></li>
+						<li><a href="#">RUB</a></li>
+					</ul>
+				</div>
+				<div class="header__lang dropdown js-dropdown-wrap">
+					<span class="header__lang-btn dropdown__btn js-dropdown-btn">
+						<span class="header__lang-flag">
+							<img src="img/flag.jpg" alt="country-flag">
+						</span>
+						ENG
+						<svg class="arrow">
+						    <use xlink:href="img/sprite-mono.svg#arrow-down"></use>
+						</svg>
+					</span>
+					<ul class="header__lang-list dropdown__body js-dropdown-body">
+						<li>
+							<a href="#">
+								<span class="header__lang-flag">
+									<img src="img/flag.jpg" alt="country-flag">
+								</span>
+								ENG
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="header__lang-flag">
+									<img src="img/flag.jpg" alt="country-flag">
+								</span>
+								RUS
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="header__lang-flag">
+									<img src="img/flag.jpg" alt="country-flag">
+								</span>
+								ENG
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--mobile button burger-->
+				<span class="header__menu-mob js-catalog-menu js-catalog-menu-mob">
+					<!--<svg class="menu">
+					    <use xlink:href="img/sprite-mono.svg#hamburger"></use>
+					</svg>
+					<svg class="close">
+					    <use xlink:href="img/sprite-mono.svg#close"></use>
+					</svg>-->
+					<span class="btn-wrap">
+						<span class="top"></span>
+						<span class="middle"></span>
+						<span class="bottom"></span>
+					</span>
+				</span>
+				<!--mobile button burger end-->
+
+			</div>
+		</div>
+	</div>
+
+	<nav class="header__catalog js-catalog">
+		<div class="container">
+			<div class="header__catalog-wrap js-catalog-wrap">
+				<div class="header__catalog-continents">
+					<span class="header__catalog-title text-medium">Континенты</span>
+					<ul class="header__catalog-list" data-scroll-lock-scrollable>
+						<li><a href="#" class="js-continent-btn active">Европа</a></li>
+						<li><a href="#" class="js-continent-btn">Азия</a></li>
+						<li><a href="#" class="js-continent-btn">Австралия и Океания</a></li>
+						<li><a href="#" class="js-continent-btn">Африка</a></li>
+						<li><a href="#" class="js-continent-btn">Северная Америка</a></li>
+						<li><a href="#" class="js-continent-btn">Южная Америка</a></li>
+					</ul>
+				</div>
+				<div class="header__catalog-countries js-countries-wrap">
+					<div class="header__catalog-content open js-countries-list">
+						<span class="header__catalog-title text-medium">Страны</span>
+						<span class="header__catalog-title mob js-catalog-back-countries">Страны Европы</span>
+						<ul class="header__catalog-list" data-scroll-lock-scrollable>
+							<li><a href="#">Беларусь</a></li>
+							<li><a href="#">Франция</a></li>
+							<li><a href="#">Италия</a></li>
+							<li><a href="#">Великобритания</a></li>
+							<li><a href="#">Эстония</a></li>
+							<li><a href="#">Австрия</a></li>
+							<li><span class="sublist js-country-btn">Германия после 1871</span></li>
+							<li><a href="#">Германия</a></li>
+							<li><a href="#">Ирландия</a></li>
+							<li><a href="#">Польша</a></li>
+							<li><a href="#">Нидерланды</a></li>
+							<li><a href="#">Швейцария</a></li>
+							<li><a href="#">Россия</a></li>
+							<li><a href="#">Финляндия</a></li>
+							<li><a href="#">Швеция</a></li>
+							<li><a href="#">Беларусь</a></li>
+							<li><a href="#">Франция</a></li>
+							<li><a href="#">Италия</a></li>
+							<li><a href="#">Великобритания</a></li>
+							<li><a href="#">Эстония</a></li>
+							<li><a href="#">Австрия</a></li>
+						</ul>
+					</div>
+					<div class="header__catalog-subcontent js-countries-sublist">
+						<span class="header__catalog-title js-catalog-back">Германия до 1871</span>
+						<ul class="header__catalog-list" data-scroll-lock-scrollable>
+							<li><a href="#">Финляндия</a></li>
+							<li><a href="#">Италия</a></li>
+							<li><a href="#">Австрия</a></li>
+							<li><a href="#">Ирландия</a></li>
+							<li><a href="#">Швейцария</a></li>
+							<li><a href="#">Швеция</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+</header>
+
+
+</div>
+<main class="lot-page">
+	<div class="container">
+		<ul class="breadcrumbs">
+	<li class="breadcrumbs__item"><a href="#">Главная</a></li>
+	<li class="breadcrumbs__item"><a href="#">Каталог монет</a></li>
+	<li class="breadcrumbs__item"><a href="#">Европа</a></li>
+	<li class="breadcrumbs__item"><a href="#">Польша</a></li>
+	<li class="breadcrumbs__item active"><a href="#">1930</a></li>
+</ul>
+		<div class="lot-page__content">
+			<div class="lot-page__header">
+				<div class="lot-page__header-logo">
+					<span>Логотип</span>
+				</div>
+				<div class="lot-page__header-info">
+					<span class="auction">Аукцион</span>
+					<span class="title text-medium">Antykwariat Numizmatyczny - Niemczyk Michal (Auction 18)</span>
+					<span class="date">Дата проведения: 10 декабря 2021</span>
+				</div>
+			</div>
+			<div class="lot-page__body">
+				<div class="lot-page__slider">
+					<div class="lot-page__slider-wrap js-product__photo-for">
+						<a href="img/lot-coin.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+						<a href="img/lot-coin-back.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin-back.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+						<a href="img/lot-coin.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+						<a href="img/lot-coin-back.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin-back.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+						<a href="img/lot-coin.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+						<a href="img/lot-coin-back.jpg" class="js-photoswipe lot-page__slider-item" alt="Coin" title="Coin" rel="group" data-fancybox-group="gallery">
+							<img data-lazy="img/lot-coin-back.jpg" alt="Coin" title="Coin" class="lot-page__slider-img" draggable="false">
+						</a>
+					</div>
+				</div>
+				<div class="lot-page__info">
+					<span class="title text-medium">Лот №25459</span>
+					<ul class="list">
+						<li class="list__item">
+							<span class="left">Название монеты</span>
+							<span class="right text-medium">Орт (18 грошей) 1698</span>
+						</li>
+						<li class="list__item">
+							<span class="left">Описание</span>
+							<span class="right text-medium">-</span>
+						</li>
+						<li class="list__item">
+							<span class="left">Дата проведения торгов</span>
+							<span class="right text-medium">10 декабря 2020 г.</span>
+						</li>
+						<li class="list__item">
+							<span class="left">Сохранность</span>
+							<span class="right text-medium">6540</span>
+						</li>
+						<li class="list__item">
+							<span class="left">Цена</span>
+							<span class="right text-medium">
+								2452 EUR
+								<div class="helper dropdown js-dropdown-wrap">
+									<svg class="helper__btn dropdown__btn js-dropdown-btn">
+									    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+									</svg>
+									<div class="helper__body dropdown__body js-dropdown-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+									</div>
+								</div>
+							</span>
+						</li>
+						<li class="list__item">
+							<span class="left">Оценка</span>
+							<span class="right text-medium">
+								2452 EUR
+								<div class="helper dropdown js-dropdown-wrap">
+									<svg class="helper__btn dropdown__btn js-dropdown-btn">
+									    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+									</svg>
+									<div class="helper__body dropdown__body js-dropdown-body">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+									</div>
+								</div>
+							</span>
+						</li>
+					</ul>
+					<a href="#" class="btn-style">Подробнее</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<footer class="footer">
+	<div class="container">
+		<div class="footer__wrap">
+			<div class="footer__logo">
+				<a href="#" class="footer__logo-link">
+					<svg>
+						<use xlink:href="img/sprite-color.svg#logo"></use>
+					</svg>
+				</a>
+				<p class="footer__logo-text"><span>© 2021 «Coinstrail».</span> <span>Все права защищены.</span></p>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav-item">
+					<span class="footer__nav-title">Континенты</span>
+					<ul class="footer__nav-links">
+						<li><a href="#" class="footer__nav-link">Европа</a></li>
+						<li><a href="#" class="footer__nav-link">Северная Америка</a></li>
+						<li><a href="#" class="footer__nav-link">Южная Америка</a></li>
+						<li><a href="#" class="footer__nav-link">Азия</a></li>
+						<li><a href="#" class="footer__nav-link">Африка</a></li>
+						<li><a href="#" class="footer__nav-link">Австралия и Океания</a></li>
+					</ul>
+				</div>
+				<div class="footer__nav-item">
+					<span class="footer__nav-title">Языки</span>
+					<ul class="footer__nav-links">
+						<li><a href="#" class="footer__nav-link">Английский</a></li>
+						<li><a href="#" class="footer__nav-link">Португальский</a></li>
+						<li><a href="#" class="footer__nav-link">Русский</a></li>
+						<li><a href="#" class="footer__nav-link">Китайский</a></li>
+						<li><a href="#" class="footer__nav-link">Французский</a></li>
+						<li><a href="#" class="footer__nav-link">Немецкий</a></li>
+					</ul>
+				</div>
+				<div class="footer__nav-item">
+					<span class="footer__nav-title">Поддержка</span>
+					<ul class="footer__nav-links">
+						<li><a href="#" class="footer__nav-link">Служба поддержки</a></li>
+						<li><a href="#" class="footer__nav-link">Cookies</a></li>
+					</ul>
+					<span class="btn-style">Связаться с нами</span>
+				</div>
+			</nav>
+		</div>
+	</div>
+</footer>
+
+</body>
+
+
+</html>

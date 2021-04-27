@@ -141,7 +141,7 @@ svg {
             }
         }
     }
-    .open + &__body {
+    .open + &__body:not(.helper__body) {
         border-top: transparent;
     }
 }
@@ -164,6 +164,29 @@ svg {
                 @include svg-rotate-open;
             }
         }
+    }
+}
+.helper {
+    &__btn {
+        padding: 0;
+        width: 16px;
+        height: 16px;
+        fill: #DADADA;
+        &:hover {
+            fill: black;
+        }
+    }
+    &__body {
+        left: auto;
+        min-width: 200px;
+        right: 0;
+        border-radius: $bdrs-6;
+        padding: 15px 20px;
+        font-size: 12px;
+        line-height: 17px;
+        font-weight: normal;
+        margin: 10px 0 0 0;
+        text-align: left;
     }
 }
 
