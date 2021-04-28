@@ -50,9 +50,17 @@ $(document).ready(function() {
 			close_catalog_menu();
 		}
 		else {
-			$(this).addClass('open');
+			$('.js-catalog-menu').addClass('open');
 			// $('.js-catalog').slideDown(400);
 			$('.js-catalog').removeClass('close').addClass('open');
+		}
+
+		if($(window).width() < 780) {
+			if ($('.js-catalog-menu').hasClass('open')) {
+				disableScroll();
+			} else {
+				enableScroll();
+			}
 		}
 	})
 
@@ -96,21 +104,16 @@ $(document).ready(function() {
 
 
 	function mob_control() {
-		if($(window).width() > 780) {
+		if($(window).width() >= 780) {
 			$('.js-countries-list').addClass('open');
 			$('.js-countries-sublist').removeClass('open');
-
+			enableScroll();
 		}
 		else {
+			if ($('.js-catalog-menu').hasClass('open')) {
+				disableScroll();
+			}
 			$('.js-countries-list').removeClass('open');
-			$('.js-catalog-menu-mob').on('click',function () {
-				if($(this).hasClass('open')){
-					disableScroll();
-				}
-				else {
-					enableScroll();
-				}
-			});
 		}
 		if($(window).width() > 639 && $('.js-finder-animate-block').hasClass('open')) {
 			$('.js-finder-animate-block').removeClass('open');

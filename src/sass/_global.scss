@@ -573,8 +573,13 @@ svg {
             border-bottom-right-radius: 0px;
             border-bottom-left-radius: 0px;
             &-list {
+                height: 100vh;
                 max-height: calc(100vh - 105px);
             }
+        }
+        &__body-list li,
+        &__more-settings {
+            box-shadow: inset 0 1px 0 0 #f0f0f0;
         }
     }
 }
