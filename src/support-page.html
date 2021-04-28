@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Support-page</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css?v.1">
+	<link rel="stylesheet" href="css/support-page.css">
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/scroll-lock.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<body>
 <div class="overlay js-overlay"></div>
 <header>
 	<div class="header">
@@ -10,8 +28,31 @@
 				</a>
 				<span class="header__menu js-catalog-menu">Каталог</span>
 				<div class="header__finder">
-					@@include('../components/finder-input.html')
-					@@include('../components/finder-list.html')
+					<div class="finder__wrap js-finder-wrap">
+	<div class="finder__input">
+		<input class="js-finder-input" type="text" placeholder="Поиск по каталогу">
+		<a href="#" class="finder__sort">
+			<svg class="finder__sort-icon">
+				<use xlink:href="img/sprite-mono.svg#settings"></use>
+			</svg>
+		</a>
+	</div>
+	<a href="#" class="finder__btn">
+		<svg class="finder__btn-icon">
+			<use xlink:href="img/sprite-mono.svg#search"></use>
+		</svg>
+	</a>
+</div>
+					<div class="finder__body js-finder-body">
+	<ul class="finder__body-list">
+		<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+		<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+		<li><a href="#">1835-1872 Золотая монета</a></li>
+		<li><a href="#">1835</a></li>
+		<li><a href="#">1835</a></li>
+	</ul>
+	<a href="#" class="finder__more-settings">Расширенный поиск</a>
+</div>
 				</div>
 				<!--mobile finder block-->
 				<div class="header__finder mob">
@@ -24,7 +65,16 @@
 							<svg class="close-icon js-finder-animate-close">
 								<use xlink:href="img/sprite-mono.svg#close"></use>
 							</svg>
-							@@include('../components/finder-list.html')
+							<div class="finder__body js-finder-body">
+	<ul class="finder__body-list">
+		<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+		<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+		<li><a href="#">1835-1872 Золотая монета</a></li>
+		<li><a href="#">1835</a></li>
+		<li><a href="#">1835</a></li>
+	</ul>
+	<a href="#" class="finder__more-settings">Расширенный поиск</a>
+</div>
 						</div>
 						<svg class="finder__btn-icon js-finder-open-input">
 							<use xlink:href="img/sprite-mono.svg#search"></use>
@@ -167,3 +217,74 @@
 	</nav>
 
 </header>
+
+
+</div>
+<main class="support-page">
+	<div class="container">
+		<ul class="breadcrumbs">
+	<li class="breadcrumbs__item"><a href="#">Главная</a></li>
+	<li class="breadcrumbs__item"><a href="#">Каталог монет</a></li>
+	<li class="breadcrumbs__item"><a href="#">Европа</a></li>
+	<li class="breadcrumbs__item"><a href="#">Польша</a></li>
+	<li class="breadcrumbs__item active"><a href="#">1930</a></li>
+</ul>
+		<div class="support-page__content">
+			<div class="support-page__header">
+			</div>
+			<div class="support-page__body">
+			</div>
+		</div>
+	</div>
+</main>
+<footer class="footer">
+	<div class="container">
+		<div class="footer__wrap">
+			<div class="footer__logo">
+				<a href="#" class="footer__logo-link">
+					<svg>
+						<use xlink:href="img/sprite-color.svg#logo"></use>
+					</svg>
+				</a>
+				<p class="footer__logo-text"><span>© 2021 «Coinstrail».</span> <span>Все права защищены.</span></p>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav-item">
+					<span class="footer__nav-title">Континенты</span>
+					<ul class="footer__nav-links">
+						<li><a href="#" class="footer__nav-link">Европа</a></li>
+						<li><a href="#" class="footer__nav-link">Северная Америка</a></li>
+						<li><a href="#" class="footer__nav-link">Южная Америка</a></li>
+						<li><a href="#" class="footer__nav-link">Азия</a></li>
+						<li><a href="#" class="footer__nav-link">Африка</a></li>
+						<li><a href="#" class="footer__nav-link">Австралия и Океания</a></li>
+					</ul>
+				</div>
+				<div class="footer__nav-item">
+					<span class="footer__nav-title">Языки</span>
+					<ul class="footer__nav-links">
+						<li><a href="#" class="footer__nav-link">Английский</a></li>
+						<li><a href="#" class="footer__nav-link">Португальский</a></li>
+						<li><a href="#" class="footer__nav-link">Русский</a></li>
+						<li><a href="#" class="footer__nav-link">Китайский</a></li>
+						<li><a href="#" class="footer__nav-link">Французский</a></li>
+						<li><a href="#" class="footer__nav-link">Немецкий</a></li>
+					</ul>
+				</div>
+				<div class="footer__nav-item">
+					<span class="footer__nav-title">Поддержка</span>
+					<ul class="footer__nav-links">
+						<li><a href="#" class="footer__nav-link">Служба поддержки</a></li>
+						<li><a href="#" class="footer__nav-link">Cookies</a></li>
+					</ul>
+					<span class="btn-style">Связаться с нами</span>
+				</div>
+			</nav>
+		</div>
+	</div>
+</footer>
+
+</body>
+
+
+</html>

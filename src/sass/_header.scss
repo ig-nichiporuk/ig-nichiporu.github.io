@@ -1,5 +1,3 @@
-$height-hd:80px;
-$height-mob:60px;
 @import "variables";
 
 header {
@@ -125,105 +123,14 @@ header {
             }*/
         }
     }
+
+
+
+
     &__finder {
         position: relative;
         margin: 0 0 0 30px;
         width: 480px;
-        &-wrap,
-        &-btn {
-            display: flex;
-            align-items: center;
-        }
-        &:not(.mob) &-wrap {
-            border: 1px solid $dropdown-bd-color;
-            border-radius: $bdrs-4;
-            &.open {
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0;
-            }
-        }
-        &-wrap {
-            height: 40px;
-        }
-        &-btn {
-            cursor: pointer;
-            justify-content: center;
-            width: 60px;
-            height: 100%;
-        }
-        &-sort {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 20px;
-        }
-        &-sort, &-btn {
-            &_icon{
-                width: 20px;
-                height: 20px;
-            }
-        }
-        &-sort {
-            &_icon{
-                fill: $gray-text;
-            }
-        }
-        &-btn {
-            &_icon{
-                fill: $dark-color;
-            }
-        }
-
-        &-input {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            padding: 0 40px 0 0;
-            border-right: 1px solid $dropdown-bd-color;
-            input {
-                width: 100%;
-                height: 100%;
-                padding: 0 20px;
-                font-size: inherit;
-                line-height: inherit;
-                color: inherit;
-            }
-        }
-        &-body {
-            display: none;
-            position: absolute;
-            z-index: 10;
-            width: 100%;
-            top: 100%;
-            left: 0;
-            background-color: #fff;
-            border: 1px solid $dropdown-bd-color;
-            border-top-color: transparent;
-            border-bottom-right-radius: $bdrs-4;
-            border-bottom-left-radius: $bdrs-4;
-        }
-        &-list {
-            max-height: calc(100vh - 115px);
-            overflow-y: auto;
-            li {
-                padding: 12px 20px;
-                box-shadow: inset 0 -1px 0 0 $dropdown-bd-color;
-                &:hover {
-                    cursor: pointer;
-                    @include hover-bgc;
-                    a {
-                        color: $green-color;
-                    }
-                }
-            }
-        }
-        &-more-settings {
-            display: block;
-            text-align: center;
-            line-height: 45px;
-            color: $gray-text;
-        }
         &.mob {
             display: none;
             align-items: center;
@@ -292,6 +199,7 @@ header {
 
         }
     }
+
     &__link {
         margin: 0 0 0 auto;
         cursor: pointer;
@@ -707,16 +615,6 @@ header {
     }
     .header__menu-mob {
         margin: 0;
-    }
-    .header__finder-body {
-        border: none;
-    }
-    .header__finder-list {
-        max-height: calc(100vh - 105px);
-    }
-    .header__finder-body {
-        border-bottom-right-radius: 0px;
-        border-bottom-left-radius: 0px;
     }
 }
 

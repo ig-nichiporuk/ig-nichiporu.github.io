@@ -12,6 +12,9 @@ $bdrs-4: 4px;
 $trans-time: .2s;
 $delay-time: .2s;
 
+$height-hd:80px;
+$height-mob:60px;
+
 
 @mixin hover-bgc {
     background-color: rgba(81, 125, 88, .15);
