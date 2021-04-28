@@ -20,6 +20,40 @@ $height-mob:60px;
     background-color: rgba(81, 125, 88, .15);
 }
 
+@mixin hover-link {
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        height: 1px;
+        -webkit-transition-property: right;
+        transition-property: right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    &:hover:before,
+    &.active:before,
+    &.open:before{
+        right: 0;
+    }
+}
+
+@mixin hover-link-dark {
+    &:before {
+        background: $dark-color;
+    }
+}
+@mixin hover-link-white {
+    &:before {
+        background: #fff;
+    }
+}
+
+
 @mixin transition {
     transition: transform $trans-time linear;
 }
