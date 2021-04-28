@@ -231,8 +231,56 @@
 </ul>
 		<div class="support-page__content">
 			<div class="support-page__header">
+				<span class="support-page__header-title">Как мы можем помочь?</span>
+				<div class="support-page__header-finder">
+					<div class="finder__wrap js-finder-wrap">
+	<div class="finder__input">
+		<input class="js-finder-input" type="text" placeholder="Поиск по каталогу">
+		<a href="#" class="finder__sort">
+			<svg class="finder__sort-icon">
+				<use xlink:href="img/sprite-mono.svg#settings"></use>
+			</svg>
+		</a>
+	</div>
+	<a href="#" class="finder__btn">
+		<svg class="finder__btn-icon">
+			<use xlink:href="img/sprite-mono.svg#search"></use>
+		</svg>
+	</a>
+</div>
+					<div class="finder__body js-finder-body">
+	<ul class="finder__body-list">
+		<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+		<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+		<li><a href="#">1835-1872 Золотая монета</a></li>
+		<li><a href="#">1835</a></li>
+		<li><a href="#">1835</a></li>
+	</ul>
+	<a href="#" class="finder__more-settings">Расширенный поиск</a>
+</div>
+				</div>
 			</div>
 			<div class="support-page__body">
+				<div class="support-page__body-faq">
+					<span class="faq__title">Популярные вопросы</span>
+					<div class="faq"></div>
+				</div>
+				<div class="support-page__body-form">
+					<span class="feedback__title"></span>
+					<div class="feedback">
+						<div class="field__wrapper">
+
+
+
+							<label>
+								<input name="file" type="file" name="file" id="image_file">
+								<span>Выбрать</span>
+							</label>
+							<span></span>
+
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -285,6 +333,14 @@
 </footer>
 
 </body>
+
+
+<script>
+	$('input[type="file"]').change(function(e){
+		var fileName = e.target.files[0].name;
+		console.log(fileName);
+	});
+</script>
 
 
 </html>

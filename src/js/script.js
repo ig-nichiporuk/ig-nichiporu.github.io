@@ -22,10 +22,8 @@ function close_dropdown() {
 
 function close_finder_body() {
 	$('.js-finder-input').val('');
-	$('.js-finder-wrap').removeClass('open js-finder-mob');
+	$('.js-finder-wrap').removeClass('open');
 	$('.js-finder-body').slideUp(0, 'linear');
-	$('.js-finder-body-mob').slideUp(0, 'linear');
-	$('.js-finder-animate-block').removeClass('open');
 }
 
 
@@ -44,6 +42,7 @@ function close_all() {
 	close_dropdown();
 	close_catalog_menu();
 	close_finder_body();
+	$('.js-finder-animate-block').removeClass('open');
 	$('.js-stamping-btn').removeClass('open');
 	$('.js-stamping-list').slideUp(200, 'linear');
 	$('body').removeClass('overlay-open mob-finder-open');

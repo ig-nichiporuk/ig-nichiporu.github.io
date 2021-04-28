@@ -1,0 +1,19 @@
+.support-page{
+    &__content {}
+    &__header {
+        &-finder {
+            position: relative;
+        }
+    }
+}
+input {
+    display: none;
+}
+label {
+    padding: 15px;
+    font-size: 14px;
+    width: 100px;
+    line-height: 35px;
+    color: red;
+    border: 1px solid;
+}

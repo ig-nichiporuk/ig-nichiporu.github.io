@@ -24,8 +24,33 @@
 		@@include('../components/breadcrumbs.html')
 		<div class="support-page__content">
 			<div class="support-page__header">
+				<span class="support-page__header-title">Как мы можем помочь?</span>
+				<div class="support-page__header-finder">
+					@@include('../components/finder-input.html')
+					@@include('../components/finder-list.html')
+				</div>
 			</div>
 			<div class="support-page__body">
+				<div class="support-page__body-faq">
+					<span class="faq__title">Популярные вопросы</span>
+					<div class="faq"></div>
+				</div>
+				<div class="support-page__body-form">
+					<span class="feedback__title"></span>
+					<div class="feedback">
+						<div class="field__wrapper">
+
+
+
+							<label>
+								<input name="file" type="file" name="file" id="image_file">
+								<span>Выбрать</span>
+							</label>
+							<span></span>
+
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -33,6 +58,14 @@
 @@include('../components/footer.html')
 
 </body>
+
+
+<script>
+	$('input[type="file"]').change(function(e){
+		var fileName = e.target.files[0].name;
+		console.log(fileName);
+	});
+</script>
 
 
 </html>
