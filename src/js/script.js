@@ -13,7 +13,7 @@ function enableScroll() {
 function close_dropdown() {
 	$('.js-dropdown-btn').removeClass('open');
 	$('.js-dropdown-wrap').removeClass('open');
-	$('.js-dropdown-body').slideUp(0, 'linear');
+	$('.js-dropdown-body').slideUp(0);
 }
 
 
@@ -23,7 +23,7 @@ function close_dropdown() {
 function close_finder_body() {
 	$('.js-finder-input').val('');
 	$('.js-finder-wrap').removeClass('open');
-	$('.js-finder-body').slideUp(0, 'linear');
+	$('.js-finder-body').slideUp(0);
 }
 
 
@@ -44,7 +44,7 @@ function close_all() {
 	close_finder_body();
 	$('.js-finder-animate-block').removeClass('open');
 	$('.js-stamping-btn').removeClass('open');
-	$('.js-stamping-list').slideUp(200, 'linear');
+	$('.js-stamping-list').slideUp(0);
 	$('body').removeClass('overlay-open mob-finder-open');
 }
 

@@ -8,7 +8,7 @@ $(document).ready(function() {
 			$(this).closest('.js-finder-wrap').next('.js-finder-body').slideDown(200, 'linear');
 		}
 		else {
-			$('.js-finder-body').slideUp(200, 'linear');
+			$('.js-finder-body').slideUp(0);
 			$('.js-finder-wrap').removeClass('open');
 		}
 	});

@@ -18,13 +18,13 @@
 <body>
 @@include('../components/header.html')
 
-</div>
+
 <main class="support-page">
 	<div class="container">
 		@@include('../components/breadcrumbs.html')
 		<div class="support-page__content">
 			<div class="support-page__header">
-				<span class="support-page__header-title">Как мы можем помочь?</span>
+				<span class="support-page__header-title text-medium">Как мы можем помочь?</span>
 				<div class="support-page__header-finder">
 					@@include('../components/finder-input.html')
 					@@include('../components/finder-list.html')
@@ -32,38 +32,117 @@
 			</div>
 			<div class="support-page__body">
 				<div class="support-page__body-faq">
-					<span class="faq__title">Популярные вопросы</span>
-					<div class="faq"></div>
-				</div>
-				<div class="support-page__body-form">
-					<span class="feedback__title"></span>
-					<div class="feedback">
-						<div class="field__wrapper">
-
-
-
-							<label>
-								<input name="file" type="file" name="file" id="image_file">
-								<span>Выбрать</span>
-							</label>
-							<span></span>
-
+					<span class="faq__title text-medium">Популярные вопросы</span>
+					<div class="faq">
+						<div class="faq__item">
+							<span class="faq__btn js-faq-btn">
+								Как найти нужную монету?
+								<span class="faq__close"></span>
+							</span>
+							<div class="faq__body js-faq-body">
+								<p>
+									В таблице показаны цены на царскую монету 1 рубль 1725 года "Траурный" выполненной из серебра. Над головой трилистник. Продажи фиксируются на публичных нумизматических аукционах всего мира. Стоимость продажи указана без учета комиссионного вознаграждения.
+								</p>
+							</div>
+						</div>
+						<div class="faq__item">
+							<span class="faq__btn js-faq-btn">
+								Как найти нужную монету?
+								<span class="faq__close"></span>
+							</span>
+							<div class="faq__body js-faq-body">
+								<p>
+									В таблице показаны цены на царскую монету 1 рубль 1725 года "Траурный" выполненной из серебра. Над головой трилистник. Продажи фиксируются на публичных нумизматических аукционах всего мира. Стоимость продажи указана без учета комиссионного вознаграждения.
+								</p>
+							</div>
+						</div>
+						<div class="faq__item">
+							<span class="faq__btn js-faq-btn">
+								Как найти нужную монету?
+								<span class="faq__close"></span>
+							</span>
+							<div class="faq__body js-faq-body">
+								<p>
+									В таблице показаны цены на царскую монету 1 рубль 1725 года "Траурный" выполненной из серебра. Над головой трилистник. Продажи фиксируются на публичных нумизматических аукционах всего мира. Стоимость продажи указана без учета комиссионного вознаграждения.
+								</p>
+							</div>
+						</div>
+						<div class="faq__item">
+							<span class="faq__btn js-faq-btn">
+								Как найти нужную монету?
+								<span class="faq__close"></span>
+							</span>
+							<div class="faq__body js-faq-body">
+								<p>
+									В таблице показаны цены на царскую монету 1 рубль 1725 года "Траурный" выполненной из серебра. Над головой трилистник. Продажи фиксируются на публичных нумизматических аукционах всего мира. Стоимость продажи указана без учета комиссионного вознаграждения.
+								</p>
+							</div>
+						</div>
+						<div class="faq__item">
+							<span class="faq__btn js-faq-btn">
+								Как найти нужную монету?
+								<span class="faq__close"></span>
+							</span>
+							<div class="faq__body js-faq-body">
+								<p>
+									В таблице показаны цены на царскую монету 1 рубль 1725 года "Траурный" выполненной из серебра. Над головой трилистник. Продажи фиксируются на публичных нумизматических аукционах всего мира. Стоимость продажи указана без учета комиссионного вознаграждения.
+								</p>
+							</div>
 						</div>
 					</div>
+				</div>
+				<div class="support-page__body-form">
+					<span class="feedback__title text-medium">Форма обратной связи</span>
+					<form class="feedback">
+						<div class="feedback__item">
+							<label>Email *</label>
+							<input type="email" placeholder="Электронный адрес">
+						</div>
+						<div class="feedback__item">
+							<label>Имя</label>
+							<input type="text" placeholder="Как к вам оброщаться">
+						</div>
+						<div class="feedback__item">
+							<label>Напишите ваш вопрос *</label>
+							<textarea class="input-style service-date__input" placeholder="Введите текст вопроса в это поле"></textarea>
+						</div>
+						<div class="feedback__item">
+							<label>Прикрепить файл</label>
+							<label class="feedback__load-wrap">
+								<input name="file" type="file" name="file" id="feedback-add-file">
+								<span class="feedback__load-btn">Выбрать файл</span>
+								<span class="feedback__load-file js-feadback-loaded-file"></span>
+							</label>
+						</div>
+						<button class="feedback__btn btn-style">Отправить вопрос</button>
+						<p class="feedback__footnote">
+							Нажимая кнопку «Отправить» я даю свое согласие
+							<span class="text-green">на обработку персональных данных</span>
+						</p>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 </main>
 @@include('../components/footer.html')
-
 </body>
 
 
 <script>
-	$('input[type="file"]').change(function(e){
-		var fileName = e.target.files[0].name;
-		console.log(fileName);
+	$('.js-faq-btn').on('click', function () {
+		if($(this).hasClass('open')){
+			$('.js-faq-btn').removeClass('open');
+			$('.js-faq-body').slideUp(200, 'linear');
+		}
+		else {
+			$('.js-faq-btn').removeClass('open');
+			$('.js-faq-body').slideUp(200, 'linear');
+			$(this).addClass('open').next('.js-faq-body').slideDown(200, 'linear');
+		}
+	})
+	$('#feedback-add-file').change(function(e){
+		$('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
 	});
 </script>
 
