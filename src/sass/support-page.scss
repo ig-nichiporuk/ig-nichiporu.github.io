@@ -2,6 +2,7 @@
 .faq {
     margin: 30px 0 0 0;
     &__title {
+        display: block;
         font-size: 32px;
         line-height: 45px;
         letter-spacing: 0.1px;
@@ -13,6 +14,12 @@
         background: #fff;
         border-radius: $bdrs-6;
         box-shadow: inset 0 0 0 1px #EDEDED;
+        transition: box-shadow $trans-time ease-in-out;
+        &:not(.open):hover,
+        &.open {
+            box-shadow: inset 0 0 0 1px $dark-color;
+            transition: box-shadow $trans-time ease-in-out;
+        }
     }
     &__item + &__item {
         margin: 15px 0 0 0;
@@ -27,6 +34,7 @@
         font-size: 18px;
         line-height: 25px;
         color: #32325D;
+        cursor: pointer;
         &.open {
             font-weight: 600;
         }
@@ -79,7 +87,9 @@
     }
 }
 .feedback {
+    margin: 25px 0 0 0;
     &__title {
+        display: block;
         font-size: 32px;
         line-height: 45px;
         letter-spacing: 0.1px;
@@ -92,7 +102,7 @@
             display: block;
         }
         label {
-            margin: 0 0 4px 0;
+            margin: 0 0 5px 0;
             font-size: 14px;
             line-height: 21px;
             letter-spacing: 0.1px;
@@ -107,7 +117,7 @@
             border: 1px solid #EDEDED;
             border-radius: $bdrs-6;
             font-size: 15px;
-            line-height: 21px;
+            line-height: 20px;
             letter-spacing: 0.1px;
             color: $main-color;
             padding: 11px 20px;
@@ -140,11 +150,17 @@
             width: 145px;
             min-width: 145px;
             padding: 12px 15px;
-            box-shadow: inset 0 0 0 1px #F0F0F0;
+            box-shadow: inset 0 0 0 1px $gray-text;
             border-radius: $bdrs-6;
             font-weight: 500;
             text-align: center;
-            color: $gray-color;
+            color: $gray-text;
+            cursor: pointer;
+            &:hover {
+                box-shadow: inset 0 0 0 1px $dark-color;
+                color: $dark-color;
+            }
+
         }
         &-file {
             display: none;
@@ -175,7 +191,7 @@
     }
     &__btn {
         width: 100%;
-        margin: 30px 0 0 0;
+        margin: 25px 0 0 0;
     }
     &__footnote {
         margin: 10px 0 0 0;
@@ -208,7 +224,8 @@
         &-finder {
             margin: 15px 0 0 0;
             position: relative;
-            width: 480px;
+            width: 100%;
+            max-width: 480px;
             .finder__sort {
                 display: none;
             }
@@ -233,3 +250,88 @@
         }
     }
 }
+
+@media (max-width: 1539px) {
+    .support-page__body {
+        padding: 40px 30px 60px;
+    }
+}
+
+@media (max-width: 1299px) {
+    .support-page__body {
+        padding: 30px 30px 60px;
+    }
+    .support-page__body-form {
+        margin: 0 0 0 50px;
+        padding: 45px 45px 25px;
+        min-width: 400px;
+    }
+    .faq__title,
+    .feedback__title{
+        font-size: 26px;
+        line-height: 36px;
+        letter-spacing: 0.2px;
+    }
+}
+
+@media (max-width: 959px) {
+    .support-page__body {
+        padding: 30px 20px 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .support-page__body-form {
+        margin: 60px 0 0 0;
+        padding: 40px 60px;
+        min-width: auto;
+        width: 100%;
+        max-width: 500px;
+    }
+    .faq__title,
+    .feedback__title{
+        font-size: 32px;
+        line-height: 45px;
+        letter-spacing: 0.1px;
+    }
+    .faq__title,
+    .feedback__title{
+        font-size: 28px;
+        line-height: 39px;
+        letter-spacing: 0.1px;
+    }
+}
+
+@media (max-width: 779px) {
+    .support-page__header-title {
+        font-size: 28px;
+        line-height: 39px;
+        letter-spacing: 0.1px;
+    }
+    .support-page__header-finder {
+        margin: 20px 0 0 0;
+    }
+    .support-page__body-form {
+        margin: 40px 0 0 0;
+    }
+}
+
+@media (max-width: 639px) {
+    .support-page__body {
+        padding: 30px 0 50px;
+    }
+    .support-page__body-faq {
+        padding: 0 15px;
+    }
+    .support-page__header-title,
+    .faq__title{
+        text-align: center;
+    }
+    .feedback__title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .support-page__body-form {
+        padding: 40px 20px;
+    }
+}
+

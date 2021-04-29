@@ -17,7 +17,7 @@
     }
     .no-img &__img {
         background-color: #F6F6F6;
-        img {
+        & > *{
             margin: auto;
             width: 60px;
             height: 60px;

@@ -28,7 +28,7 @@ a, a:active, a:focus {
     outline: 0
 }
 
-button, button:active, button:focus, input, input:active, input:focus, textarea, textarea:active, textarea:focus {
+button, input,  textarea {
     font: inherit;
     border: none;
     outline: 0;
@@ -52,38 +52,41 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-    color: #C4C4C4;
+    color: $gray-text;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-    color: #C4C4C4;
+    color: $gray-text;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-    color: #C4C4C4;
+    color: $gray-text;
 }
 
 input::-ms-input-placeholder,
 textarea::-ms-input-placeholder {
-    color: #C4C4C4;
+    color: $gray-text;
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-    color: #C4C4C4;
+    color: $gray-text;
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: #C4C4C4;
+    color: $gray-text;
 }
 
 .br {
     display: block;
     line-height: 0 !important;
     height: 0 !important;
+}
+.red-star {
+    color: #FF0000;
 }
 img {
     display: block;

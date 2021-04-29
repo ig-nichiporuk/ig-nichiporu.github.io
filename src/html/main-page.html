@@ -10,9 +10,19 @@
 	<script src="js/script.js"></script>
 	<script src="js/header.js"></script>
 </head>
+<style>
+	.main-page {
+		background-image: url('img/main-background.jpg');
+	}
+	@media (max-width: 639px) {
+		.main-page {
+			background-image: url('img/main-background-mob.jpg');
+		}
+	}
+</style>
 <body>
 @@include('../components/header.html')
-<main class="main-page" style="background-image: url('img/main-background.jpg');">
+<main class="main-page">
 	<div class="container">
 		<div class="main-page__content">
 			<div class="main-page__wrap">
