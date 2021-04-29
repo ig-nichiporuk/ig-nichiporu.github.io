@@ -68,14 +68,13 @@
             }
         }
         &-link {
+            position: relative;
             display: inline-block;
             font-size: 15px;
             line-height: 21px;
-            color: #979797;
-            &:hover, &:active {
-                font-weight: 600;
-                color: $green-color;
-            }
+            color: $dark-color;
+            @include hover-link;
+            @include hover-link-dark;
         }
     }
 }
