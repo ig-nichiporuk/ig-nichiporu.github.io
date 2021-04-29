@@ -29,7 +29,6 @@ a, a:active, a:focus {
 }
 
 button, button:active, button:focus, input, input:active, input:focus, textarea, textarea:active, textarea:focus {
-    font-family: inherit;
     font: inherit;
     border: none;
     outline: 0;
@@ -164,8 +163,8 @@ svg {
         border-bottom-right-radius: $bdrs-6;
         border-bottom-left-radius: $bdrs-6;
         background-color: #fff;
-        box-shadow: 0px 17px 27px rgba(0, 0, 0, 0.05),
-                    0px 2px 3px rgba(0, 0, 0, 0.025);
+        box-shadow: 0 17px 27px rgba(0, 0, 0, 0.05),
+                    0 2px 3px rgba(0, 0, 0, 0.025);
         &:not(.sidebar__wrap) > * {
             &:hover {
                 @include hover-bgc;
@@ -425,82 +424,6 @@ svg {
         line-height: 45px;
         color: $gray-text;
     }
-
-
-
-
-
-
-
-
-
-    &.mob {
-        display: none;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        margin: 0 5px 0 auto;
-    }
-    &-animate {
-        position: fixed;
-        background-color: #fff;
-        z-index: 12;
-        width: 100vw;
-        height: $height-mob;
-        display: flex;
-        padding: 0 16px;
-        align-items: center;
-        //left: 150%;
-        top: 0;
-        //transition: left .2s linear;
-
-
-        /*другой вариант*/
-        left: 0;
-        visibility: hidden;
-        opacity: 0;
-        & > * {
-            opacity: 0;
-            transition: opacity .3s ease-in-out;
-        }
-        /*другой вариант конец*/
-
-        &.open {
-            //left: 0;
-            //transition: left .2s linear;
-
-
-            /*другой вариант*/
-            visibility: visible;
-            opacity: 1;
-            & > * {
-                opacity: 1;
-                transition: opacity .3s ease-in-out;
-            }
-            /*другой вариант конец*/
-        }
-
-        & > svg {
-            width: 20px;
-            min-width: 20px;
-            height: 20px;
-            fill: #D4D3D3;
-        }
-        .close-icon {
-            width: 40px;
-            min-width: 40px;
-            height: 40px;
-            padding: 11px;
-        }
-        .find-icon {
-            fill: $dark-color;
-        }
-        input {
-            width: 100%;
-            margin: 0 15px;
-        }
-
-    }
 }
 
 
@@ -601,8 +524,8 @@ svg {
     .finder {
         &__body {
             border: none;
-            border-bottom-right-radius: 0px;
-            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
             &-list {
                 height: 100vh;
                 max-height: calc(100vh - 105px);
