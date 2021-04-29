@@ -408,7 +408,6 @@ svg {
         border-bottom-right-radius: $bdrs-4;
         border-bottom-left-radius: $bdrs-4;
         &-list {
-            max-height: calc(100vh - 115px);
             overflow-y: auto;
             li {
                 padding: 12px 20px;
@@ -421,6 +420,9 @@ svg {
                     }
                 }
             }
+        }
+        .header__finder &-list {
+            max-height: calc(100vh - 115px);
         }
     }
     &__more-settings {
@@ -527,11 +529,11 @@ svg {
         }
     }
     .finder {
-        &__body {
+        .header__finder-animate &__body {
             border: none;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
-            &-list {
+            .header__finder-animate &-list {
                 height: 100vh;
                 max-height: calc(100vh - 105px);
             }

@@ -73,8 +73,7 @@
             font-size: 15px;
             line-height: 21px;
             color: $dark-color;
-            @include hover-link;
-            @include hover-link-dark;
+            @include hover-link($dark-color);
         }
     }
 }

@@ -31,8 +31,7 @@ header {
         cursor: pointer;
         min-width: 61px;
         position: relative;
-        @include hover-link;
-        @include hover-link-dark;
+        @include hover-link($dark-color);
         &-mob {
             display: none;
             width: 40px;
@@ -142,40 +141,32 @@ header {
             background-color: #fff;
             z-index: 12;
             width: 100vw;
-            height: $height-mob;
-            display: flex;
-            padding: 0 16px;
-            align-items: center;
-            //left: 150%;
             top: 0;
-            //transition: left .2s linear;
-
-
-            /*другой вариант*/
             left: 0;
             visibility: hidden;
             opacity: 0;
+            &.open {
+                visibility: visible;
+                opacity: 1;
+            }
+
+
+
+
+        }
+        &-wrap {
+            display: flex;
+            padding: 0 16px;
+            align-items: center;
+            height: $height-mob;
             & > * {
                 opacity: 0;
                 transition: opacity .3s ease-in-out;
             }
-            /*другой вариант конец*/
-
-            &.open {
-                //left: 0;
-                //transition: left .2s linear;
-
-
-                /*другой вариант*/
-                visibility: visible;
+            .open & > * {
                 opacity: 1;
-                & > * {
-                    opacity: 1;
-                    transition: opacity .3s ease-in-out;
-                }
-                /*другой вариант конец*/
+                transition: opacity .3s ease-in-out;
             }
-
             & > svg {
                 width: 20px;
                 min-width: 20px;
@@ -203,8 +194,7 @@ header {
         margin: 0 0 0 auto;
         cursor: pointer;
         position: relative;
-        @include hover-link;
-        @include hover-link-dark;
+        @include hover-link($dark-color);
     }
     &__currency,
     &__lang{
@@ -428,8 +418,7 @@ header {
                         padding: 0 20px 0 0;
                         font-size: 15px;
                     }
-                    @include hover-link;
-                    @include hover-link-white;
+                    @include hover-link(#fff);
                 }
             }
         }
@@ -459,8 +448,7 @@ header {
                 & > * {
                     font-size: 15px;
                     line-height: 21px;
-                    @include hover-link;
-                    @include hover-link-dark;
+                    @include hover-link($dark-color);
                 }
             }
         }

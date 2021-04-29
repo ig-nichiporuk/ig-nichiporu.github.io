@@ -333,5 +333,8 @@
     .support-page__body-form {
         padding: 40px 20px;
     }
+    .support-page__header-finder .finder__body-list li:first-child {
+        box-shadow: none;
+    }
 }
 
