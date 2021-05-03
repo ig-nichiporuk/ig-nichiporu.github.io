@@ -1,49 +1,140 @@
 @import "variables";
 .table {
+    position: relative;
+    display: table;
     width: 100%;
     &__row {
-        td:first-of-type {
-            & > * {
-                color: $dark-color;
-                font-size: 20px;
-                line-height: 24px;
-                letter-spacing: 0.2px;
-                font-weight: 500;
-            }
+        display: table-row;
+    }
+    &__row:not(.table__header) {
+        &:not(:first-of-type){
+            box-shadow: inset 0 1px 0 0 #EDEDED;
+        }
+        &:last-of-type{
+            box-shadow: inset 0 1px 0 0 #EDEDED,
+                        inset 0 -1px 0 0 #EDEDED;
         }
     }
-    &__cell{
-        &:not(&-header) {
-            padding: 12px 0;
-            & > * {
-                border-right: 1px solid #EDEDED;
-            }
+    &__row:not(.table__header):hover,
+    &__row:not(.table__header):hover + &__row:not(.table__header):not(:last-of-type) {
+        box-shadow: inset 0 1px 0 0 transparent;
+    }
+    &__row:not(.table__header):hover + &__row:not(.table__header):last-of-type {
+        box-shadow: inset 0 1px 0 0 transparent,
+                    inset 0 -1px 0 0 #EDEDED;
+    }
+    &__row:not(.table__header):hover &__cell{
+        @include hover-bgc;
+        &:first-of-type{
+            border-top-left-radius: $bdrs-6;
+            border-bottom-left-radius: $bdrs-6;
         }
-        border-bottom: 1px solid #EDEDED;
+        &:last-of-type{
+            border-top-right-radius: $bdrs-6;
+            border-bottom-right-radius: $bdrs-6;
+        }
+        &:not(:last-of-type):before {
+            background-color: #F6F6F6;
+        }
+    }
+    &__header {
+        box-shadow: inset 0 -1px 0 0 $green-color;
+    }
+    &__cell {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 15px;
+        line-height: 21px;
+        color: $main-color;
+    }
+    &__header &__cell,
+    &__row:not(.table__header) &__cell{
         & > * {
             display: flex;
             align-items: center;
-            min-height: 40px;
-            padding: 10px 20px;
-            font-size: 15px;
-            line-height: 21px;
-            color: $main-color;
+            padding: 0 20px;
         }
-        &-header {
-            & > * {
-                min-height: 60px;
-                font-size: 14px;
-                line-height: 20px;
-                font-weight: 600;
-                letter-spacing: 0.2px;
-                color: $dark-color;
-                border-bottom: 1px solid $green-color;
+    }
+    &__row:not(.table__header) &__cell{
+        position: relative;
+        padding: 12px 0;
+        &:first-of-type {
+            color: $dark-color;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.2px;
+            font-weight: 600;
+        }
+        &:not(:last-of-type):before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate3d(0, -50%, 0);
+            width: 1px;
+            height: calc(100% - 24px);
+            background-color: #EDEDED;
+        }
+        & > * {
+            &:not(.pass) {
+                min-height: 40px;
+            }
+            &.pass {
+                width: 30px;
+                line-height: 30px;
+                border-radius: 50%;
+                background-color: $main-color;
+                color: #fff;
+                padding: 0;
+                justify-content: center;
+                margin: 0 20px;
             }
         }
     }
+    &__header &__cell{
+        line-height: 18px;
+        font-weight: 600;
+        letter-spacing: 0.1px;
+        color: $dark-color;
+        & > * {
+            min-height: 60px;
+            white-space: nowrap;
+            &.mob {
+                display: none;
+            }
+        }
+    }
+    &__footnote {
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: none;
+        background-color: rgba(50, 50, 93, 0.1);
+        border-radius: $bdrs-6;
+        span {
+            margin: auto;
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px #32325d;
+            color: #fff;
+        }
+    }
+    &.scroll &__footnote{
+        display: flex;
+    }
 }
+
+
+
+
 .type-page {
-    &__container {}
+    &__container + &__container {
+        margin: 40px 0 0 0;
+    }
     &__header {
         display: flex;
         align-items: center;
@@ -52,6 +143,9 @@
             display: flex;
             justify-content: center;
             margin: 0 -5px;
+            img {
+                min-width: 225px;
+            }
         }
         &-item {
             padding: 0 5px;
@@ -77,7 +171,156 @@
         }
     }
     &__table {
-        margin: 20px 0 0 0;
+        margin: 25px 0 0 0;
         padding: 0 20px 40px;
+    }
+}
+
+@media (max-width: 1539px) {
+    .type-page__header {
+        padding: 30px 30px 0;
+    }
+    .type-page__table {
+        margin: 30px 0 0 0;
+    }
+}
+
+@media (max-width: 1299px) and (min-width: 960px) {
+    .type-page__header-title {
+        margin: 25px 0 0 0;
+    }
+    .type-page__table {
+        padding: 0 15px 40px;
+    }
+    .table__header .table__cell > *,
+    .table__row:not(.table__header) .table__cell > * {
+        padding: 0px 10px 0 15px;
+    }
+    .table__row:not(.table__header) .table__cell > *.pass {
+        margin: 0 10px 0 15px;
+    }
+    .table__cell:nth-of-type(3) {
+        min-width: 120px;
+    }
+    .table__row:not(.table__header) .table__cell:first-of-type {
+        font-size: 18px;
+    }
+    .table__row:not(.table__header) .table__cell {
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 1299px) {
+    .type-page__header {
+        flex-direction: column;
+    }
+    .type-page__header-title .title,
+    .type-page__header-title .desc {
+        text-align: center;
+    }
+    .table__header .table__cell > *.mob {
+        display: flex;
+    }
+    .table__header .table__cell > *.mob + * {
+        display: none;
+    }
+}
+
+@media (max-width: 959px) {
+    .type-page__header {
+        padding: 30px 20px 0;
+    }
+    .type-page__header-title {
+        margin: 0 0 0 10px;
+    }
+    .type-page__table {
+        margin: 25px 0 0 0;
+    }
+}
+
+@media (max-width: 779px) {
+    .type-page {
+        padding: 0 0 40px 0;
+    }
+    .type-page__header-title {
+        margin: 15px 0 0 0;
+    }
+    .type-page__header-title .title {
+        font-size: 28px;
+        line-height: 39px;
+        letter-spacing: 0.2px;
+    }
+    .type-page__header-title .desc {
+        margin: 10px 0 0 0;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .table__header .table__cell > *.mob {
+        display: none;
+    }
+    .table__header .table__cell > *.mob + * {
+        display: flex;
+    }
+    .type-page__table {
+        width: calc(100vw - 32px);
+        overflow-x: auto;
+        margin: 25px  0 0 0;
+        padding: 0;
+    }
+    .table {
+        padding: 0 15px;
+    }
+    .table__header .table__cell {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .table__row:not(.table__header) .table__cell:first-of-type {
+        font-size: 18px;
+    }
+    .table__cell:nth-of-type(3) {
+        min-width: 110px;
+    }
+    .table__header .table__cell > *,
+    .table__row:not(.table__header) .table__cell > * {
+        padding: 0px 10px 0 15px;
+    }
+    .table__row:not(.table__header) .table__cell > *.pass {
+        margin: 0 10px 0 15px;
+    }
+}
+
+@media (max-width: 639px) {
+    .type-page__container {
+        margin: 25px 0 0 0;
+    }
+    .type-page__header {
+        padding: 25px 15px 0;
+    }
+    .type-page__header-img img {
+        min-width: auto;
+    }
+
+}
+
+@media (max-width: 479px) {
+    .table__header .table__cell {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .table__cell {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .table__row:not(.table__header) .table__cell:first-of-type {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .table__header .table__cell > *,
+    .table__row:not(.table__header) .table__cell > * {
+        padding: 0px 10px;
+    }
+    .table__row:not(.table__header) .table__cell > *.pass {
+        margin: 0 10px;
     }
 }
