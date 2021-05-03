@@ -3,6 +3,7 @@ $dark-color: #32325D;
 $gray-color: #C4C4C4;
 $gray-text: #A8A8A8;
 $green-color: #517D58;
+$active-color: #2B2B9F;
 
 $dropdown-bd-color: #F0F0F0;
 
@@ -12,7 +13,7 @@ $bdrs-4: 4px;
 $trans-time: .2s;
 $delay-time: .2s;
 
-$height-hd:80px;
+$height-hd:70px;
 $height-mob:60px;
 
 @mixin hover-shadow {

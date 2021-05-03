@@ -111,8 +111,10 @@
     .dop-info {
         padding: 15px 0 0;
     }
-    .dop-info__content-item.hidden-960 {
-        display: none;
+    @for $i from 7 through 8 {
+        .dop-info__content-item:nth-of-type(#{$i}) {
+            display: none;
+        }
     }
     .dop-info__content-show {
         display: block;
@@ -137,8 +139,10 @@
     .dop-info__content-item {
         width: 50%;
     }
-    .dop-info__content-item.hidden-780 {
-        display: none;
+    @for $i from 5 through 8 {
+        .dop-info__content-item:nth-of-type(#{$i}) {
+            display: none;
+        }
     }
 }
 
@@ -173,8 +177,10 @@
     .dop-info__content-item {
         padding: 10px 0;
     }
-    .dop-info__content-item.hidden-mob {
-        display: none;
+    @for $i from 3 through 8 {
+        .dop-info__content-item:nth-of-type(#{$i}) {
+            display: none;
+        }
     }
 }
 

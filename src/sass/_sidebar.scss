@@ -22,20 +22,25 @@
                 top: 19px;
                 right: 26px;
                 display: block;
-                width: 0;
-                height: 0;
+                width: 8px;
+                height: 8px;
                 border-radius: 50%;
                 background-color: $main-color;
+                transform: scale(0);
             }
             &.open {
                 font-weight: 600;
-                letter-spacing: 0.2px;
+                svg {
+                    @include svg-rotate-open
+                }
+            }
+            &.open-second {
                 svg {
                     display: none;
                 }
                 &:before {
-                    width: 8px;
-                    height: 8px;
+                    transform: scale(1);
+                    @include transition;
                 }
             }
             .text-gray {
@@ -56,6 +61,7 @@
     .no-touch &__subitem &__item-btn:hover,
     &__subitem &__item-btn.open,
     &__link:hover{
+        color: $active-color;
         @include hover-bgc;
     }
 
@@ -71,9 +77,7 @@
         line-height: 21px;
         color: $main-color;
         cursor: pointer;
-        /*&.open, .no-touch &:hover {
-            @include hover-bgc;
-        }*/
+        position: relative;
     }
 
     &__subitem &__item-btn {

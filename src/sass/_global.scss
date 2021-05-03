@@ -324,14 +324,14 @@ svg {
             h1 {
                 font-size: 40px;
                 line-height: 48px;
-                letter-spacing: 0.1px;
+                letter-spacing: -0.5px;
                 color: $dark-color;
             }
             p {
                 margin: 10px 0 0 1px;
                 font-size: 18px;
                 line-height: 27px;
-                letter-spacing: 0.2px;
+                letter-spacing: -0.1px;
                 color: $main-color;
             }
         }
@@ -378,6 +378,9 @@ svg {
         right: 20px;
         &-icon{
             fill: $gray-text;
+            &:hover {
+                fill: $dark-color
+            }
         }
     }
     &__sort, &__btn {
@@ -422,7 +425,7 @@ svg {
                     cursor: pointer;
                     @include hover-bgc;
                     a {
-                        color: $green-color;
+                        color: $active-color;
                     }
                 }
             }
@@ -436,6 +439,9 @@ svg {
         text-align: center;
         line-height: 45px;
         color: $gray-text;
+        &:hover{
+            color: $active-color;
+        }
     }
 }
 

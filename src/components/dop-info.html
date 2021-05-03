@@ -23,28 +23,28 @@
 			<h2 class="dop-info__title text-medium">Самые дорогие монеты мира</h2>
 			<div class="dop-info__content-wrap">
 				<div class="dop-info__content-info">
-					<div class="dop-info__content-item">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-mob">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-mob">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-780">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-780">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-960">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-960">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
 				</div>
@@ -63,22 +63,22 @@
 					<div class="dop-info__content-item">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-mob">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-mob">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-780">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-780">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-960">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
-					<div class="dop-info__content-item hidden-960">
+					<div class="dop-info__content-item js-info-card">
 						@@include('../components/card.html')
 					</div>
 				</div>
@@ -116,7 +116,7 @@
 	});
 	$('.js-info-show-cards').on('click', function () {
 
-		$(this).closest('.js-info-block').find('[class *= hidden-]').addClass('show');
+		$(this).closest('.js-info-block').find('.js-info-card').css({'display' : 'block'});
 		$(this).addClass('hidden');
 	});
 </script>
