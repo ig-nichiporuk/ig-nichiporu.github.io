@@ -81,6 +81,10 @@ input::placeholder,
 textarea::placeholder {
     color: $gray-text;
 }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 .br {
     display: block;
@@ -312,6 +316,7 @@ svg {
             }
         }
         &-title {
+            margin: 20px 0 0 0;
             & > * {
                 display: block;
             }
@@ -490,6 +495,9 @@ svg {
                 &.mob {
                     display: block;
                 }
+            }
+            &-title {
+                margin: 0;
             }
             &-wrap {
                 flex-direction: column;

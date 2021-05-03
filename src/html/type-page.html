@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('../components/head-meta.html', {"title": "Type-page"})
+	@@include('../components/head-links.html')
+	<link rel="stylesheet" href="css/style.css?v.1">
+	<link rel="stylesheet" href="css/type-page.css">
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/scroll-lock.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="content">
+	<div class="container">
+		<div class="content__wrap">
+			<div class="content__block-breadcrumbs mob">
+				@@include('../components/breadcrumbs.html')
+			</div>
+			<div class="content__nav">
+				<div class="content__nav-stamping">
+					@@include('../components/stamping.html')
+				</div>
+				<div class="content__nav-sidebar">
+					@@include('../components/sidebar.html')
+				</div>
+			</div>
+			<div class="content__block">
+				<div class="content__block-breadcrumbs">
+					@@include('../components/breadcrumbs.html')
+				</div>
+				<div class="content__block-title">
+					<h1 class="text-medium">Медные монеты номиналом 3 гроша</h1>
+				</div>
+				<div class="content__block-wrap type-page__container">
+					<div class="type-page">
+						<div class="type-page__header">
+							<div class="type-page__header-img">
+								<div class="type-page__header-item">
+									<img src="img/type-coin.jpg" alt="type-coin">
+								</div>
+								<div class="type-page__header-item">
+									<img src="img/type-coin-back.jpg" alt="type-coin">
+								</div>
+							</div>
+							<div class="type-page__header-title">
+								<p class="title text-medium">3 гроша "Хвост прямой"</p>
+								<span class="desc">1835-1839</span>
+							</div>
+						</div>
+						<div class="type-page__table">
+							<table class="table">
+								<tr class="table__row">
+									<th class="table__cell table__cell-header">
+										<span>Год</span>
+									</th>
+									<th class="table__cell table__cell-header">
+										<span>Знак</span>
+									</th>
+									<th class="table__cell table__cell-header">
+										<span>Описание</span>
+									</th>
+									<th class="table__cell table__cell-header">
+										<span>Тираж</span>
+									</th>
+									<th class="table__cell table__cell-header">
+										<span>Биткин</span>
+									</th>
+									<th class="table__cell table__cell-header">
+										<span>Средняя цена</span>
+									</th>
+									<th class="table__cell table__cell-header">
+										<span>Проходы</span>
+									</th>
+								</tr>
+								<tr class="table__row">
+									<td class="table__cell">
+										<span>1835</span>
+									</td>
+									<td class="table__cell">
+										<span>MW</span>
+									</td>
+									<td class="table__cell">
+										<span>Хвост орла прямой</span>
+									</td>
+									<td class="table__cell">
+										<span>288292</span>
+									</td>
+									<td class="table__cell">
+										<span>R3</span>
+									</td>
+									<td class="table__cell">
+										<span>0 $</span>
+									</td>
+									<td class="table__cell">
+										<span>0 $</span>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		@@include('../components/dop-info.html')
+
+	</div>
+</main>
+
+
+@@include('../components/footer.html')
+
+</body>
+</html>
