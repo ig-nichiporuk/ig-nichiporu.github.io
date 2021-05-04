@@ -104,9 +104,17 @@ svg {
     display: block;
     transform: translateZ(0);
 }
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
 
 .hidden {
     display: none !important;
+}
+
+.active-color {
+    color: $active-color;
 }
 
 .overlay {
@@ -228,6 +236,7 @@ svg {
         font-weight: normal;
         margin: 10px 0 0 0;
         text-align: left;
+        color: $main-color;
     }
 }
 
@@ -258,6 +267,7 @@ svg {
     }
     &__item{
         padding: 12px 20px;
+        cursor: pointer;
         & > * {
             font-size: 15px;
             line-height: 21px;
@@ -444,6 +454,47 @@ svg {
         }
     }
 }
+
+.checkbox__label {
+    display: inline-block;
+    cursor: pointer;
+    &-text {
+        display: block;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+        position: relative;
+        padding-left: 30px;
+        color: $main-color;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 3C0.5 1.61929 1.61929 0.5 3 0.5H17C18.3807 0.5 19.5 1.61929 19.5 3V17C19.5 18.3807 18.3807 19.5 17 19.5H3C1.61929 19.5 0.5 18.3807 0.5 17V3Z' fill='white' stroke='%23E0E0E0'/%3E%3C/svg%3E%0A");
+        }
+    }
+    &-check:checked + &-text:before {
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 3C0.5 1.61929 1.61929 0.5 3 0.5H17C18.3807 0.5 19.5 1.61929 19.5 3V17C19.5 18.3807 18.3807 19.5 17 19.5H3C1.61929 19.5 0.5 18.3807 0.5 17V3Z' fill='%232B2B9F' stroke='%232B2B9F'/%3E%3Cpath d='M4.15 10.5C4.05 10.4 4 10.25 4 10.15C4 10.05 4.05 9.9 4.15 9.8L4.85 9.1C5.05 8.9 5.35 8.9 5.55 9.1L5.6 9.15L8.35 12.1C8.45 12.2 8.6 12.2 8.7 12.1L15.4 5.15H15.45C15.65 4.95 15.95 4.95 16.15 5.15L16.85 5.85C17.05 6.05 17.05 6.35 16.85 6.55L8.85 14.85C8.75 14.95 8.65 15 8.5 15C8.35 15 8.25 14.95 8.15 14.85L4.25 10.65L4.15 10.5Z' fill='white'/%3E%3C/svg%3E%0A");
+    }
+}
+
+
+
 
 
 @media (max-width: 1539px) {

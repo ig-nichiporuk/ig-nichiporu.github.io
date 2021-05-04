@@ -1,0 +1,65 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 1px 0 0 #EDEDED;
+    height: 80px;
+    background-color: #fff;
+    &__prev,
+    &__next {
+        display: flex;
+        height: inherit;
+        width: 105px;
+        svg {
+            margin: auto;
+            width: 24px;
+            height: 24px;
+            fill:$dark-color
+        }
+    }
+    &__prev {
+        box-shadow: inset -1px 0 0 0 #EDEDED;
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+    &__next {
+        box-shadow: inset 1px 0 0 0 #EDEDED;
+        svg {
+            transform: rotate(-90deg);
+        }
+    }
+    &__pages {
+        display: flex;
+        align-items: center;
+        .page{
+            &-num,
+            &-empty{
+                width: 42px;
+                font-size: 16px;
+                line-height: 42px;
+                font-weight: 600;
+                text-align: center;
+                letter-spacing: 0.1px;
+                color: $main-color;
+            }
+            &-num + &-num,
+            &-num + &-empty,
+            &-empty + &-num {
+                margin: 0 0 0 10px;
+            }
+            &-num {
+                &.active {
+                    border-radius: 50%;
+                    color: #fff;
+                    background: $active-color;
+                }
+
+            }
+            &-empty{
+                cursor: default;
+                pointer-events: none;
+            }
+        }
+    }
+}

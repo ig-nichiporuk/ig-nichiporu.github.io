@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('../components/head-meta.html', {"title": "Coin-page"})
+	@@include('../components/head-links.html')
+	<link rel="stylesheet" href="css/style.css?v.2">
+	<link rel="stylesheet" href="css/coin-page.css">
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/scroll-lock.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="content">
+	<div class="container">
+		<div class="content__wrap">
+			<div class="content__block-breadcrumbs mob">
+				@@include('../components/breadcrumbs.html')
+			</div>
+			<div class="content__nav">
+				<div class="content__nav-stamping">
+					@@include('../components/stamping.html')
+				</div>
+				<div class="content__nav-sidebar">
+					@@include('../components/sidebar.html')
+				</div>
+			</div>
+			<div class="content__block">
+				<div class="content__block-breadcrumbs">
+					@@include('../components/breadcrumbs.html')
+				</div>
+				<div class="content__block-title">
+					<h1 class="text-medium">1 грош 1930 WJ</h1>
+					<p>Описание монеты</p>
+				</div>
+				<div class="content__block-wrap coin-page__container">
+					<div class="coin-page">
+						<div class="coin-page__tabs">
+							<span class="coin-page__tab js-coin-info-tab" data-info="auctions">Цены на аукционах</span>
+							<span class="coin-page__tab active js-coin-info-tab" data-info="varieties">Разновидности (3)</span>
+						</div>
+						<div class="coin-page__info js-coin-info-content">
+							<div class="coin-page__info-block hidden js-coin-info-block" data-block="auctions-block">
+								<span class="coin-page__info-title text-medium">Цены на аукционах</span>
+								<div class="auctions">
+									<div class="auctions__filter">
+										<div class="auctions__filter-title">Сохранность</div>
+										<div class="auctions__filter-wrap">
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+										</div>
+									</div>
+									<div class="auctions__filter">
+										<div class="auctions__filter-title">Сохранность (слабы)</div>
+										<div class="auctions__filter-wrap">
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+										</div>
+									</div>
+									<div class="auctions__filter">
+										<div class="auctions__filter-title">Сервис</div>
+										<div class="auctions__filter-wrap">
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+											<label class="checkbox__label">
+												<input type="checkbox" class="checkbox__label-check">
+												<span class="checkbox__label-text">Inactive</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="auctions__select">
+									<label class="auctions__select-label text-medium">Аукционы</label>
+									<div class="auctions__select-wrap js-dropdown-wrap">
+										<input type="text">
+										<span class="select-style__btn js-dropdown-btn">Все страны</span>
+										<ul class="select-style__body js-dropdown-body">
+											<li class="select-style__item js-info-btn active" data-info="expensive">
+												<span class="select-style__option">Аукционы1</span>
+											</li>
+											<li class="select-style__item js-info-btn active" data-info="expensive">
+												<span class="select-style__option">Аукционы2</span>
+											</li>
+											<li class="select-style__item js-info-btn" data-info="popular">
+												<span class="select-style__option">Аукционы3</span>
+											</li>
+											<li class="select-style__item js-info-btn" data-info="news">
+												<span class="select-style__option">Аукционы4</span>
+											</li>
+											<li class="select-style__item js-info-btn active" data-info="expensive">
+												<span class="select-style__option">Аукционы5</span>
+											</li>
+											<li class="select-style__item js-info-btn active" data-info="expensive">
+												<span class="select-style__option">Аукционы6</span>
+											</li>
+										</ul>
+									</div>
+
+								</div>
+								<div class="auctions__cards">
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"this-auctions": "current",
+											"price-active": "",
+											"price": "0"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"price-active": "",
+											"price": "0"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"price-active": "bg-color",
+											"price": "152 USD"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"price-active": "bg-color",
+											"price": "152 USD"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"price-active": "",
+											"price": "0"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html')
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"price-active": "bg-color",
+											"price": "152 USD"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"price-active": "bg-color",
+											"price": "152 USD"
+										})
+									</div>
+									<div class="auctions__card">
+										@@include('../components/card-big-image.html', {
+											"price-active": "",
+											"price": "0"
+										})
+									</div>
+								</div>
+								<div class="auctions__select">
+									<label class="auctions__select-label text-medium">Года</label>
+									<div class="auctions__select-wrap js-dropdown-wrap">
+										<input type="text">
+										<span class="select-style__btn js-dropdown-btn">1865-1935</span>
+										<ul class="select-style__body js-dropdown-body">
+											<li class="select-style__item js-info-btn active" data-info="expensive">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+											<li class="select-style__item js-info-btn active" data-info="expensive">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+											<li class="select-style__item js-info-btn" data-info="popular">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+											<li class="select-style__item js-info-btn" data-info="news">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+											<li class="select-style__item js-info-btn active" data-info="expensive">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+											<li class="select-style__item js-info-btn active" data-info="expensive">
+												<span class="select-style__option">1865-1935</span>
+											</li>
+										</ul>
+									</div>
+
+								</div>
+								@@include('../components/pagination.html')
+							</div>
+							<div class="coin-page__info-block  js-coin-info-block" data-block="varieties-block">
+								<span class="coin-page__info-title text-medium">Разновидности</span>
+								<div class="varieties__cards">
+									<div class="varieties__card">
+										@@include('../components/card-two-images.html', {
+											"this-auctions": "current",
+											"pass-active": "active",
+											"pass": "8"
+										})
+									</div>
+									<div class="varieties__card">
+										@@include('../components/card-two-images.html', {
+											"pass-active": "",
+											"pass": "0"
+										})
+									</div>
+									<div class="varieties__card">
+										@@include('../components/card-two-images.html', {
+											"pass-active": "active",
+											"pass": "5"
+										})
+									</div>
+									<div class="varieties__card">
+										@@include('../components/card-two-images.html', {
+											"pass-active": "",
+											"pass": "0"
+										})
+									</div>
+									<div class="varieties__card">
+										@@include('../components/card-two-images.html', {
+											"pass-active": "",
+											"pass": "0"
+										})
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		@@include('../components/dop-info.html')
+	</div>
+</main>
+@@include('../components/footer.html')
+</body>
+<script>
+	$('.js-coin-info-tab').on('click', function () {
+		if(!$(this).hasClass('active')){
+			$('.js-coin-info-block').addClass('hidden');
+			$('.js-coin-info-tab').removeClass('active');
+			$(this).addClass('active');
+			$('.js-coin-info-content').find("div[data-block='" + $(this).attr('data-info') +"-block']").removeClass('hidden');
+		}
+	});
+</script>
+</html>

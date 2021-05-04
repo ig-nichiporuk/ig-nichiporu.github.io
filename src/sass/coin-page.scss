@@ -1,0 +1,136 @@
+@import "variables";
+.auctions {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 0 0;
+    background: #EDEDED;
+    border-radius: $bdrs-6;
+    padding: 40px;
+    &__filter {
+        &-title {
+            display: block;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            color: $dark-color;
+            margin: 0 0 20px 0;
+        }
+        & + &:not(:last-of-type) {
+            margin: 0 0 0 180px;
+        }
+        &:not(:last-of-type) &-wrap {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 120px;
+            grid-row-gap: 20px;
+        }
+        &:last-of-type {
+            margin: 40px 0 0 0;
+        }
+        &:last-of-type &-wrap {
+            width: 100%;
+            display: flex;
+            margin: -10px;
+            & > * {
+                padding: 10px;
+            }
+        }
+    }
+    &__select {
+        margin: 30px 0 0 0;
+        display: flex;
+        align-items: center;
+        input {
+            display: none;
+        }
+        &-wrap {
+            position: relative;
+            width: 100%;
+            margin: 0 0 0 20px;
+        }
+        &-label {
+            font-size: 18px;
+            line-height: 27px;
+            letter-spacing: 0.2px;
+            color: $main-color;
+        }
+    }
+    &__cards + &__select {
+        margin: 60px 0 0 0;
+    }
+}
+.auctions,
+.varieties {
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px -10px -20px;
+    }
+    &__card {
+        width: calc(100% / 3);
+        padding: 20px 10px;
+    }
+}
+.coin-page {
+    &__container {}
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        background-color: $dark-color;
+        border-radius: 6px 6px 0 0;
+    }
+    &__tab {
+        font-size: 15px;
+        line-height: 21px;
+        color: #FFFFFF;
+        padding: 15px 0 15px 0;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 51%;
+            right: 51%;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 2px 2px 0px 0px;;
+            -webkit-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+        }
+        &:not(.active):hover {
+            cursor: pointer;
+        }
+        &.active {
+            cursor: default;
+        }
+        &:not(.active):hover,
+        &.active{
+            &:before {
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+    &__tab + &__tab {
+        margin: 0 0 0 30px;
+    }
+    &__info {
+        &-block {
+            padding: 40px 40px 0;
+            .pagination {
+                background: none;
+                margin: 80px -40px 0;
+            }
+            &[data-block="varieties-block"] {
+                padding-bottom: 40px;
+            }
+        }
+        &-title {
+            display: block;
+            font-size: 32px;
+            line-height: 45px;
+            letter-spacing: -0.5px;
+            color: $dark-color;
+        }
+    }
+}
