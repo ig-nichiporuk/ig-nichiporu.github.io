@@ -9,7 +9,7 @@
     &__next {
         display: flex;
         height: inherit;
-        width: 105px;
+        width: 120px;
         svg {
             margin: auto;
             width: 24px;
@@ -43,11 +43,6 @@
                 letter-spacing: 0.1px;
                 color: $main-color;
             }
-            &-num + &-num,
-            &-num + &-empty,
-            &-empty + &-num {
-                margin: 0 0 0 10px;
-            }
             &-num {
                 &.active {
                     border-radius: 50%;
@@ -61,5 +56,49 @@
                 pointer-events: none;
             }
         }
+        .page-num + .page-num,
+        .page-num + .page-empty,
+        .page-empty + .page-num {
+            margin: 0 0 0 10px;
+        }
     }
+}
+
+@media (max-width: 1539px) {
+    .pagination__prev, .pagination__next {
+        width: 105px;
+    }
+}
+
+@media (max-width: 1299px) {
+    .pagination__prev, .pagination__next {
+        width: 65px;
+    }
+}
+
+@media (max-width: 959px) {
+    .pagination__prev, .pagination__next {
+        width: 60px;
+    }
+}
+
+@media (max-width: 779px) {
+}
+
+@media(max-width: 639px) {
+    .pagination__pages .page-num, .pagination__pages .page-empty {
+        width: 32px;
+        font-size: 15px;
+        line-height: 32px;
+        letter-spacing: -0.2px;
+    }
+    .pagination__pages .page-num + .page-num, .pagination__pages .page-num + .page-empty, .pagination__pages .page-empty + .page-num {
+        margin: 0;
+    }
+    .pagination__prev, .pagination__next {
+        width: 60px;
+    }
+}
+
+@media (max-width: 479px) {
 }
