@@ -59,7 +59,9 @@
         margin: 40px 0 0 0;
     }
     &__stamping {
-        padding: 40px 40px 60px;
+        padding: 40px;
+        min-height: 280px;
+
         &-btns {
             display: flex;
             flex-wrap: wrap;
@@ -68,18 +70,9 @@
         &-btn {
             padding: 10px 6px;
 
-            //test
-            flex-grow: 1;
-            //test
-
             & > * {
                 display: block;
-                //width: 95px;
-
-                //test
-                min-width: 95px;
-                //test
-
+                width: 95px;
                 font-size: 18px;
                 line-height: 45px;
                 text-align: center;
@@ -105,6 +98,9 @@
         }
         &__card {
             padding: 20px 7px;
+        }
+        &__stamping {
+            padding: 30px;
         }
     }
 }
@@ -137,6 +133,23 @@
             width: 50%;
             padding: 15px 5px;
         }
+        &__stamping {
+            min-height: auto;
+        }
+    }
+}
+
+@media (max-width: 1299px) and (min-width: 960px) {
+    .period-page {
+        &__stamping {
+            &-btns {
+                margin: 15px -8px -10px;
+            }
+
+            &-btn {
+                padding: 10px 8px;
+            }
+        }
     }
 }
 
@@ -157,10 +170,10 @@
             padding: 25px 15px 40px;
         }
         &__cards {
-            margin: -20px -9px;
+            margin: -20px -15px;
         }
         &__card {
-            padding: 20px 9px;
+            padding: 20px 15px;
         }
     }
 }
@@ -190,7 +203,20 @@
             padding: 10px 0px;
         }
         &__stamping {
-            padding: 30px 30px 50px;
+            padding: 30px 15px;
+            &-btns {
+                margin: 18px -3px -7px;
+            }
+
+            &-btn {
+                flex-grow: 1;
+                min-width: 97px;
+                max-width: calc(100% / 2);
+                padding: 7px 3px;
+                & > * {
+                    width: 100%;
+                }
+            }
         }
     }
 }

@@ -42,7 +42,7 @@
 						<div class="period-page__header-desc">
 							<span class="sup-text">Каталог монет</span>
 							<span class="title">II Республики</span>
-							<span class="years">(1919-1939)</span>
+							<span class="years">1919-1939</span>
 						</div>
 					</div>
 					<div class="period-page__content">
@@ -94,8 +94,22 @@
 
 <script>
 	$('.js-period-card-show').on('click',function () {
-		$(this).addClass('hidden');
-		$(this).prev('.js-period-card-list').children().css({'display' : 'block'});
+		if($(this).hasClass('open')){
+			$(this).removeClass('open').find('.text').text('Показать все');
+			$(this).find('.count').removeClass('hidden');
+			$(this).prev('.js-period-card-list').children().slice(3);
+			$(this).prev('.js-period-card-list').children().each(function (){
+				if($(this).index() > 5) {
+					$(this).removeAttr("style");
+				}
+			});
+		}
+		else {
+			$(this).addClass('open').find('.text').text('Свернуть');
+			$(this).find('.count').addClass('hidden');
+			$(this).prev('.js-period-card-list').children().css({'display' : 'block'});
+		}
+
 	});
 </script>
 </body>

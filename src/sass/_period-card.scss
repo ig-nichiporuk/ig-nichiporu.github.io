@@ -57,11 +57,13 @@
         font-size: 15px;
         line-height: 40px;
         text-align: center;
-        box-shadow: inset 0 1px 0 0 #F8F8F8;;
+        box-shadow: inset 0 1px 0 0 #F8F8F8;
+        border-radius: 0 0 $bdrs-6 $bdrs-6;
         color: $dark-color;
         cursor: pointer;
         &:hover {
             color: $active-color;
+            @include hover-bgc;
         }
     }
 }
