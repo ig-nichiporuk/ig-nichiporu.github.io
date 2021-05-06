@@ -545,6 +545,7 @@ input[type="checkbox"] {
         }
         &__nav {
             width: 100%;
+            min-width: auto;
         }
         &__block {
             padding: 0;
