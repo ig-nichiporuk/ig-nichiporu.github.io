@@ -126,7 +126,7 @@
             line-height: 24px;
             color: $dark-color;
             padding-bottom: 20px;
-            box-shadow: inset 0 -1px 0 0 $dark-color;
+            box-shadow: inset 0 -1px 0 0 $gray-color;
             &.mob{
                 display: none;
                 position: relative;
@@ -227,7 +227,7 @@
     &__tab {
         font-size: 15px;
         line-height: 20px;
-        color: #FFFFFF;
+        color: #9595AF;
         padding: 15px 0 15px 0;
         position: relative;
         &:before {
@@ -236,9 +236,8 @@
             bottom: 0;
             left: 51%;
             right: 51%;
-            height: 5px;
+            height: 3px;
             background-color: #fff;
-            border-radius: 2px 2px 0px 0px;;
             -webkit-transition: all 0.2s ease-out;
             transition: all 0.2s ease-out;
         }
@@ -246,10 +245,12 @@
             cursor: pointer;
         }
         &.active {
+            color: #fff;
             cursor: default;
         }
         &:not(.active):hover,
         &.active{
+            color: #fff;
             &:before {
                 left: 0;
                 right: 0;

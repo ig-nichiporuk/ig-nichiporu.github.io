@@ -404,6 +404,7 @@ header {
             position: relative;
             margin: 20px 0 0 0;
             li {
+                display: block;
                 padding: 12px 0;
                 & > * {
                     display: inline-block;
@@ -412,11 +413,13 @@ header {
                     letter-spacing: 0.2px;
                     position: relative;
                     &.sublist {
-                        display: block;
                         cursor: pointer;
                         position: relative;
-                        padding: 0 20px 0 0;
+                        margin: 0 25px 0 0;
                         font-size: 15px;
+                        &:after {
+                            right: -25px;
+                        }
                     }
                     @include hover-link(#fff);
                 }
@@ -438,12 +441,15 @@ header {
         &-countries &-list {
             max-width: 680px;
         }
-        &-countries &-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-column-gap: 40px;
+        &-links {
             max-height: 384px;
             overflow-y: auto;
+        }
+        &-countries &-list {
+            columns: 3;
+            -webkit-column-gap: 40px;
+            -moz-column-gap: 40px;
+            column-gap: 40px;
             li {
                 & > * {
                     font-size: 15px;
@@ -488,13 +494,17 @@ header {
     }
     .header__catalog-countries .header__catalog-list {
         max-width: 100%;
-        grid-template-columns: repeat(2, 1fr);
+        columns: 2;
     }
     .header__catalog-countries .header__catalog-title{
         max-width: 100%;
     }
-    .header__catalog-countries .header__catalog-list {
+    /*.header__catalog-countries .header__catalog-list {
         max-width: 440px;
+    }*/
+    .header__catalog-countries .header__catalog-links {
+        max-height: 440px;
+        overflow-y: auto;
     }
 }
 
@@ -521,7 +531,9 @@ header {
         padding: 45px 30px 80px 35px;
     }
     .header__catalog-countries .header__catalog-list {
-        grid-column-gap: 20px;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
     }
 
 }
@@ -597,13 +609,15 @@ header {
         }
     }
     .header__catalog-list,
-    .header__catalog-countries .header__catalog-list{
-        max-height: calc(100% - 49px);
+    .header__catalog-countries .header__catalog-links{
+        max-height: calc(100% - 115px);
         overflow-y: auto;
     }
     .header__catalog-countries .header__catalog-list {
         max-width: 100%;
-        grid-column-gap: 40px;
+        -webkit-column-gap: 40px;
+        -moz-column-gap: 40px;
+        column-gap: 40px;
     }
 }
 
@@ -621,6 +635,6 @@ header {
 
 @media (max-width: 479px) {
     .header__catalog-countries .header__catalog-list {
-        grid-template-columns: repeat(1, 1fr);
+        columns: 1;
     }
 }

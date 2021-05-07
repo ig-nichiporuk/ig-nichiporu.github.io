@@ -3,7 +3,6 @@
 <head>
 	@@include('../components/head-meta.html', {"title": "Catalog-page"})
 	@@include('../components/head-links.html')
-	<link rel="stylesheet" href="css/style.css?v.2">
 	<link rel="stylesheet" href="css/catalog-page.css">
 	<script src="js/jquery-3.6.0.js"></script>
 	<script src="js/scroll-lock.min.js"></script>
@@ -52,7 +51,7 @@
 							<div class="catalog-page__body">
 								<div class="catalog-page__list js-list">
 									<span class="catalog-page__list-title">Страны Европы</span>
-									<ul class="catalog-page__list-wrap">
+									<ul class="catalog-page__list-wrap js-main-list">
 										<li class="catalog-page__list-item">
 											<a href="#" class="catalog-page__list-link">
 												<img src="../img/flag.jpg" alt="flag">
@@ -225,6 +224,7 @@
 											</a>
 										</li>
 									</ul>
+									<span class="catalog-page__list-btn js-list-more">Показать все</span>
 								</div>
 								<div class="catalog-page__list sublist js-list">
 									<span class="catalog-page__list-title js-show-mainlist">
@@ -303,7 +303,11 @@
 	});
 	$('.js-show-mainlist').on('click', function () {
 		$('.js-list').removeClass('open');
-	})
+	});
+	$('.js-list-more').on('click',function () {
+		$(this).addClass('hidden');
+		$(this).prev('.js-main-list').children().css({'display' : 'block'});
+	});
 </script>
 </body>
 </html>
