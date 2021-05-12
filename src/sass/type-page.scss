@@ -145,8 +145,10 @@
     }
 }
 .type-page {
-    &__container + &__container {
-        margin: 40px 0 0 0;
+    &__container {
+        .content__block-wrap + .content__block-wrap {
+            margin: 40px 0 0 0;
+        }
     }
     &__header {
         display: flex;
@@ -304,9 +306,6 @@
 }
 
 @media (max-width: 639px) {
-    .type-page__container {
-        margin: 25px 0 0 0;
-    }
     .type-page__header {
         padding: 25px 15px 0;
     }

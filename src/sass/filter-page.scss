@@ -1,0 +1,181 @@
+@import"variables";
+.content__block-title + .filter-page {
+    margin: 30px 0 0;
+}
+.filter-page {
+    &__container {
+        .content__block-wrap {
+            overflow: hidden;
+        }
+    }
+    &__finder {
+        position: relative;
+        .finder__sort {
+            display: none;
+        }
+        .finder__cleaner {
+            display: block;
+        }
+        .finder__wrap {
+            height: 45px;
+        }
+    }
+    &__result {
+        background-color: #fff;
+        border-radius: $bdrs-6;
+        padding: 20px 30px 0;
+        &-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-select {
+            width: 100%;
+            max-width: 320px;
+        }
+        &-views {
+            display: flex;
+            align-items: center;
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: $gray-text;
+                cursor: pointer;
+                &:hover:not(.active) {
+                    fill: $active-color;
+                }
+                &.active {
+                    fill: $active-color;
+                }
+            }
+            svg + svg {
+                margin: 0 0 0 20px;
+            }
+        }
+        &-body {
+            display: flex;
+            flex-direction: column;
+            margin: 25px 0 0;
+            &.row {
+                flex-direction: row;
+                margin: 5px -10px -20px;
+            }
+        }
+        &-item {
+            width: 100%;
+        }
+        .row &-item {
+            width: calc(100% / 3);
+            padding: 20px 10px;
+        }
+        &-item + &-item {
+            margin: 20px 0 0;
+        }
+        .row &-item + &-item {
+            margin: 0;
+        }
+    }
+    &__pagination {
+        margin: 60px 0 0;
+    }
+}
+
+@media (max-width: 1539px) {
+    .filter-page {
+        &__result {
+            &-body {
+                &.row {
+                    margin: 5px -7px -20px;
+                }
+            }
+            .row &-item {
+                width: calc(100% / 3);
+                padding: 20px 7px;
+            }
+        }
+        &__pagination {
+            margin: 40px 0 0;
+        }
+    }
+}
+
+@media (max-width: 1299px) {
+    .filter-page {
+        &__result {
+            padding: 20px 20px 0;
+            &-select {
+                max-width: 100%;
+            }
+            &-views {
+                display: none;
+            }
+            &-body,
+            &-body.row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 10px -5px -15px;
+            }
+            .row &-item,
+            &-item {
+                width: 50%;
+                padding: 15px 5px;
+            }
+            &-item + &-item {
+                margin: 0;
+            }
+        }
+        &__pagination {
+            margin: 40px 0 0;
+        }
+    }
+}
+
+@media (max-width: 959px) {
+    .filter-page {
+        &__result {
+            &-body,
+            &-body.row {
+                margin: 5px -10px -20px;
+            }
+            .row &-item,
+            &-item {
+                padding: 20px 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 779px) {
+    .filter-page {
+        &__result {
+            &-body,
+            &-body.row {
+                margin: 5px -9px -20px;
+            }
+            .row &-item,
+            &-item {
+                padding: 20px 9px;
+            }
+        }
+    }
+}
+
+@media (max-width: 639px) {
+    .filter-page {
+        &__result {
+            padding: 20px 15px 0;
+            &-body,
+            &-body.row {
+                flex-direction: column;
+                margin: 15px 0 -10px;
+            }
+            .row &-item,
+            &-item {
+                width: 100%;
+                padding: 10px 0 ;
+            }
+        }
+    }
+
+}

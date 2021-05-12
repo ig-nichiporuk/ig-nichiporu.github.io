@@ -11,17 +11,17 @@
 </head>
 <body>
 @@include('../components/header.html')
-<main class="content">
+<main class="content type-page__container">
 	<div class="container">
 		<div class="content__wrap">
 			<div class="content__block-breadcrumbs mob">
 				@@include('../components/breadcrumbs.html')
 			</div>
-			<div class="content__nav">
-				<div class="content__nav-stamping">
+			<div class="content__panel">
+				<div class="content__panel-stamping">
 					@@include('../components/stamping.html')
 				</div>
-				<div class="content__nav-sidebar">
+				<div class="content__panel-sidebar">
 					@@include('../components/sidebar.html')
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 				<div class="content__block-title">
 					<h1 class="text-medium">Медные монеты номиналом 3 гроша</h1>
 				</div>
-				<div class="content__block-wrap type-page__container">
+				<div class="content__block-wrap">
 					<div class="type-page">
 						<div class="type-page__header">
 							<div class="type-page__header-img">
@@ -197,7 +197,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="content__block-wrap type-page__container">
+				<div class="content__block-wrap">
 					<div class="type-page">
 						<div class="type-page__header">
 							<div class="type-page__header-img">
@@ -370,7 +370,6 @@
 	</div>
 </main>
 @@include('../components/footer.html')
-
 <script>
 	function check_table_width() {
 		$('.js-table').each(function () {
@@ -390,7 +389,5 @@
 		check_table_width();
 	});
 </script>
-
-
 </body>
 </html>

@@ -11,17 +11,17 @@
 </head>
 <body>
 @@include('../components/header.html')
-<main class="content">
+<main class="content period-page__container">
 	<div class="container">
 		<div class="content__wrap">
 			<div class="content__block-breadcrumbs mob">
 				@@include('../components/breadcrumbs.html')
 			</div>
-			<div class="content__nav">
-				<div class="content__nav-stamping">
+			<div class="content__panel">
+				<div class="content__panel-stamping">
 					@@include('../components/stamping.html')
 				</div>
-				<div class="content__nav-sidebar">
+				<div class="content__panel-sidebar">
 					@@include('../components/sidebar.html')
 				</div>
 			</div>
@@ -33,7 +33,7 @@
 					<h1 class="text-medium">Каталог монет II Республики (1919-1939)</h1>
 					<p>Всего 25859 лотов в каталоге</p>
 				</div>
-				<div class="content__block-wrap period-page__container">
+				<div class="content__block-wrap">
 					<div class="period-page__header">
 						<div class="period-page__header-img">
 							<img src="img/king-jpg.jpg" alt="king">
@@ -64,7 +64,7 @@
 							</div>
 						</div>
 				</div>
-				<div class="content__block-wrap period-page__container">
+				<div class="content__block-wrap">
 					<div class="period-page__stamping">
 						<span class="period-page__stamping-title">Годы чеканки</span>
 						<ul class="period-page__stamping-btns">
@@ -90,7 +90,6 @@
 	</div>
 </main>
 @@include('../components/footer.html')
-
 <script>
 	$('.js-period-card-show').on('click',function () {
 		if($(this).hasClass('open')){

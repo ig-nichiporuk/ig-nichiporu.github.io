@@ -1,6 +1,8 @@
 .country-page {
     &__container {
-        padding: 40px 50px;
+        .content__block-wrap {
+            padding: 40px 50px;
+        }
     }
     &__wrap {
         display: flex;
@@ -17,7 +19,7 @@
     .country-card__img {
         height: 244px;
     }
-    .country-page__container {
+    .country-page__container .content__block-wrap{
         padding: 30px 30px 40px;
     }
     .country-page__wrap {
@@ -32,7 +34,7 @@
     .country-card__img {
         height: 244px;
     }
-    .country-page__container {
+    .country-page__container .content__block-wrap{
         padding: 20px 15px 40px;
     }
     .country-page__wrap {
@@ -48,7 +50,7 @@
     .country-card__img {
         height: 295px;
     }
-    .country-page__container {
+    .country-page__container .content__block-wrap{
         padding: 30px 40px 40px;
     }
     .country-page__wrap {
@@ -77,7 +79,7 @@
     .country-card__img {
         height: 295px;
     }
-    .country-page__container {
+    .country-page__container .content__block-wrap{
         padding: 20px 15px 40px;
     }
     .country-page__wrap {

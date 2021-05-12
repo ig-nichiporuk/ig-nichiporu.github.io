@@ -108,6 +108,14 @@ input[type="radio"],
 input[type="checkbox"] {
     display: none;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
 
 .hidden {
     display: none !important;
@@ -312,10 +320,10 @@ input[type="checkbox"] {
             width: 100%;
         }
     }
-    &__nav {
+    &__panel {
         width: 320px;
         min-width: 320px;
-        &-sidebar {
+        &-stamping + &-sidebar {
             margin: 20px 0 0 0;
         }
     }
@@ -380,7 +388,8 @@ input[type="checkbox"] {
             fill: $dark-color;
         }
     }
-    &__sort {
+    &__sort,
+    &__cleaner {
         cursor: pointer;
         position: absolute;
         top: 50%;
@@ -389,15 +398,18 @@ input[type="checkbox"] {
         &-icon{
             fill: $gray-text;
             &:hover {
-                fill: $dark-color
+                fill: $active-color;
             }
         }
     }
-    &__sort, &__btn {
+    &__sort, &__btn, &__cleaner {
         &-icon{
             width: 20px;
             height: 20px;
         }
+    }
+    &__cleaner {
+        display: none;
     }
     &__input {
         width: 100%;
@@ -409,9 +421,9 @@ input[type="checkbox"] {
             width: 100%;
             height: 100%;
             padding: 0 20px;
-            font-size: inherit;
-            line-height: inherit;
-            color: inherit;
+            font-size: 15px;
+            line-height: 21px;
+            color: $main-color;
         }
     }
     &__body {
@@ -430,7 +442,6 @@ input[type="checkbox"] {
             overflow-y: auto;
             li {
                 padding: 12px 20px;
-                box-shadow: inset 0 -1px 0 0 $dropdown-bd-color;
                 &:hover {
                     cursor: pointer;
                     @include hover-bgc;
@@ -439,9 +450,12 @@ input[type="checkbox"] {
                     }
                 }
             }
+            li + li {
+                box-shadow: inset 0 1px 0 0 $dropdown-bd-color;
+            }
         }
         .header__finder &-list {
-            max-height: calc(100vh - 115px);
+            max-height: calc(100vh - 95px);
         }
     }
     &__more-settings {
@@ -449,6 +463,7 @@ input[type="checkbox"] {
         text-align: center;
         line-height: 45px;
         color: $gray-text;
+        box-shadow: inset 0 1px 0 0 $dropdown-bd-color;
         &:hover{
             color: $active-color;
         }
@@ -491,6 +506,9 @@ input[type="checkbox"] {
     &-check:checked + &-text:before {
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 3C0.5 1.61929 1.61929 0.5 3 0.5H17C18.3807 0.5 19.5 1.61929 19.5 3V17C19.5 18.3807 18.3807 19.5 17 19.5H3C1.61929 19.5 0.5 18.3807 0.5 17V3Z' fill='%232B2B9F' stroke='%232B2B9F'/%3E%3Cpath d='M4.15 10.5C4.05 10.4 4 10.25 4 10.15C4 10.05 4.05 9.9 4.15 9.8L4.85 9.1C5.05 8.9 5.35 8.9 5.55 9.1L5.6 9.15L8.35 12.1C8.45 12.2 8.6 12.2 8.7 12.1L15.4 5.15H15.45C15.65 4.95 15.95 4.95 16.15 5.15L16.85 5.85C17.05 6.05 17.05 6.35 16.85 6.55L8.85 14.85C8.75 14.95 8.65 15 8.5 15C8.35 15 8.25 14.95 8.15 14.85L4.25 10.65L4.15 10.5Z' fill='white'/%3E%3C/svg%3E%0A");
     }
+    &:hover &-text {
+        color: $active-color;
+    }
 }
 
 
@@ -502,7 +520,7 @@ input[type="checkbox"] {
         width: 1300px;
     }
     .content{
-        &__nav {
+        &__panel {
             width: 300px;
             min-width: 300px;
         }
@@ -543,7 +561,7 @@ input[type="checkbox"] {
             flex-direction: column;
             padding: 0;
         }
-        &__nav {
+        &__panel {
             width: 100%;
             min-width: auto;
         }
@@ -589,25 +607,18 @@ input[type="checkbox"] {
 
 
 @media(max-width: 639px) {
-    .content {
-        &__block {
-            &-wrap {
-                margin: 25px 0 0 0;
-            }
-        }
-    }
     .finder {
         .header__finder-animate &__body {
             border: none;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
-            .header__finder-animate &-list {
+            &-list {
+                padding-bottom: 30px;
                 height: 100vh;
                 max-height: calc(100vh - 105px);
             }
         }
-        &__body-list li,
-        &__more-settings {
+        &__body-list li {
             box-shadow: inset 0 1px 0 0 #f0f0f0;
         }
     }

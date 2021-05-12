@@ -11,17 +11,17 @@
 </head>
 <body>
 @@include('../components/header.html')
-<main class="content">
+<main class="content year-page__container">
 	<div class="container">
 		<div class="content__wrap">
 			<div class="content__block-breadcrumbs mob">
 				@@include('../components/breadcrumbs.html')
 			</div>
-			<div class="content__nav">
-				<div class="content__nav-stamping">
+			<div class="content__panel">
+				<div class="content__panel-stamping">
 					@@include('../components/stamping.html')
 				</div>
-				<div class="content__nav-sidebar">
+				<div class="content__panel-sidebar">
 					@@include('../components/sidebar.html')
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 				<div class="content__block-title">
 					<h1 class="text-medium">Каталог монет Польши 1930 года</h1>
 				</div>
-				<div class="content__block-wrap year-page__container">
+				<div class="content__block-wrap">
 					<div class="year-page">
 						<div class="year-page__choose">
 							<span class="text-medium">Выберите категорию:</span>
@@ -152,9 +152,6 @@
 
 	</div>
 </main>
-
-
 @@include('../components/footer.html')
-
 </body>
 </html>

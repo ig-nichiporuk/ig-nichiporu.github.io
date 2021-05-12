@@ -38,6 +38,12 @@
 				<use xlink:href="img/sprite-mono.svg#settings"></use>
 			</svg>
 		</a>
+		<span class="finder__cleaner js-finder-clean">
+			<svg class="finder__cleaner-icon">
+				<use xlink:href="img/sprite-mono.svg#close"></use>
+			</svg>
+		</span>
+
 	</div>
 	<a href="#" class="finder__btn">
 		<svg class="finder__btn-icon">
@@ -225,7 +231,7 @@
 
 </header>
 
-<main class="content">
+<main class="content coin-page__container">
 	<div class="container">
 		<div class="content__wrap">
 			<div class="content__block-breadcrumbs mob">
@@ -237,8 +243,8 @@
 	<li class="breadcrumbs__item active"><a href="#">1930</a></li>
 </ul>
 			</div>
-			<div class="content__nav">
-				<div class="content__nav-stamping">
+			<div class="content__panel">
+				<div class="content__panel-stamping">
 					<div class="stamping js-stamping-wrap">
 	<div class="stamping__wrap">
 		<div class="stamping__flag">
@@ -296,7 +302,7 @@
 	})
 </script>
 				</div>
-				<div class="content__nav-sidebar">
+				<div class="content__panel-sidebar">
 					<nav class="sidebar">
 	<ul class="sidebar__wrap">
 		<li class="sidebar__item">
@@ -1805,7 +1811,7 @@
 					<h1 class="text-medium">1 грош 1930 WJ</h1>
 					<p>Описание монеты</p>
 				</div>
-				<div class="content__block-wrap coin-page__container">
+				<div class="content__block-wrap">
 					<div class="coin-page">
 						<div class="coin-page__img">
 							<div class="coin-page__img-wrap">
@@ -1946,7 +1952,7 @@
 
 					</div>
 				</div>
-				<div class="content__block-wrap coin-page__container">
+				<div class="content__block-wrap">
 					<div class="coin-page__tabs">
 							<span class="coin-page__tab active js-coin-info-tab" data-info="auctions">Цены на аукционах</span>
 							<span class="coin-page__tab js-coin-info-tab" data-info="varieties">Разновидности (3)</span>
@@ -2079,37 +2085,38 @@
 			<img src="img/big-img-coin.jpg" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Дата</span>
-			<span class="right">10 декабря 2020</span>
-		</li>
-		<li>
-			<span class="left">Сохранность</span>
-			<span class="right">MS62 <span class="active-color">ANACS</span></span>
-		</li>
-		<li class="">
-			<span class="left">Цена</span>
-			<span class="right with-helper">
-				 0
-				<div class="helper dropdown js-dropdown-wrap">
-					<svg class="helper__btn dropdown__btn js-dropdown-btn">
-					    <use xlink:href="img/sprite-mono.svg#help-info"></use>
-					</svg>
-					<!--<div class="helper__body dropdown__body js-dropdown-body">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
-					</div>-->
-				</div>
-			</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Дата</span>
+				<span class="right">10 декабря 2020</span>
+			</li>
+			<li>
+				<span class="left">Сохранность</span>
+				<span class="right">MS62 <span class="active-color">ANACS</span></span>
+			</li>
+			<li class="">
+				<span class="left">Цена</span>
+				<span class="right with-helper">
+					 0
+					<div class="helper dropdown js-dropdown-wrap">
+						<svg class="helper__btn dropdown__btn js-dropdown-btn">
+						    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+						</svg>
+						<!--<div class="helper__body dropdown__body js-dropdown-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+						</div>-->
+					</div>
+				</span>
+			</li>
+		</ul>
+	</div>
 </a>
 									</div>
 									<div class="auctions__card">
@@ -2119,37 +2126,38 @@
 			<img src="img/big-img-coin.jpg" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Дата</span>
-			<span class="right">10 декабря 2020</span>
-		</li>
-		<li>
-			<span class="left">Сохранность</span>
-			<span class="right">MS62 <span class="active-color">ANACS</span></span>
-		</li>
-		<li class="">
-			<span class="left">Цена</span>
-			<span class="right with-helper">
-				 0
-				<div class="helper dropdown js-dropdown-wrap">
-					<svg class="helper__btn dropdown__btn js-dropdown-btn">
-					    <use xlink:href="img/sprite-mono.svg#help-info"></use>
-					</svg>
-					<!--<div class="helper__body dropdown__body js-dropdown-body">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
-					</div>-->
-				</div>
-			</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Дата</span>
+				<span class="right">10 декабря 2020</span>
+			</li>
+			<li>
+				<span class="left">Сохранность</span>
+				<span class="right">MS62 <span class="active-color">ANACS</span></span>
+			</li>
+			<li class="">
+				<span class="left">Цена</span>
+				<span class="right with-helper">
+					 0
+					<div class="helper dropdown js-dropdown-wrap">
+						<svg class="helper__btn dropdown__btn js-dropdown-btn">
+						    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+						</svg>
+						<!--<div class="helper__body dropdown__body js-dropdown-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+						</div>-->
+					</div>
+				</span>
+			</li>
+		</ul>
+	</div>
 </a>
 									</div>
 									<div class="auctions__card">
@@ -2159,37 +2167,38 @@
 			<img src="img/big-img-coin.jpg" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Дата</span>
-			<span class="right">10 декабря 2020</span>
-		</li>
-		<li>
-			<span class="left">Сохранность</span>
-			<span class="right">MS62 <span class="active-color">ANACS</span></span>
-		</li>
-		<li class="bg-color">
-			<span class="left">Цена</span>
-			<span class="right with-helper">
-				 152 USD
-				<div class="helper dropdown js-dropdown-wrap">
-					<svg class="helper__btn dropdown__btn js-dropdown-btn">
-					    <use xlink:href="img/sprite-mono.svg#help-info"></use>
-					</svg>
-					<!--<div class="helper__body dropdown__body js-dropdown-body">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
-					</div>-->
-				</div>
-			</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Дата</span>
+				<span class="right">10 декабря 2020</span>
+			</li>
+			<li>
+				<span class="left">Сохранность</span>
+				<span class="right">MS62 <span class="active-color">ANACS</span></span>
+			</li>
+			<li class="bg-color">
+				<span class="left">Цена</span>
+				<span class="right with-helper">
+					 152 USD
+					<div class="helper dropdown js-dropdown-wrap">
+						<svg class="helper__btn dropdown__btn js-dropdown-btn">
+						    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+						</svg>
+						<!--<div class="helper__body dropdown__body js-dropdown-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+						</div>-->
+					</div>
+				</span>
+			</li>
+		</ul>
+	</div>
 </a>
 									</div>
 									<div class="auctions__card">
@@ -2199,37 +2208,38 @@
 			<img src="img/big-img-coin.jpg" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Дата</span>
-			<span class="right">10 декабря 2020</span>
-		</li>
-		<li>
-			<span class="left">Сохранность</span>
-			<span class="right">MS62 <span class="active-color">ANACS</span></span>
-		</li>
-		<li class="bg-color">
-			<span class="left">Цена</span>
-			<span class="right with-helper">
-				 152 USD
-				<div class="helper dropdown js-dropdown-wrap">
-					<svg class="helper__btn dropdown__btn js-dropdown-btn">
-					    <use xlink:href="img/sprite-mono.svg#help-info"></use>
-					</svg>
-					<!--<div class="helper__body dropdown__body js-dropdown-body">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
-					</div>-->
-				</div>
-			</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Дата</span>
+				<span class="right">10 декабря 2020</span>
+			</li>
+			<li>
+				<span class="left">Сохранность</span>
+				<span class="right">MS62 <span class="active-color">ANACS</span></span>
+			</li>
+			<li class="bg-color">
+				<span class="left">Цена</span>
+				<span class="right with-helper">
+					 152 USD
+					<div class="helper dropdown js-dropdown-wrap">
+						<svg class="helper__btn dropdown__btn js-dropdown-btn">
+						    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+						</svg>
+						<!--<div class="helper__body dropdown__body js-dropdown-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+						</div>-->
+					</div>
+				</span>
+			</li>
+		</ul>
+	</div>
 </a>
 									</div>
 									<div class="auctions__card">
@@ -2239,37 +2249,38 @@
 			<img src="img/big-img-coin.jpg" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Дата</span>
-			<span class="right">10 декабря 2020</span>
-		</li>
-		<li>
-			<span class="left">Сохранность</span>
-			<span class="right">MS62 <span class="active-color">ANACS</span></span>
-		</li>
-		<li class="">
-			<span class="left">Цена</span>
-			<span class="right with-helper">
-				 0
-				<div class="helper dropdown js-dropdown-wrap">
-					<svg class="helper__btn dropdown__btn js-dropdown-btn">
-					    <use xlink:href="img/sprite-mono.svg#help-info"></use>
-					</svg>
-					<!--<div class="helper__body dropdown__body js-dropdown-body">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
-					</div>-->
-				</div>
-			</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Дата</span>
+				<span class="right">10 декабря 2020</span>
+			</li>
+			<li>
+				<span class="left">Сохранность</span>
+				<span class="right">MS62 <span class="active-color">ANACS</span></span>
+			</li>
+			<li class="">
+				<span class="left">Цена</span>
+				<span class="right with-helper">
+					 0
+					<div class="helper dropdown js-dropdown-wrap">
+						<svg class="helper__btn dropdown__btn js-dropdown-btn">
+						    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+						</svg>
+						<!--<div class="helper__body dropdown__body js-dropdown-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+						</div>-->
+					</div>
+				</span>
+			</li>
+		</ul>
+	</div>
 </a>
 									</div>
 									<div class="auctions__card">
@@ -2279,37 +2290,38 @@
 			<img src="img/big-img-coin.jpg" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Дата</span>
-			<span class="right">10 декабря 2020</span>
-		</li>
-		<li>
-			<span class="left">Сохранность</span>
-			<span class="right">MS62 <span class="active-color">ANACS</span></span>
-		</li>
-		<li class="">
-			<span class="left">Цена</span>
-			<span class="right with-helper">
-				 0
-				<div class="helper dropdown js-dropdown-wrap">
-					<svg class="helper__btn dropdown__btn js-dropdown-btn">
-					    <use xlink:href="img/sprite-mono.svg#help-info"></use>
-					</svg>
-					<!--<div class="helper__body dropdown__body js-dropdown-body">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
-					</div>-->
-				</div>
-			</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Дата</span>
+				<span class="right">10 декабря 2020</span>
+			</li>
+			<li>
+				<span class="left">Сохранность</span>
+				<span class="right">MS62 <span class="active-color">ANACS</span></span>
+			</li>
+			<li class="">
+				<span class="left">Цена</span>
+				<span class="right with-helper">
+					 0
+					<div class="helper dropdown js-dropdown-wrap">
+						<svg class="helper__btn dropdown__btn js-dropdown-btn">
+						    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+						</svg>
+						<!--<div class="helper__body dropdown__body js-dropdown-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+						</div>-->
+					</div>
+				</span>
+			</li>
+		</ul>
+	</div>
 </a>
 									</div>
 									<div class="auctions__card">
@@ -2319,37 +2331,38 @@
 			<img src="img/big-img-coin.jpg" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Дата</span>
-			<span class="right">10 декабря 2020</span>
-		</li>
-		<li>
-			<span class="left">Сохранность</span>
-			<span class="right">MS62 <span class="active-color">ANACS</span></span>
-		</li>
-		<li class="bg-color">
-			<span class="left">Цена</span>
-			<span class="right with-helper">
-				 152 USD
-				<div class="helper dropdown js-dropdown-wrap">
-					<svg class="helper__btn dropdown__btn js-dropdown-btn">
-					    <use xlink:href="img/sprite-mono.svg#help-info"></use>
-					</svg>
-					<!--<div class="helper__body dropdown__body js-dropdown-body">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
-					</div>-->
-				</div>
-			</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Дата</span>
+				<span class="right">10 декабря 2020</span>
+			</li>
+			<li>
+				<span class="left">Сохранность</span>
+				<span class="right">MS62 <span class="active-color">ANACS</span></span>
+			</li>
+			<li class="bg-color">
+				<span class="left">Цена</span>
+				<span class="right with-helper">
+					 152 USD
+					<div class="helper dropdown js-dropdown-wrap">
+						<svg class="helper__btn dropdown__btn js-dropdown-btn">
+						    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+						</svg>
+						<!--<div class="helper__body dropdown__body js-dropdown-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+						</div>-->
+					</div>
+				</span>
+			</li>
+		</ul>
+	</div>
 </a>
 									</div>
 									<div class="auctions__card">
@@ -2359,37 +2372,38 @@
 			<img src="img/big-img-coin.jpg" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Дата</span>
-			<span class="right">10 декабря 2020</span>
-		</li>
-		<li>
-			<span class="left">Сохранность</span>
-			<span class="right">MS62 <span class="active-color">ANACS</span></span>
-		</li>
-		<li class="bg-color">
-			<span class="left">Цена</span>
-			<span class="right with-helper">
-				 152 USD
-				<div class="helper dropdown js-dropdown-wrap">
-					<svg class="helper__btn dropdown__btn js-dropdown-btn">
-					    <use xlink:href="img/sprite-mono.svg#help-info"></use>
-					</svg>
-					<!--<div class="helper__body dropdown__body js-dropdown-body">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
-					</div>-->
-				</div>
-			</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Дата</span>
+				<span class="right">10 декабря 2020</span>
+			</li>
+			<li>
+				<span class="left">Сохранность</span>
+				<span class="right">MS62 <span class="active-color">ANACS</span></span>
+			</li>
+			<li class="bg-color">
+				<span class="left">Цена</span>
+				<span class="right with-helper">
+					 152 USD
+					<div class="helper dropdown js-dropdown-wrap">
+						<svg class="helper__btn dropdown__btn js-dropdown-btn">
+						    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+						</svg>
+						<!--<div class="helper__body dropdown__body js-dropdown-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+						</div>-->
+					</div>
+				</span>
+			</li>
+		</ul>
+	</div>
 </a>
 									</div>
 									<div class="auctions__card">
@@ -2399,37 +2413,38 @@
 			<img src="img/big-img-coin.jpg" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Дата</span>
-			<span class="right">10 декабря 2020</span>
-		</li>
-		<li>
-			<span class="left">Сохранность</span>
-			<span class="right">MS62 <span class="active-color">ANACS</span></span>
-		</li>
-		<li class="">
-			<span class="left">Цена</span>
-			<span class="right with-helper">
-				 0
-				<div class="helper dropdown js-dropdown-wrap">
-					<svg class="helper__btn dropdown__btn js-dropdown-btn">
-					    <use xlink:href="img/sprite-mono.svg#help-info"></use>
-					</svg>
-					<!--<div class="helper__body dropdown__body js-dropdown-body">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
-					</div>-->
-				</div>
-			</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Дата</span>
+				<span class="right">10 декабря 2020</span>
+			</li>
+			<li>
+				<span class="left">Сохранность</span>
+				<span class="right">MS62 <span class="active-color">ANACS</span></span>
+			</li>
+			<li class="">
+				<span class="left">Цена</span>
+				<span class="right with-helper">
+					 0
+					<div class="helper dropdown js-dropdown-wrap">
+						<svg class="helper__btn dropdown__btn js-dropdown-btn">
+						    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+						</svg>
+						<!--<div class="helper__body dropdown__body js-dropdown-body">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
+						</div>-->
+					</div>
+				</span>
+			</li>
+		</ul>
+	</div>
 </a>
 									</div>
 								</div>
@@ -2497,26 +2512,28 @@
 			<img src="img/coin-most-expensive.png" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Тираж</span>
-			<span class="right">55644008</span>
-		</li>
-		<li>
-			<span class="left">Средняя цена</span>
-			<span class="right">5000 $</span>
-		</li>
-		<li>
-			<span class="left">Проходы</span>
-			<span class="right pass active">8</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Тираж</span>
+				<span class="right">55644008</span>
+			</li>
+			<li>
+				<span class="left">Средняя цена</span>
+				<span class="right">5000 $</span>
+			</li>
+			<li>
+				<span class="left">Проходы</span>
+				<span class="right pass active">8</span>
+			</li>
+		</ul>
+	</div>
 </a>
 
 									</div>
@@ -2530,26 +2547,28 @@
 			<img src="img/coin-most-expensive.png" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Тираж</span>
-			<span class="right">55644008</span>
-		</li>
-		<li>
-			<span class="left">Средняя цена</span>
-			<span class="right">5000 $</span>
-		</li>
-		<li>
-			<span class="left">Проходы</span>
-			<span class="right pass ">0</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Тираж</span>
+				<span class="right">55644008</span>
+			</li>
+			<li>
+				<span class="left">Средняя цена</span>
+				<span class="right">5000 $</span>
+			</li>
+			<li>
+				<span class="left">Проходы</span>
+				<span class="right pass ">0</span>
+			</li>
+		</ul>
+	</div>
 </a>
 
 									</div>
@@ -2563,26 +2582,28 @@
 			<img src="img/coin-most-expensive.png" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Тираж</span>
-			<span class="right">55644008</span>
-		</li>
-		<li>
-			<span class="left">Средняя цена</span>
-			<span class="right">5000 $</span>
-		</li>
-		<li>
-			<span class="left">Проходы</span>
-			<span class="right pass active">5</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Тираж</span>
+				<span class="right">55644008</span>
+			</li>
+			<li>
+				<span class="left">Средняя цена</span>
+				<span class="right">5000 $</span>
+			</li>
+			<li>
+				<span class="left">Проходы</span>
+				<span class="right pass active">5</span>
+			</li>
+		</ul>
+	</div>
 </a>
 
 									</div>
@@ -2596,26 +2617,28 @@
 			<img src="img/coin-most-expensive.png" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Тираж</span>
-			<span class="right">55644008</span>
-		</li>
-		<li>
-			<span class="left">Средняя цена</span>
-			<span class="right">5000 $</span>
-		</li>
-		<li>
-			<span class="left">Проходы</span>
-			<span class="right pass ">0</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Тираж</span>
+				<span class="right">55644008</span>
+			</li>
+			<li>
+				<span class="left">Средняя цена</span>
+				<span class="right">5000 $</span>
+			</li>
+			<li>
+				<span class="left">Проходы</span>
+				<span class="right pass ">0</span>
+			</li>
+		</ul>
+	</div>
 </a>
 
 									</div>
@@ -2629,26 +2652,28 @@
 			<img src="img/coin-most-expensive.png" alt="coin">
 		</div>
 	</div>
-	<span class="coin-card__title text-medium">
-		200 złotych 1995 Międzynaro
-	</span>
-	<span class="coin-card__desc">
-		200 złotych 1995
-	</span>
-	<ul class="coin-card__info">
-		<li>
-			<span class="left">Тираж</span>
-			<span class="right">55644008</span>
-		</li>
-		<li>
-			<span class="left">Средняя цена</span>
-			<span class="right">5000 $</span>
-		</li>
-		<li>
-			<span class="left">Проходы</span>
-			<span class="right pass ">0</span>
-		</li>
-	</ul>
+	<div class="coin-card__text">
+		<span class="coin-card__title text-medium">
+			200 złotych 1995 Międzynaro
+		</span>
+		<span class="coin-card__desc">
+			200 złotych 1995
+		</span>
+		<ul class="coin-card__info">
+			<li>
+				<span class="left">Тираж</span>
+				<span class="right">55644008</span>
+			</li>
+			<li>
+				<span class="left">Средняя цена</span>
+				<span class="right">5000 $</span>
+			</li>
+			<li>
+				<span class="left">Проходы</span>
+				<span class="right pass ">0</span>
+			</li>
+		</ul>
+	</div>
 </a>
 
 									</div>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('../components/head-meta.html', {"title": "Filter-page-done"})
+	@@include('../components/head-links.html')
+	<link rel="stylesheet" href="css/filter-page.css">
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/scroll-lock.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="content filter-page__container">
+	<div class="container">
+		<div class="content__wrap">
+			<div class="content__block-breadcrumbs mob">
+				@@include('../components/breadcrumbs.html')
+			</div>
+			<div class="content__panel">
+				<div class="content__panel-sidebar">
+					@@include('../components/filter.html')
+				</div>
+			</div>
+			<div class="content__block">
+				<div class="content__block-breadcrumbs">
+					@@include('../components/breadcrumbs.html')
+				</div>
+				<div class="content__block-title">
+					<h1 class="text-medium">Результат по запросу «Талер 1768-1782» </h1>
+					<p>Найдено: 15</p>
+				</div>
+				<div class="filter-page">
+					<div class="filter-page__finder">
+						@@include('../components/finder-input.html')
+						@@include('../components/finder-list.html')
+					</div>
+				</div>
+				<div class="content__block-wrap">
+					<div class="filter-page__result js-result-content">
+						<div class="filter-page__result-controls">
+							<div class="filter-page__result-select select-style js-dropdown-wrap">
+								<span class="select-style__btn js-dropdown-btn">Все</span>
+								<ul class="select-style__body js-dropdown-body">
+									<li class="select-style__item js-info-btn active" data-info="expensive">
+										<span class="select-style__option">По цене</span>
+									</li>
+									<li class="select-style__item js-info-btn active" data-info="expensive">
+										<span class="select-style__option">По популярности</span>
+									</li>
+									<li class="select-style__item js-info-btn" data-info="popular">
+										<span class="select-style__option">По аукционам</span>
+									</li>
+								</ul>
+							</div>
+							<div class="filter-page__result-views">
+								<svg class="active js-result-view" data-info="column">
+									<use xlink:href="img/sprite-mono.svg#list"></use>
+								</svg>
+								<svg class="js-result-view" data-info="row">
+									<use xlink:href="img/sprite-mono.svg#view-cards"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="filter-page__result-body js-result-body" data-block="column">
+							<div class="filter-page__result-item">
+								@@include('../components/card-horizontal.html', {
+								"pass-active": "active",
+								"pass": "6"
+								})
+							</div>
+							<div class="filter-page__result-item">
+								@@include('../components/card-horizontal.html', {
+								"pass-active": "",
+								"pass": "0"
+								})
+							</div>
+							<div class="filter-page__result-item">
+								@@include('../components/card-horizontal.html', {
+								"pass-active": "",
+								"pass": "0"
+								})
+							</div>
+						</div>
+						<div class="filter-page__result-body row js-result-body hidden" data-block="row">
+							<div class="filter-page__result-item">
+								@@include('../components/card-two-images.html', {
+								"pass-active": "active",
+								"pass": "6"
+								})
+							</div>
+							<div class="filter-page__result-item">
+								@@include('../components/card-two-images.html', {
+								"pass-active": "",
+								"pass": "0"
+								})
+							</div>
+							<div class="filter-page__result-item">
+								@@include('../components/card-two-images.html', {
+								"pass-active": "",
+								"pass": "0"
+								})
+							</div>
+						</div>
+					</div>
+					<div class="filter-page__pagination">
+						@@include('../components/pagination.html')
+					</div>
+				</div>
+			</div>
+		</div>
+		@@include('../components/dop-info.html')
+	</div>
+</main>
+@@include('../components/footer.html')
+<script>
+	$('.js-filter-mob-btn').on('click', function () {
+		$('.js-filter').show();
+		disableScroll();
+	});
+	$('.js-filter-mob-close').on('click', function () {
+		$('.js-filter').hide();
+		enableScroll();
+	});
+	$( window ).resize(function() {
+		if($(window).width() >= 960) {
+			$('.js-filter').removeAttr('style');
+		}
+	});
+
+	$('.js-result-view').on('click', function () {
+		if(!$(this).hasClass('active')){
+			$('.js-result-body').addClass('hidden');
+			$('.js-result-view').removeClass('active');
+			$(this).addClass('active');
+			$('.js-result-content').find("div[data-block='" + $(this).attr('data-info') +"']").removeClass('hidden');
+		}
+	});
+
+</script>
+</body>
+</html>

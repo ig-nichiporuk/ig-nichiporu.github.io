@@ -11,8 +11,6 @@
 </head>
 <body>
 @@include('../components/header.html')
-
-
 <main class="support-page">
 	<div class="container">
 		@@include('../components/breadcrumbs.html')
@@ -121,8 +119,6 @@
 </main>
 @@include('../components/footer.html')
 </body>
-
-
 <script>
 	$('.js-faq-btn').on('click', function () {
 		if($(this).hasClass('open')){
@@ -140,6 +136,4 @@
 		$('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
 	});
 </script>
-
-
 </html>

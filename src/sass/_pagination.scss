@@ -10,11 +10,15 @@
         display: flex;
         height: inherit;
         width: 120px;
+        cursor: pointer;
         svg {
             margin: auto;
             width: 24px;
             height: 24px;
             fill:$dark-color
+        }
+        &:hover {
+            fill: $active-color;
         }
     }
     &__prev {

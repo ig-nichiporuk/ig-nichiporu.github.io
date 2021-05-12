@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('../components/head-meta.html', {"title": "Filter-page"})
+	@@include('../components/head-links.html')
+	<link rel="stylesheet" href="css/filter-page.css">
+	<script src="js/jquery-3.6.0.js"></script>
+	<script src="js/scroll-lock.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/header.js"></script>
+</head>
+<body>
+@@include('../components/header.html')
+<main class="content filter-page__container">
+	<div class="container">
+		<div class="content__wrap">
+			<div class="content__block-breadcrumbs mob">
+				@@include('../components/breadcrumbs.html')
+			</div>
+			<div class="content__panel">
+				<div class="content__panel-sidebar">
+					@@include('../components/filter.html')
+				</div>
+			</div>
+			<div class="content__block">
+				<div class="content__block-breadcrumbs">
+					@@include('../components/breadcrumbs.html')
+				</div>
+				<div class="content__block-title">
+					<h1 class="text-medium">Расширенный поиск</h1>
+				</div>
+				<div class="filter-page">
+					<div class="filter-page__finder">
+						@@include('../components/finder-input.html')
+						@@include('../components/finder-list.html')
+					</div>
+				</div>
+				<div class="content__block-wrap"></div>
+			</div>
+		</div>
+		@@include('../components/dop-info.html')
+	</div>
+</main>
+@@include('../components/footer.html')
+</body>
+</html>

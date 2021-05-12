@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 	$('.js-finder-input').on('keyup', function() {
-
 		if($(this).val().length >= 1) {
 			/*$('.js-finder-input').val($(this).val());*/
 			$(this).closest('.js-finder-wrap').addClass('open');
@@ -13,7 +12,10 @@ $(document).ready(function() {
 		}
 	});
 	$('.js-finder-input').focusin(function () {
-		close_finder_body()
+		close_finder_body();
+	});
+	$('.js-finder-clean').on('click', function () {
+		close_finder_body();
 	})
 
 
