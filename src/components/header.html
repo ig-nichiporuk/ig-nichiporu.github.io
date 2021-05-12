@@ -10,7 +10,9 @@
 				</a>
 				<span class="header__menu js-catalog-menu">Каталог</span>
 				<div class="header__finder">
-					@@include('../components/finder-input.html')
+					@@include('../components/finder-input.html', {
+						"placeholder": "Поиск по каталогу",
+					})
 					@@include('../components/finder-list.html')
 				</div>
 				<!--mobile finder block-->

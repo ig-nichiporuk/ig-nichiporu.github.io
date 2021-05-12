@@ -32,7 +32,9 @@
 				</div>
 				<div class="filter-page">
 					<div class="filter-page__finder">
-						@@include('../components/finder-input.html')
+						@@include('../components/finder-input.html', {
+							"placeholder": "Поиск по ключевым словам",
+						})
 						@@include('../components/finder-list.html')
 					</div>
 				</div>
@@ -59,6 +61,11 @@
 								</svg>
 								<svg class="js-result-view" data-info="row">
 									<use xlink:href="img/sprite-mono.svg#view-cards"></use>
+								</svg>
+							</div>
+							<div class="filter__btn-mob js-filter-mob-btn">
+								<svg>
+								    <use xlink:href="img/sprite-mono.svg#settings"></use>
 								</svg>
 							</div>
 						</div>
@@ -109,7 +116,6 @@
 				</div>
 			</div>
 		</div>
-		@@include('../components/dop-info.html')
 	</div>
 </main>
 @@include('../components/footer.html')

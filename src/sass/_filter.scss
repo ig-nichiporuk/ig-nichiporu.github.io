@@ -122,19 +122,10 @@
             display: none;
             justify-content: center;
             align-items: center;
-            padding: 12px 15px;
-            background-color: #fff;
-            span {
-                position: relative;
-                font-size: 15px;
-                line-height: 21px;
-                padding: 0 0 0 34px;
-            }
+            width: 45px;
+            height: 45px;
+            margin: 0 0 0 10px;
             svg {
-                position: absolute;
-                top: 50%;
-                margin-top: -12px;
-                left: 0;
                 width: 24px;
                 height: 24px;
                 fill: $main-color;

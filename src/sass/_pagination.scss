@@ -18,7 +18,10 @@
             fill:$dark-color
         }
         &:hover {
-            fill: $active-color;
+            @include hover-bgc;
+            svg {
+                fill: $active-color;
+            }
         }
     }
     &__prev {
@@ -48,10 +51,13 @@
                 color: $main-color;
             }
             &-num {
+                border-radius: 50%;
                 &.active {
-                    border-radius: 50%;
                     color: #fff;
                     background: $active-color;
+                }
+                &:hover:not(.active){
+                    @include hover-bgc;
                 }
 
             }
@@ -100,9 +106,14 @@
         margin: 0;
     }
     .pagination__prev, .pagination__next {
-        width: 60px;
+        width: 40px;
     }
 }
 
-@media (max-width: 479px) {
+@media (max-width: 359px) {
+    .pagination__pages .page-num, .pagination__pages .page-empty {
+        width: 28px;
+        font-size: 13px;
+        line-height: 28px;
+    }
 }
