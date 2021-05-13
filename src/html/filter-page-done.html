@@ -71,6 +71,56 @@
 								</svg>
 							</div>
 						</div>
+						<div class="filter-page__result-hashtags">
+							<div class="filter-page__result-hashtag">
+								<span>
+									Золото
+									<svg>
+									    <use xlink:href="img/sprite-mono.svg#close"></use>
+									</svg>
+								</span>
+							</div>
+							<div class="filter-page__result-hashtag">
+								<span>
+									Золото
+									<svg>
+									    <use xlink:href="img/sprite-mono.svg#close"></use>
+									</svg>
+								</span>
+							</div>
+							<div class="filter-page__result-hashtag">
+								<span>
+									Золото
+									<svg>
+									    <use xlink:href="img/sprite-mono.svg#close"></use>
+									</svg>
+								</span>
+							</div>
+							<div class="filter-page__result-hashtag">
+								<span>
+									Золото
+									<svg>
+									    <use xlink:href="img/sprite-mono.svg#close"></use>
+									</svg>
+								</span>
+							</div>
+							<div class="filter-page__result-hashtag">
+								<span>
+									Золото
+									<svg>
+									    <use xlink:href="img/sprite-mono.svg#close"></use>
+									</svg>
+								</span>
+							</div>
+							<div class="filter-page__result-hashtag">
+								<span>
+									Золото
+									<svg>
+									    <use xlink:href="img/sprite-mono.svg#close"></use>
+									</svg>
+								</span>
+							</div>
+						</div>
 						<div class="filter-page__result-body js-result-body" data-block="column">
 							<div class="filter-page__result-item">
 								@@include('../components/card-horizontal.html', {
@@ -135,21 +185,31 @@
 	$(".checkbox__label-check").each(function () {
 		$(this).change(function () {
 			if($(".checkbox__label-check").filter(":checked").length > 0) {
-				if($(window).height() + $(document).scrollTop() <  $('.js-filter').offset().top + $('.js-filter').height() || $('.js-filter').scrollTop() < $('.js-filter-wrap').height() - $(window).height()) {
+				$('.js-filter-reset').removeClass('hidden');
+				$('.js-filter-show-btn').text('Показать результат (15)');
+
+				if($(window).height() + $(document).scrollTop() < $('.js-filter').offset().top + $('.js-filter').height() - 60) {
 					$('.js-filter-show-btn').addClass('fix');
 				}
 				else {
-					$('.js-filter-show-btn').removeClass('fix');
+					if($('.js-filter').scrollTop() < $('.js-filter-wrap').height() - $(window).height() - 60 && $('.js-filter-wrap').height() > $('.js-filter').height()) {
+						$('.js-filter-show-btn').addClass('fix');
+					}
+					else {
+						$('.js-filter-show-btn').removeClass('fix');
+					}
 				}
 			}
 			else {
+				$('.js-filter-reset').addClass('hidden');
+				$('.js-filter-show-btn').text('Найти');
 				$('.js-filter-show-btn').removeClass('fix');
 			}
 		});
 	});
 
 
-	$(document, '.js-filter').scroll(function () {
+	$(document).scroll(function () {
 		if($(".checkbox__label-check").filter(":checked").length > 0 && $(document).scrollTop() > $('.js-filter').offset().top - $(window).height() && $(window).height() + $(document).scrollTop() <  $('.js-filter').offset().top + $('.js-filter').height()) {
 			$('.js-filter-show-btn').addClass('fix');
 		}
@@ -158,7 +218,7 @@
 		}
 	});
 	$('.js-filter').scroll(function () {
-		if(($(".checkbox__label-check").filter(":checked").length > 0 && $('.js-filter').scrollTop() < $('.js-filter-wrap').height() - $(window).height() - 150)) {
+		if(($(".checkbox__label-check").filter(":checked").length > 0 && $('.js-filter').scrollTop() < $('.js-filter-wrap').height() - $(window).height() - 60)) {
 			$('.js-filter-show-btn').addClass('fix');
 		}
 		else {

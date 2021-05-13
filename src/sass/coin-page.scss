@@ -78,11 +78,6 @@
     }
 }
 .coin-page {
-    &__container {
-        .content__block-wrap {
-            overflow: hidden;
-        }
-    }
     padding: 40px;
 
     &__img {
@@ -260,6 +255,12 @@
                 background: none;
                 margin: 80px -40px 0;
             }
+            .pagination__prev {
+                border-radius: 0 0 0 $bdrs-6;
+            }
+            .pagination__next {
+                border-radius: 0 0 $bdrs-6 0;
+            }
             &[data-block="varieties-block"] {
                 padding-bottom: 40px;
             }
@@ -401,6 +402,10 @@
         font-size: 28px;
         line-height: 39px;
         letter-spacing: 0.2px;
+    }
+    .coin-page__specification-list li .left .helper__body {
+        right: auto;
+        left: 0;
     }
 }
 
