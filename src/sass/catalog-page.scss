@@ -36,26 +36,14 @@
         color: #9595af;
         white-space: nowrap;
         cursor: pointer;
-        &:before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 51%;
-            right: 51%;
-            height: 3px;
-            background-color: #fff;
-            transition: all 0.2s ease-out;
-        }
-        &:not(.active):hover,
+        @include tab-hover(#fff);
+        .no-touch &:not(.active):hover,
         &.active{
             color: #fff;
         }
-        &:not(.active):hover,
+        .no-touch &:not(.active):hover,
         &.active{
-            &:before {
-                left: 0;
-                right: 0;
-            }
+            @include tab-hover-active;
         }
     }
     &__tab + &__tab {

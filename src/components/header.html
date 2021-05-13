@@ -13,7 +13,9 @@
 					@@include('../components/finder-input.html', {
 						"placeholder": "Поиск по каталогу",
 					})
-					@@include('../components/finder-list.html')
+					@@include('../components/finder-list.html', {
+						"link-to-filter-page": "",
+					})
 				</div>
 				<!--mobile finder block-->
 				<div class="header__finder mob">
@@ -27,7 +29,9 @@
 									<use xlink:href="img/sprite-mono.svg#close"></use>
 								</svg>
 							</div>
-							@@include('../components/finder-list.html')
+							@@include('../components/finder-list.html', {
+								"link-to-filter-page": "",
+							})
 						</div>
 						<svg class="finder__btn-icon js-finder-open-input">
 							<use xlink:href="img/sprite-mono.svg#search"></use>

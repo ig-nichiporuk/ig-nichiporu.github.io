@@ -30,30 +30,14 @@
         line-height: 21px;
         color: $main-color;
         cursor: pointer;
-        &:before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 51%;
-            right: 51%;
-            height: 3px;
-            background-color: $main-color;
-            transition: all $trans-time ease-out;
-
-        }
-        &:not(.active):hover, &:not(.active):active {
-            &:before {
-                left: 0;
-                right: 0;
-                transition: all $trans-time ease-out;
-            }
+        @include tab-hover($main-color);
+        .no-touch &:not(.active):hover,
+        .no-touch &:not(.active):active,
+        &.active{
+            @include tab-hover-active;
         }
         &.active{
             color: $dark-color;
-            &:before {
-                left: 0;
-                right: 0;
-            }
         }
     }
     &__btn + &__btn {

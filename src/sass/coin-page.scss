@@ -236,17 +236,7 @@
         color: #9595AF;
         padding: 15px 0 15px 0;
         position: relative;
-        &:before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 51%;
-            right: 51%;
-            height: 3px;
-            background-color: #fff;
-            -webkit-transition: all 0.2s ease-out;
-            transition: all 0.2s ease-out;
-        }
+        @include tab-hover(#fff);
         &:not(.active):hover {
             cursor: pointer;
         }
@@ -254,13 +244,10 @@
             color: #fff;
             cursor: default;
         }
-        &:not(.active):hover,
+        .no-touch &:not(.active):hover,
         &.active{
             color: #fff;
-            &:before {
-                left: 0;
-                right: 0;
-            }
+            @include tab-hover-active;
         }
     }
     &__tab + &__tab {

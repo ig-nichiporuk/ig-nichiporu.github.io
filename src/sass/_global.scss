@@ -447,6 +447,7 @@ input[type=number] {
         border-top-color: transparent;
         border-bottom-right-radius: $bdrs-4;
         border-bottom-left-radius: $bdrs-4;
+        overflow: hidden;
         &-list {
             overflow-y: auto;
             li {
