@@ -114,6 +114,7 @@ gulp.task('css-src', function (done) {
 });
 gulp.task('img-src', function (done) {
 	gulp.src(['./src/media/*.*', './src/media/global/*.*']).pipe(gulp.dest('./src/img/'));
+	gulp.src(['./src/media/webp/*.*']).pipe(gulp.dest('./src/img/webp/'));
 	done();
 });
 
