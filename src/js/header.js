@@ -22,7 +22,8 @@ $(document).ready(function() {
 	$(document).mousedown(function(e){
 		if(!$('.js-catalog-menu').is(e.target) && !$('.js-catalog-wrap').is(e.target)
 			&& $('.js-catalog-menu').has(e.target).length === 0
-			&& $('.js-catalog-wrap').has(e.target).length === 0) {
+			&& $('.js-catalog-wrap').has(e.target).length === 0
+			&& $('.js-catalog-menu').hasClass('open')) {
 			close_catalog_menu();
 			enableScroll();
 		}

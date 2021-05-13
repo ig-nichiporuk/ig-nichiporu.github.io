@@ -120,6 +120,7 @@
 </main>
 @@include('../components/footer.html')
 <script>
+
 	$('.js-filter-mob-btn').on('click', function () {
 		$('.js-filter').show();
 		disableScroll();
@@ -128,6 +129,44 @@
 		$('.js-filter').hide();
 		enableScroll();
 	});
+
+	$(".checkbox__label-check").each(function () {
+		$(this).change(function () {
+			if($(".checkbox__label-check").filter(":checked").length > 0) {
+				if($(window).height() + $(document).scrollTop() <  $('.js-filter').offset().top + $('.js-filter').height() || $('.js-filter').scrollTop() < $('.js-filter-wrap').height() - $(window).height()) {
+					$('.js-filter-show-btn').addClass('fix');
+				}
+				else {
+					$('.js-filter-show-btn').removeClass('fix');
+				}
+			}
+			else {
+				$('.js-filter-show-btn').removeClass('fix');
+			}
+		});
+	});
+
+
+	$(document, '.js-filter').scroll(function () {
+		if($(".checkbox__label-check").filter(":checked").length > 0 && $(document).scrollTop() > $('.js-filter').offset().top - $(window).height() && $(window).height() + $(document).scrollTop() <  $('.js-filter').offset().top + $('.js-filter').height()) {
+			$('.js-filter-show-btn').addClass('fix');
+		}
+		else {
+			$('.js-filter-show-btn').removeClass('fix');
+		}
+	});
+	$('.js-filter').scroll(function () {
+		if(($(".checkbox__label-check").filter(":checked").length > 0 && $('.js-filter').scrollTop() < $('.js-filter-wrap').height() - $(window).height() - 150)) {
+			$('.js-filter-show-btn').addClass('fix');
+		}
+		else {
+			$('.js-filter-show-btn').removeClass('fix');
+		}
+	});
+
+
+
+
 	$( window ).resize(function() {
 		if($(window).width() >= 960) {
 			$('.js-filter').removeAttr('style');
