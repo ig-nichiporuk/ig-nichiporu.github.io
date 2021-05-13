@@ -123,6 +123,9 @@
     .dop-info__content-item {
         width: 50%;
     }
+    .dop-info__title {
+        letter-spacing: normal;
+    }
     @for $i from 5 through 8 {
         .dop-info__content-item:nth-of-type(#{$i}) {
             display: none;
@@ -176,9 +179,12 @@
         display: block;
     }
     .dop-info__title {
-        margin: 0 0 25px 0;
+        margin: 0 0 20px 0;
         padding: 0 15px;
-        font-size: 28px;
-        line-height: 39px;
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .dop-info__content {
+        padding: 30px 0 0 0;
     }
 }

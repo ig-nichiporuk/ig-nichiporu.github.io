@@ -450,12 +450,10 @@
 	});
 	$('.js-pecification-title').on('click', function () {
 		if($(this).hasClass('open')){
-			$('.js-pecification-title').removeClass('open');
-			$('.js-pecification-title').next().slideUp(200, 'linear');
+			$(this).removeClass('open');
+			$(this).next().slideUp(200, 'linear');
 		}
 		else {
-			$('.js-pecification-title').removeClass('open');
-			$('.js-pecification-title').next().slideUp(200, 'linear');
 			$(this).addClass('open');
 			$(this).addClass('open').next().slideDown(200, 'linear');
 		}

@@ -415,7 +415,8 @@
         padding: 30px;
     }
     .auctions__filter:last-of-type .auctions__filter-wrap > * {
-        padding: 10px 0;
+        padding: 0;
+        margin-bottom: 10px;
         display: block;
     }
     .auctions__filter + .auctions__filter:not(:last-of-type) {
@@ -425,6 +426,8 @@
     .auctions__filter:last-of-type .auctions__filter-wrap {
         columns: 2;
         display: block;
+        margin: 0;
+        column-gap: 50px;
     }
     .auctions__filter:not(:last-of-type) .auctions__filter-wrap .checkbox__label-text {
         max-width: 200px;
@@ -485,6 +488,7 @@
     }
     .auctions__filter:not(:last-of-type) .auctions__filter-wrap, .auctions__filter:last-of-type .auctions__filter-wrap {
         column-gap: 80px;
+        margin: 0;
     }
     .auctions__cards, .varieties__cards {
         margin: 10px -9px -20px;

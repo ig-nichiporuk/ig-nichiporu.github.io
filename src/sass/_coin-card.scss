@@ -46,12 +46,13 @@
         color: $dark-color;
     }
     &__desc{
-        margin: 10px 0 25px 0;
         font-size: 14px;
         line-height: 20px;
     }
-    .two-imgs &__desc,
-    .big-img &__desc{
+    &__title + &__desc{
+        margin: 10px 0 25px 0;
+    }
+    .two-imgs &__desc{
         margin: 10px 0 15px 0;
     }
     &__desc  + &__title {
