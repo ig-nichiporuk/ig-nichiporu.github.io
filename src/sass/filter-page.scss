@@ -3,9 +3,6 @@
     margin: 15px 0 0;
 }
 .filter-page {
-    & + footer {
-        margin: 0;
-    }
     &__container {
         .content__block-wrap {
             overflow: hidden;
@@ -18,14 +15,14 @@
         padding: 0;
     }
     &__wrap {
-        min-height: 960px;
+        min-height: 660px;
         .content__block-title {
             margin: 130px 0 0;
             text-align: center;
         }
         .filter-page__finder {
             margin: 30px auto 0;
-            max-width: 1140px;
+            max-width: 750px;
         }
     }
     &__finder {
@@ -51,11 +48,48 @@
             color: $gray-text;
         }
         a {
+            white-space: nowrap;
             font-weight: 500;
             color: $active-color;
         }
         p + p {
             margin: 10px 0 0;
+        }
+    }
+    &__analog {
+        margin: 130px 0 0;
+        background-color: #fff;
+        border-radius: $bdrs-6;
+        padding: 40px 40px 0;
+        &-title {
+            display: block;
+            font-size: 32px;
+            line-height: 45px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: $dark-color;
+        }
+        &-body{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 5px -10px -20px;
+        }
+        &-item {
+            width: 25%;
+            padding: 20px 10px;
+        }
+        &-btn {
+            display: block;
+            margin: 40px -40px 0;
+            font-size: 15px;
+            line-height: 50px;
+            text-align: center;
+            color: $dark-color;
+            cursor: pointer;
+            box-shadow: inset 0 1px 0 0 #EDEDED;
+            &:hover {
+                color: $active-color;
+            }
         }
     }
     &__result {
@@ -154,9 +188,6 @@
             .content__block-title {
                 margin: 110px 0 0;
             }
-            .filter-page__finder {
-                max-width: 930px;
-            }
         }
         &__result {
             &-body {
@@ -204,6 +235,24 @@
         &__pagination {
             margin: 40px 0 0;
         }
+        &__wrap {
+            .content__block-title {
+                margin: 90px 0 0;
+            }
+        }
+        &__analog {
+            margin: 100px 0 0;
+            padding: 30px 20px 0;
+            &-body{
+                margin: 5px -10px -20px;
+            }
+            &-item {
+                width: calc(100% / 3);
+            }
+            &-btn {
+                margin: 40px -20px 0;
+            }
+        }
     }
 }
 
@@ -219,18 +268,51 @@
                 padding: 20px 10px;
             }
         }
+        &__wrap {
+            .content__block-title {
+                margin: 50px 0 0;
+            }
+            .filter-page__finder {
+                margin: 20px auto 0;
+                max-width: 600px;
+            }
+        }
+        &__not-found {
+            margin: 20px auto 0;
+            max-width: 540px;
+            p {
+                font-size: 18px;
+                line-height: 27px;
+                letter-spacing: -0.1px;
+            }
+        }
+
+        &__analog {
+            margin: 60px 0 0;
+            &-title {
+                text-align: center;
+                font-size: 28px;
+                line-height: 39px;
+                letter-spacing: -0.5px;
+            }
+            &-body{
+                max-width: 600px;
+                margin: 10px auto -15px;
+            }
+            &-item {
+                width: 50%;
+                padding: 15px 10px;
+            }
+        }
     }
 }
 
 @media (max-width: 779px) {
     .filter-page {
         &__wrap {
-            min-height: 454px;
-            .content__block-title {
-                margin: 50px 0 0;
-            }
+            min-height: 254px;
             .filter-page__finder {
-                margin: 20px auto 0;
+                max-width: 500px;
             }
         }
         &__result {
@@ -241,6 +323,23 @@
             .row &-item,
             &-item {
                 padding: 20px 9px;
+            }
+        }
+        &__analog {
+            padding: 30px 15px 0;
+            &-title {
+                font-size: 28px;
+                line-height: 34px;
+            }
+            &-body{
+                max-width: inherit;
+                margin: 10px -10px -15px;
+            }
+            &-item {
+                padding: 15px 10px;
+            }
+            &-btn {
+                margin: 40px -15px 0;
             }
         }
     }
@@ -259,6 +358,32 @@
             &-item {
                 width: 100%;
                 padding: 10px 0 ;
+            }
+        }
+        &__not-found {
+            p {
+                text-align: center;
+            }
+            p + p {
+                margin: 5px 0 0;
+            }
+            a {
+                display: block;
+                line-height: 25px;
+                &:first-of-type {
+                    margin: 10px 0 0;
+                }
+            }
+        }
+
+        &__analog {
+            padding: 25px 15px 0;
+            &-body{
+                margin: 15px 0 -10px;
+            }
+            &-item {
+                width: 100%;
+                padding: 10px 0;
             }
         }
     }
