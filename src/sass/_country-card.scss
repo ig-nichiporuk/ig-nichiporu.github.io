@@ -2,6 +2,7 @@
 .country-card {
     @include card-style;
     overflow: hidden;
+    height: 100%;
     padding: 10px;
     &:hover {
         @include card-hover;

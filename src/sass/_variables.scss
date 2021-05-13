@@ -43,7 +43,6 @@ $height-mob:60px;
 @mixin card-style{
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 100%;
     background: #FFF;
     border-radius: $bdrs-6;

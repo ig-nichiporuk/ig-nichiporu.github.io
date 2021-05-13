@@ -1,6 +1,7 @@
 @import "variables";
 .coin-card {
     @include card-style;
+    height: 100%;
     padding: 20px 20px 0;
     &:hover {
         @include card-hover;

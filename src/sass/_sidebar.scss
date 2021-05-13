@@ -2,7 +2,9 @@
 .sidebar {
     border-radius: $bdrs-6;
     background-color: #fff;
-    overflow: hidden;
+    &:not(.mob) {
+        overflow: hidden;
+    }
     &__item {
         &-btn {
             position: relative;
@@ -166,7 +168,7 @@
 
         &__mob{
             &-select {
-                margin: 10px 0 0 0;
+                margin: 5px 0 0 0;
             }
         }
     }

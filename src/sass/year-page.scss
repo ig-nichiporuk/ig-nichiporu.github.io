@@ -25,6 +25,7 @@
         margin: 0 0 25px 0;
         font-size: 32px;
         line-height: 45px;
+        font-weight: 500;
         letter-spacing: 0.2px;
         color: $dark-color;
     }
@@ -72,8 +73,8 @@
 
 @media (max-width: 959px) {
     .year-page__subtitle {
-        font-size: 28px;
-        line-height: 39px;
+        font-size: 24px;
+        line-height: 34px;
         letter-spacing: 0.1px;
     }
     .year-page__content {
