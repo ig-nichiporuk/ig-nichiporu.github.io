@@ -296,9 +296,10 @@
         background-position: 50% 100%;
         &__wrap {
             justify-content: stretch;
-            & > * {
-                width: 100%;
-            }
+        }
+        &__form,
+        &__statistic {
+            width: 100%;
         }
         &__cookies {
             flex-direction: column;
@@ -356,6 +357,7 @@
 @media (max-width: 359px) {
     .main-page {
         &__title {
+            width: 275px;
             .title {
                 font-size: 64px;
                 line-height: 78px;
