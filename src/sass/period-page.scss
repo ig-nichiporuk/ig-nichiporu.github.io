@@ -1,4 +1,15 @@
 @import "variables";
+@import "global";
+@import "header";
+@import "footer";
+@import "sidebar";
+@import "stamping";
+@import "period-card";
+@import "breadcrumbs";
+@import "dop-info-block";
+@import "news";
+@import "coin-card";
+
 .period-page{
     &__header-desc .title,
     &__stamping-title {
@@ -90,6 +101,7 @@
         }
     }
 }
+
 @media (max-width: 1539px) {
     .period-page{
         &__content {

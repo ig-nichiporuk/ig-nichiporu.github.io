@@ -1,4 +1,8 @@
 @import "variables";
+@import "variables";
+@import "global";
+@import "header";
+@import "footer";
 .fast-find,
 .statistic,
 .main-page__title{
@@ -111,7 +115,6 @@
         }
     }
 }
-
 .main-page {
     background-position: 50% 100%;
     background-repeat: no-repeat;
@@ -197,6 +200,7 @@
         }
     }
 }
+
 @media (max-width: 1539px) {
     .main-page {
         &__content {

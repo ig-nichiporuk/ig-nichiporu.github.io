@@ -1,4 +1,13 @@
 @import "variables";
+@import "global";
+@import "header";
+@import "footer";
+@import "sidebar";
+@import "stamping";
+@import "breadcrumbs";
+@import "coin-card";
+@import "pagination";
+
 .auctions {
     display: flex;
     flex-wrap: wrap;

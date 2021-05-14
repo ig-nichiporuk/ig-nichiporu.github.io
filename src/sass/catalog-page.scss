@@ -1,10 +1,17 @@
 @import "variables";
+@import "global";
+@import "header";
+@import "footer";
+@import "breadcrumbs";
+@import "dop-info-block";
+@import "news";
+@import "coin-card";
+
 .catalog-page__container {
     .content__block {
         padding: 0;
     }
 }
-
 .catalog-page {
     min-height: 806px;
     &__header {
@@ -225,12 +232,12 @@
         }
     }
 }
+
 @media (max-width: 1539px) {
     .catalog-page__container .content__wrap {
         margin: 0 0 100px 0;
     }
 }
-
 
 @media (max-width: 1299px) {
     .catalog-page {

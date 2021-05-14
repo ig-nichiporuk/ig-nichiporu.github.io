@@ -1,4 +1,12 @@
-@import"variables";
+@import "variables";
+@import "global";
+@import "header";
+@import "footer";
+@import "breadcrumbs";
+@import "pagination";
+@import "coin-card";
+@import "filter";
+
 .content__block-title + .filter-page {
     margin: 15px 0 0;
 }

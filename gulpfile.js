@@ -35,7 +35,7 @@ gulp.task('serve', function(done) {  // task sass выполняется пер�
 gulp.task('sass',  function(done){ //Создаём таск "sass"
 	gulp.src(['src/sass/**/*.sass','src/sass/**/*.scss']) //Берём источник
 		.pipe(sourcemaps.init())
-		.pipe(sass({/*outputStyle:'compressed'*/}).on('error',sass.logError)) //Преобразуем Sass в Css
+		.pipe(sass({outputStyle:'compressed'}).on('error',sass.logError)) //Преобразуем Sass в Css
 		// .pipe(uncss({
   //           html: ['src/filter-industrial-tires.html']
   //       }))

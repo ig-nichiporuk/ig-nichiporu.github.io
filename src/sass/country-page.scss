@@ -1,3 +1,16 @@
+@import "variables";
+@import "global";
+@import "header";
+@import "footer";
+@import "sidebar";
+@import "stamping";
+@import "country-card";
+@import "breadcrumbs";
+@import "dop-info-block";
+@import "news";
+@import "pagination";
+@import "coin-card";
+
 .country-page {
     &__container {
         .content__block-wrap {

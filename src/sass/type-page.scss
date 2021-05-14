@@ -1,4 +1,14 @@
 @import "variables";
+@import "global";
+@import "header";
+@import "footer";
+@import "sidebar";
+@import "stamping";
+@import "breadcrumbs";
+@import "dop-info-block";
+@import "news";
+@import "coin-card";
+
 .table {
     position: relative;
     display: table;
