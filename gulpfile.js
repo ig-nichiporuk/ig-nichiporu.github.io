@@ -135,7 +135,7 @@ gulp.task('clear-img', function (done) {
 
 
 
-gulp.task('default', gulp.series('css-src', 'img-src', 'svgSpriteCol', 'svgSpriteBuild', 'sass', 'serve'));
+gulp.task('default', gulp.series('html-src', 'css-src', 'img-src', 'svgSpriteCol', 'svgSpriteBuild', 'sass', 'serve'));
 
 
 
