@@ -4,8 +4,7 @@
 	@@include('../components/head-meta.html', {"title": "Catalog-page"})
 	@@include('../components/head-links.html')
 	<link rel="stylesheet" href="css/catalog-page.css?v.1">
-	<script src="js/jquery-3.6.0.js"></script>
-	<script src="js/scroll-lock.min.js"></script>
+	@@include('../components/head-scripts.html')
 	<script src="js/script.js"></script>
 	<script src="js/header.js"></script>
 </head>
@@ -40,7 +39,7 @@
 						<div class="catalog-page__content">
 							<div class="catalog-page__map">
 								<svg class="catalog-page__map-icon">
-									<use xlink:href="img/sprite-color.svg#europe"></use>
+									<use xlink:href="#europe"></use>
 								</svg>
 								<div class="catalog-page__map-desc">
 									<span class="title">Европа</span>
@@ -74,14 +73,14 @@
 											<span href="#" class="catalog-page__list-link js-show-list">
 												<span class="circle">
 													<svg>
-													    <use xlink:href="img/sprite-mono.svg#list"></use>
+													    <use xlink:href="#list"></use>
 													</svg>
 												</span>
 												<p class="caption">
 													<span class="title">
 														Германия до 1871
 														<svg>
-														    <use xlink:href="img/sprite-mono.svg#arrow-down"></use>
+														    <use xlink:href="#arrow-down"></use>
 														</svg>
 													</span>
 													<span class="desc">5404 монет</span>
@@ -229,7 +228,7 @@
 								<div class="catalog-page__list sublist js-list">
 									<span class="catalog-page__list-title js-show-mainlist">
 										<svg>
-										    <use xlink:href="img/sprite-mono.svg#arrow-down"></use>
+										    <use xlink:href="#arrow-down"></use>
 										</svg>
 										Германия до 1871
 									</span>

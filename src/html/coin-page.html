@@ -4,8 +4,7 @@
 	@@include('../components/head-meta.html', {"title": "Coin-page"})
 	@@include('../components/head-links.html')
 	<link rel="stylesheet" href="css/coin-page.css?v.1">
-	<script src="js/jquery-3.6.0.js"></script>
-	<script src="js/scroll-lock.min.js"></script>
+	@@include('../components/head-scripts.html')
 	<script src="js/script.js"></script>
 	<script src="js/header.js"></script>
 </head>
@@ -129,7 +128,7 @@
 												Краузе
 												<div class="helper dropdown js-dropdown-wrap">
 													<svg class="helper__btn dropdown__btn js-dropdown-btn open">
-													    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+													    <use xlink:href=#help-info"></use>
 													</svg>
 													<div class="helper__body dropdown__body js-dropdown-body">
 														Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
@@ -143,7 +142,7 @@
 												Фишер
 												<div class="helper dropdown js-dropdown-wrap">
 													<svg class="helper__btn dropdown__btn js-dropdown-btn open">
-													    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+													    <use xlink:href="#help-info"></use>
 													</svg>
 													<div class="helper__body dropdown__body js-dropdown-body">
 														Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!
@@ -157,7 +156,7 @@
 												Пархимович (POL 2020)
 												<div class="helper dropdown js-dropdown-wrap">
 													<svg class="helper__btn dropdown__btn js-dropdown-btn open">
-													    <use xlink:href="img/sprite-mono.svg#help-info"></use>
+													    <use xlink:href="#help-info"></use>
 													</svg>
 													<div class="helper__body dropdown__body js-dropdown-body">
 														Lorem ipsum dolor sit amet, consectetur adipisicing elit. At!

@@ -26,7 +26,7 @@ gulp.task('serve', function(done) {  // task sass выполняется пер�
 	browserSync.init({
 		server: "src/",  // Остлеживаем всё в папке site
 	});
-	gulp.watch("src/media/**/*", gulp.series('clear-img', 'img-src', 'svgSpriteCol', 'svgSpriteBuild'));
+	gulp.watch("src/media/**/*", gulp.series('clear-img', 'img-src', 'svgSpriteBuild'));
 	gulp.watch("src/js/**/*").on('change', browserSync.reload);
 	gulp.watch("src/sass/**/*", gulp.series('clear-css', 'sass', 'css-src')); // Остлеживаем в папке site папку sass  и все файлы .scss
 	gulp.watch(["src/html/*.html", "src/components/*.html"], gulp.series('html-src')).on('change', browserSync.reload); // при изменении html в папке site перезагружается браузер
@@ -72,16 +72,7 @@ gulp.task('svgSpriteBuild', function (done) {
 			parserOptions: { xmlMode: true }
 		}))
 		.pipe(replace('&gt;', '>'))	// cheerio преобразует '>' в '&gt;', заменяем.
-		.pipe(svgSprite({
-				mode: "symbols",
-				padding: "0",
-				preview: false,
-				svg: {
-					symbols: './sprite-mono.svg'
-				}
-			}
-		))
-		.pipe(gulp.dest('src/img'));
+		.pipe(gulp.dest('src/svg'));
 	done();
 });
 
@@ -89,13 +80,13 @@ gulp.task('svgSpriteBuild', function (done) {
 
 //---------------------Минимизация цветных SVG-картинок---------------------------------------------------------------
 //---------------------Минимизация цветных SVG-картинок---------------------------------------------------------------
-gulp.task('svgSpriteCol', function (done) {
-	gulp.src('./src/media/svg-color/**/*.svg')
+gulp.task('sprite', function (done) {
+	gulp.src('./src/svg/*.svg')
 		.pipe(svgSprite({
 				mode: "symbols",
 				preview: false,
 				svg: {
-					symbols: './sprite-color.svg'
+					symbols: './global-sprite.html'
 				}
 			}
 		))
@@ -115,6 +106,7 @@ gulp.task('css-src', function (done) {
 gulp.task('img-src', function (done) {
 	gulp.src(['./src/media/*.*', './src/media/global/*.*']).pipe(gulp.dest('./src/img/'));
 	gulp.src(['./src/media/webp/*.*']).pipe(gulp.dest('./src/img/webp/'));
+	gulp.src(['./src/media/svg-color/**/*.*']).pipe(gulp.dest('./src/svg/'));
 	done();
 });
 
@@ -135,7 +127,7 @@ gulp.task('clear-img', function (done) {
 
 
 
-gulp.task('default', gulp.series('html-src', 'css-src', 'img-src', 'svgSpriteCol', 'svgSpriteBuild', 'sass', 'serve'));
+gulp.task('default', gulp.series('html-src', 'css-src', 'img-src', 'svgSpriteBuild', 'sass', 'serve'));
 
 
 

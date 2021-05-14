@@ -12,7 +12,8 @@
 
 	<link rel="stylesheet" href="css/main-page.css?v.1">
 	<script src="js/jquery-3.6.0.js"></script>
-	<script src="js/scroll-lock.min.js"></script>
+<script src="js/scroll-lock.min.js"></script>
+<script src="js/global_svg_localstorage.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/header.js"></script>
 </head>
@@ -34,7 +35,7 @@
 			<div class="header__wrap">
 				<a href="#" class="header__logo">
 					<svg>
-						<use xlink:href="img/sprite-color.svg#logo"></use>
+						<use xlink:href="#logo"></use>
 					</svg>
 				</a>
 				<span class="header__menu js-catalog-menu">Каталог</span>
@@ -44,19 +45,19 @@
 		<input class="js-finder-input" type="text" placeholder="Поиск по каталогу">
 		<a href="#" class="finder__sort">
 			<svg class="finder__sort-icon">
-				<use xlink:href="img/sprite-mono.svg#settings"></use>
+				<use xlink:href="#settings"></use>
 			</svg>
 		</a>
 		<span class="finder__cleaner js-finder-clean">
 			<svg class="finder__cleaner-icon">
-				<use xlink:href="img/sprite-mono.svg#close"></use>
+				<use xlink:href="#close"></use>
 			</svg>
 		</span>
 
 	</div>
 	<a href="#" class="finder__btn">
 		<svg class="finder__btn-icon">
-			<use xlink:href="img/sprite-mono.svg#search"></use>
+			<use xlink:href="#search"></use>
 		</svg>
 	</a>
 </div>
@@ -77,11 +78,11 @@
 						<div class="header__finder-animate js-finder-animate-block">
 							<div class="header__finder-wrap js-finder-wrap">
 								<svg class="find-icon">
-									<use xlink:href="img/sprite-mono.svg#search"></use>
+									<use xlink:href="#search"></use>
 								</svg>
 								<input class="js-finder-input" type="text" placeholder="Поиск по каталогу">
 								<svg class="close-icon js-finder-animate-close">
-									<use xlink:href="img/sprite-mono.svg#close"></use>
+									<use xlink:href="#close"></use>
 								</svg>
 							</div>
 							<div class="finder__body js-finder-body">
@@ -96,7 +97,7 @@
 </div>
 						</div>
 						<svg class="finder__btn-icon js-finder-open-input">
-							<use xlink:href="img/sprite-mono.svg#search"></use>
+							<use xlink:href="#search"></use>
 						</svg>
 
 				</div>
@@ -107,7 +108,7 @@
 					<span class="header__currency-btn dropdown__btn js-dropdown-btn">
 						USD
 						<svg class="arrow">
-						    <use xlink:href="img/sprite-mono.svg#arrow-down"></use>
+						    <use xlink:href="#arrow-down"></use>
 						</svg>
 					</span>
 					<ul class="header__currency-list dropdown__body js-dropdown-body">
@@ -126,7 +127,7 @@
 						</span>
 						ENG
 						<svg class="arrow">
-						    <use xlink:href="img/sprite-mono.svg#arrow-down"></use>
+						    <use xlink:href="#arrow-down"></use>
 						</svg>
 					</span>
 					<ul class="header__lang-list dropdown__body js-dropdown-body">
@@ -156,23 +157,13 @@
 						</li>
 					</ul>
 				</div>
-
-				<!--mobile button burger-->
 				<span class="header__menu-mob js-catalog-menu">
-					<!--<svg class="menu">
-					    <use xlink:href="img/sprite-mono.svg#hamburger"></use>
-					</svg>
-					<svg class="close">
-					    <use xlink:href="img/sprite-mono.svg#close"></use>
-					</svg>-->
 					<span class="btn-wrap">
 						<span class="top"></span>
 						<span class="middle"></span>
 						<span class="bottom"></span>
 					</span>
 				</span>
-				<!--mobile button burger end-->
-
 			</div>
 		</div>
 	</div>
@@ -359,7 +350,7 @@
 			<div class="footer__logo">
 				<a href="#" class="footer__logo-link">
 					<svg>
-						<use xlink:href="img/sprite-color.svg#logo"></use>
+						<use xlink:href="#logo"></use>
 					</svg>
 				</a>
 				<p class="footer__logo-text"><span>© 2021 «Coinstrail».</span> <span>Все права защищены.</span></p>
