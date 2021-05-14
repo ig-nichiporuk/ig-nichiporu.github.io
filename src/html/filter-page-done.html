@@ -186,24 +186,26 @@
 		$(this).change(function () {
 			if($(".checkbox__label-check").filter(":checked").length > 0) {
 				$('.js-filter-reset').removeClass('hidden');
-				$('.js-filter-show-btn').text('Показать результат (15)');
+				$('.js-filter-show-btn').text('Показать результат (15)').removeAttr('disabled');
+				$('.js-filter-wrap').addClass('checked');
 
-				if($(window).height() + $(document).scrollTop() < $('.js-filter').offset().top + $('.js-filter').height() - 60) {
-					$('.js-filter-show-btn').addClass('fix');
+				if($(window).height() + $(document).scrollTop() < $('.js-filter').offset().top + $('.js-filter').height() - 100) {
+					$('.js-filter-btns').addClass('fix');
 				}
 				else {
-					if($('.js-filter').scrollTop() < $('.js-filter-wrap').height() - $(window).height() - 60 && $('.js-filter-wrap').height() > $('.js-filter').height()) {
-						$('.js-filter-show-btn').addClass('fix');
+					if($('.js-filter').scrollTop() < $('.js-filter-wrap').height() - $(window).height() - 100 && $('.js-filter-wrap').height() > $('.js-filter').height()) {
+						$('.js-filter-btns').addClass('fix');
 					}
 					else {
-						$('.js-filter-show-btn').removeClass('fix');
+						$('.js-filter-btns').removeClass('fix');
 					}
 				}
 			}
 			else {
 				$('.js-filter-reset').addClass('hidden');
-				$('.js-filter-show-btn').text('Найти');
-				$('.js-filter-show-btn').removeClass('fix');
+				$('.js-filter-show-btn').text('Найти').attr('disabled', true);
+				$('.js-filter-btns').removeClass('fix');
+				$('.js-filter-wrap').removeClass('checked');
 			}
 		});
 	});
@@ -211,20 +213,28 @@
 
 	$(document).scroll(function () {
 		if($(".checkbox__label-check").filter(":checked").length > 0 && $(document).scrollTop() > $('.js-filter').offset().top - $(window).height() && $(window).height() + $(document).scrollTop() <  $('.js-filter').offset().top + $('.js-filter').height()) {
-			$('.js-filter-show-btn').addClass('fix');
+			$('.js-filter-btns').addClass('fix');
 		}
 		else {
-			$('.js-filter-show-btn').removeClass('fix');
+			$('.js-filter-btns').removeClass('fix');
 		}
 	});
 	$('.js-filter').scroll(function () {
-		if(($(".checkbox__label-check").filter(":checked").length > 0 && $('.js-filter').scrollTop() < $('.js-filter-wrap').height() - $(window).height() - 60)) {
-			$('.js-filter-show-btn').addClass('fix');
+		if(($(".checkbox__label-check").filter(":checked").length > 0 && $('.js-filter').scrollTop() < $('.js-filter-wrap').height() - $(window).height() - 100)) {
+			$('.js-filter-btns').addClass('fix');
 		}
 		else {
-			$('.js-filter-show-btn').removeClass('fix');
+			$('.js-filter-btns').removeClass('fix');
 		}
 	});
+
+	$('.js-filter-reset').on('click', function () {
+		$(this).addClass('hidden');
+		$('.js-filter-btns').removeClass('fix');
+		$('.js-filter-wrap').removeClass('checked');
+		$(".checkbox__label-check").prop('checked', false);
+		$('.js-filter-show-btn').text('Найти').attr('disabled', true);
+	})
 
 
 

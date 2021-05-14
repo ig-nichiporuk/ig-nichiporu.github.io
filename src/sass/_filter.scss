@@ -1,13 +1,19 @@
 @import "variables";
 .filter {
     position: relative;
-    padding: 13px 0 30px;
+    padding: 13px 0 0;
     background-color: #fff;
+    &__wrap {
+        position: relative;
+        padding: 0 0 85px 0;
+        &.checked {
+            padding: 0 0 130px 0;
+        }
+    }
     &__label,
     &__block,
     &__see,
-    &__btn,
-    &__btn-reset {
+    &__btn {
         padding: 0 20px;
     }
     &__item {
@@ -115,26 +121,30 @@
             text-align: center;
         }
     }
-    &__btn,
-    &__btn-reset {
+    &__btn {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        &.fix {
+            position: fixed;
+            z-index: 11;
+            bottom: 0;
+            left: initial;
+            width: 320px;
+            border-top: 1px solid #e1e1e1;
+            background-color: #fff;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: bottom .15s linear;
+        }
         .btn-style {
             width: 100%;
-        }
-    }
-    &__btn {
-        height: 45px;
-        margin: 10px 0 0 0;
-        .btn-style {
             position: relative;
             bottom: 0;
             transition: bottom 0s linear;
-            &.fix {
-                position: fixed;
-                z-index: 11;
-                bottom: 20px;
-                width: 280px;
-                transition: bottom .15s linear;
-            }
         }
         &-mob {
             display: none;
@@ -157,21 +167,13 @@
                 }
             }
         }
-        &-reset {
-            .btn-style {
-                background-color: transparent;
-                color: $gray-text;
-            }
-        }
     }
 }
 @media (max-width: 1539px) {
     .filter {
         &__btn {
-            .btn-style {
-                &.fix {
-                    width: 260px;
-                }
+            &.fix {
+                width: 300px;
             }
         }
     }
@@ -214,10 +216,8 @@
             &-mob {
                 display: flex;
             }
-            .btn-style {
-                &.fix {
-                    width: calc(100% - 40px);
-                }
+            &.fix {
+                width: 100%;
             }
         }
     }

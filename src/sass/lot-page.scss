@@ -121,10 +121,6 @@
             left: 0;
             position: relative;
             z-index: 1;
-            &:hover,
-            &:focus {
-                background-color: #F6F6F6;
-            }
         }
     }
     &__info {
@@ -174,7 +170,6 @@
         .btn-style {
             width: 100%;
             margin: 30px 0 0 0;
-            background-color: $active-color;
         }
     }
 }
@@ -201,6 +196,11 @@ button.slick-next{
         background-position: 50% 50%;
         background-size: 20px 20px;
         background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2357 5L13 5.80292L8.49044 10.5L13 15.1971L12.2357 16L7 10.5L12.2357 5Z' fill='%2332325D'/%3E%3C/svg%3E%0A");
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        @include hover-bgc;
     }
 }
 button.pswp__button--arrow--left,

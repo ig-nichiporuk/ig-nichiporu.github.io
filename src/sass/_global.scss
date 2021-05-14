@@ -289,7 +289,7 @@ input[type=number] {
 
 .btn-style {
     display: block;
-    background-color: #C2C2CF;
+    background-color: $dark-color;
     border-radius: $bdrs-4;
     text-align: center;
     font-size: 14px;
@@ -303,10 +303,20 @@ input[type=number] {
         background-color: #ededed;
         color: $dark-color;
     }
-    &:hover, &:active {
+    &.btn-white {
+        background-color: #fff;
+        color: $gray-text;
+    }
+    &:not([disabled]):not(.btn-white):hover,
+    &:not([disabled]):not(.btn-white):active {
         color: #fff;
-        background-color: rgba(50, 50, 93, 1);
+        background-color: $active-color;
         transition: background-color .1s linear;
+    }
+    &[disabled] {
+        pointer-events: none;
+        cursor: default;
+        background-color: #C2C2CF;
     }
 
 }
