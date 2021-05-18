@@ -99,7 +99,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -122,7 +122,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -145,7 +145,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -168,7 +168,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -264,7 +264,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -287,7 +287,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -310,7 +310,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span>1836</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -333,7 +333,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1836</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -354,9 +354,6 @@
 										<span class="pass">0</span>
 									</span>
 								</a>
-								<div class="table__footnote">
-									<span></span>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -372,18 +369,18 @@
 <script>
 	function check_table_width() {
 		$('.js-table').each(function () {
-			if($(this).outerWidth() > $(this).closest('.js-table-hidden').outerWidth()) {
+			if($(this).outerWidth() > $(this).closest('.js-table-hidden').outerWidth() && !$(this).hasClass('scrolled')) {
 				$(this).addClass('scroll');
 			}
 			else {
 				$(this).removeClass('scroll');
 			}
-			$('.js-table-hidden').on('scroll', function () {
-				$(this).children('.js-table').removeClass('scroll');
-			})
 		});
 	}
 	check_table_width();
+	$('.js-table-hidden').on('scroll', function () {
+		$(this).children('.js-table').removeClass('scroll').addClass('scrolled');
+	});
 	$(window).resize(function() {
 		check_table_width();
 	});

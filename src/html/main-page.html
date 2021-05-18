@@ -32,68 +32,85 @@
 					<div class="fast-find">
 						<span class="fast-find__title text-medium">Быстрый поиск лота</span>
 						<form action="" class="fast-find__form">
-							<div class="fast-find__form-item">
-								<input type="text">
+							<div class="fast-find__form-item js-delete-first-step">
 								<span>Выберите страну</span>
 								<div class="select-style js-dropdown-wrap">
-									<span class="select-style__btn js-dropdown-btn">Все страны</span>
+									<div class="select-style__btn js-dropdown-btn">
+										<input type="text" placeholder="Все страны" readonly>
+									</div>
 									<ul class="select-style__body js-dropdown-body">
-										<li class="select-style__item js-info-btn active" data-info="expensive">
+										<li class="select-style__item">
 											<span class="select-style__option">Беларусь</span>
 										</li>
-										<li class="select-style__item js-info-btn active" data-info="expensive">
+										<li class="select-style__item">
 											<span class="select-style__option">Италия</span>
 										</li>
-										<li class="select-style__item js-info-btn" data-info="popular">
+										<li class="select-style__item">
 											<span class="select-style__option">Испания</span>
 										</li>
-										<li class="select-style__item js-info-btn" data-info="news">
+										<li class="select-style__item">
 											<span class="select-style__option">Россия</span>
 										</li>
-										<li class="select-style__item js-info-btn active" data-info="expensive">
+										<li class="select-style__item">
 											<span class="select-style__option">Великобритания</span>
 										</li>
-										<li class="select-style__item js-info-btn active" data-info="expensive">
+										<li class="select-style__item">
 											<span class="select-style__option">Италия</span>
 										</li>
-										<li class="select-style__item js-info-btn" data-info="popular">
+										<li class="select-style__item">
 											<span class="select-style__option">Испания</span>
 										</li>
-										<li class="select-style__item js-info-btn" data-info="news">
+										<li class="select-style__item">
 											<span class="select-style__option">Россия</span>
 										</li>
 									</ul>
 								</div>
 							</div>
-							<div class="fast-find__form-item disabled">
-								<input type="text">
+							<div class="fast-find__form-item js-delete-second-step" disabled="">
 								<span>Год</span>
 								<div class="select-style js-dropdown-wrap">
-									<span class="select-style__btn js-dropdown-btn">Все года</span>
+									<div class="select-style__btn js-dropdown-btn">
+										<input type="tel" placeholder="Все года">
+									</div>
 									<ul class="select-style__body js-dropdown-body">
-										<li class="select-style__item js-info-btn active" data-info="expensive">
+										<li class="select-style__item">
 											<span class="select-style__option">1982</span>
 										</li>
-										<li class="select-style__item js-info-btn active" data-info="expensive">
+										<li class="select-style__item">
 											<span class="select-style__option">1983</span>
 										</li>
-										<li class="select-style__item js-info-btn" data-info="popular">
+										<li class="select-style__item">
 											<span class="select-style__option">1989</span>
 										</li>
-										<li class="select-style__item js-info-btn" data-info="news">
+										<li class="select-style__item">
 											<span class="select-style__option">1991</span>
 										</li>
-										<li class="select-style__item js-info-btn active" data-info="expensive">
+										<li class="select-style__item">
 											<span class="select-style__option">1992</span>
 										</li>
-										<li class="select-style__item js-info-btn active" data-info="expensive">
+										<li class="select-style__item">
 											<span class="select-style__option">1990</span>
 										</li>
-										<li class="select-style__item js-info-btn" data-info="popular">
+										<li class="select-style__item">
 											<span class="select-style__option">1995</span>
 										</li>
-										<li class="select-style__item js-info-btn" data-info="news">
+										<li class="select-style__item">
 											<span class="select-style__option">2000</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2001</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2002</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2003</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2004</span>
+										</li>
+										<li class="select-style__item">
+											<span class="select-style__option">2005</span>
 										</li>
 									</ul>
 								</div>
@@ -135,3 +152,31 @@
 @@include('../components/footer.html')
 </body>
 </html>
+
+
+<script>
+	$('.js-delete-first-step .select-style__item').on('click', function () {
+		$('.js-delete-first-step input').val($(this).find('.select-style__option').text());
+		close_dropdown();
+		$('.js-delete-second-step').removeAttr('disabled');
+	});
+	$('.js-delete-second-step .select-style__item').on('click', function () {
+		$('.js-delete-first-step input').val($(this).find('.select-style__option').text());
+		close_dropdown();
+		$('.js-delete-second-step').next('.fast-find__form-btn').removeAttr('disabled');
+	});
+	$('.js-delete-second-step input').on('keyup', function () {
+		$('.js-delete-second-step .select-style__item').each(function () {
+			console.log(typeof (+($(this).children().text())));
+			$(this).filter(function () {
+				if(+($(this).children().text()).indexOf($('.js-delete-second-step input').val()) === -1) {
+					$(this).addClass('hidden');
+				}
+				else {
+					$(this).removeClass('hidden');
+				}
+			})
+
+		});
+	})
+</script>

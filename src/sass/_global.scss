@@ -9,7 +9,7 @@ body {
     -o-text-size-adjust: 100%;
     min-width: 320px;
     color: $main-color;
-    background: #f6f6f6;
+    background: #F0F0F0;
 }
 
 
@@ -253,7 +253,12 @@ input[type=number] {
         background: #FFFFFF;
         box-shadow: inset 0 0 0 1px #EDEDED;
         padding: 12px 50px 12px 15px;
-        color: #C4C4C4;
+        color: $main-color;
+        input {
+            width: 100%;
+            color: inherit;
+            cursor: inherit;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -272,6 +277,10 @@ input[type=number] {
                 @include svg-rotate-open;
             }
         }
+    }
+    &__body {
+        max-height: 400px;
+        overflow-y: auto;
     }
     &__item{
         padding: 12px 20px;

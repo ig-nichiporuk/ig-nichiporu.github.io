@@ -1021,7 +1021,9 @@
 <nav class="sidebar mob">
 	<span class="sidebar__mob-title">Выберите категорию</span>
 	<div class="sidebar__mob-select select-style js-dropdown-wrap">
-		<span class="select-style__btn js-dropdown-btn">Все</span>
+		<div class="select-style__btn js-dropdown-btn">
+			<input type="text" placeholder="Все" readonly>
+		</div>
 		<ul class="sidebar__wrap select-style__body js-dropdown-body">
 			<li class="sidebar__item">
 			<span class="sidebar__item-btn js-sidebar-btn" data-button="main-btn">
@@ -1869,7 +1871,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -1892,7 +1894,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -1915,7 +1917,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -1938,7 +1940,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -2034,7 +2036,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -2057,7 +2059,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1835</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -2080,7 +2082,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span>1836</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -2103,7 +2105,7 @@
 								</a>
 								<a href="#" class="table__row">
 									<span class="table__cell">
-										<span>1835</span>
+										<span class="text-gray">1836</span>
 									</span>
 									<span class="table__cell">
 										<span>MW</span>
@@ -2124,9 +2126,6 @@
 										<span class="pass">0</span>
 									</span>
 								</a>
-								<div class="table__footnote">
-									<span></span>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -2141,7 +2140,9 @@
 		<span class="dop-info__btn js-info-btn" data-info="news">Статьи</span>
 	</div>
 	<div class="dop-info__btns mob select-style js-dropdown-wrap">
-		<span class="select-style__btn js-dropdown-btn">Самые популярные</span>
+		<div class="select-style__btn js-dropdown-btn">
+			<input type="text" placeholder="Самые популярные" readonly>
+		</div>
 		<ul class="select-style__body js-dropdown-body">
 			<li class="select-style__item js-info-btn active" data-info="expensive">
 				<span class="select-style__option">Самые дорогие</span>
@@ -2863,18 +2864,18 @@
 <script>
 	function check_table_width() {
 		$('.js-table').each(function () {
-			if($(this).outerWidth() > $(this).closest('.js-table-hidden').outerWidth()) {
+			if($(this).outerWidth() > $(this).closest('.js-table-hidden').outerWidth() && !$(this).hasClass('scrolled')) {
 				$(this).addClass('scroll');
 			}
 			else {
 				$(this).removeClass('scroll');
 			}
-			$('.js-table-hidden').on('scroll', function () {
-				$(this).children('.js-table').removeClass('scroll');
-			})
 		});
 	}
 	check_table_width();
+	$('.js-table-hidden').on('scroll', function () {
+		$(this).children('.js-table').removeClass('scroll').addClass('scrolled');
+	});
 	$(window).resize(function() {
 		check_table_width();
 	});

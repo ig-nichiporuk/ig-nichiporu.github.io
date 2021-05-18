@@ -14,8 +14,9 @@
     margin: 20px 0 0 0;
     background: #EDEDED;
     border-radius: $bdrs-6;
-    padding: 40px;
     &__filter {
+        width: calc(100% / 3);
+        padding: 40px 60px;
         &-title {
             display: block;
             font-size: 20px;
@@ -24,12 +25,9 @@
             color: $dark-color;
             margin: 0 0 20px 0;
         }
-        & + &:not(:last-of-type) {
-            margin: 0 0 0 180px;
-        }
-        &:not(:last-of-type) &-wrap {
+        &-wrap {
             columns: 2;
-            column-gap: 90px;
+            column-gap: 50px;
             .checkbox__label {
                 display: block;
                 margin-bottom: 10px;
@@ -39,25 +37,14 @@
                 }
             }
         }
-        &:last-of-type {
-            margin: 20px 0 0 0;
-        }
-        &:last-of-type &-wrap {
-            width: 100%;
-            display: flex;
-            margin: -10px;
-            & > * {
-                padding: 10px;
-            }
-        }
+    }
+    &__filter + &__filter {
+        box-shadow: inset 1px 0 0 0 #fff;
     }
     &__select {
         margin: 30px 0 0 0;
         display: flex;
         align-items: center;
-        input {
-            display: none;
-        }
         &-wrap {
             position: relative;
             width: 100%;
@@ -330,11 +317,8 @@
     .coin-page__info-block .pagination {
         margin: 60px -30px 0;
     }
-    .auctions__filter:not(:last-of-type) .auctions__filter-wrap {
-        column-gap: 50px;
-    }
-    .auctions__filter + .auctions__filter:not(:last-of-type) {
-        margin: 0 0 0 80px;
+    .auctions__filter {
+        padding: 40px 25px;
     }
 }
 
@@ -401,9 +385,6 @@
         padding: 15px 5px;
     }
 
-    .auctions {
-        padding: 30px;
-    }
     .coin-page__info-block .pagination {
         margin: 80px -20px 0;
     }
@@ -416,33 +397,23 @@
         right: auto;
         left: 0;
     }
-}
-
-@media (max-width: 1299px) and (min-width: 960px), (max-width: 779px) {
-    .auctions {
-        flex-direction: column;
-        padding: 30px;
-    }
-    .auctions__filter:last-of-type .auctions__filter-wrap > * {
-        padding: 0;
-        margin-bottom: 10px;
-        display: block;
+    .auctions__filter {
+        width: 50%;
+        padding: 20px 20px 40px;
     }
     .auctions__filter + .auctions__filter:not(:last-of-type) {
-        margin: 30px 0 0;
+        box-shadow: inset 1px -1px 0 0 #fff;
     }
-    .auctions__filter:not(:last-of-type) .auctions__filter-wrap,
-    .auctions__filter:last-of-type .auctions__filter-wrap {
-        columns: 2;
-        display: block;
-        margin: 0;
-        column-gap: 50px;
+    .auctions__filter:first-of-type {
+        box-shadow: inset 0 -1px 0 0 #fff;
     }
-    .auctions__filter:not(:last-of-type) .auctions__filter-wrap .checkbox__label-text {
-        max-width: 200px;
+    .auctions__filter:last-of-type {
+        box-shadow: none;
+    }
+    .auctions__filter-wrap {
+        column-gap: 30px;
     }
 }
-
 @media (max-width: 959px) {
     .coin-page {
         padding: 30px 20px 55px;
@@ -471,17 +442,7 @@
         padding: 20px 10px;
     }
 
-    .auctions__filter + .auctions__filter:not(:last-of-type) {
-        margin: 0 0 0 30px;
-    }
-    .auctions__filter:not(:last-of-type) .auctions__filter-wrap {
-        column-gap: 15px;
-    }
 
-    .auctions {
-        padding: 45px 18px;
-        justify-content: space-between;
-    }
 }
 
 @media (max-width: 779px) {
@@ -491,13 +452,6 @@
     .coin-page__img-item img {
         width: calc(100vw / 2 - 38px);
         height: calc(100vw / (2 * 1.01)  - 38px);
-    }
-    .auctions__filter + .auctions__filter:not(:last-of-type) {
-        margin: 30px 0 0 0;
-    }
-    .auctions__filter:not(:last-of-type) .auctions__filter-wrap, .auctions__filter:last-of-type .auctions__filter-wrap {
-        column-gap: 80px;
-        margin: 0;
     }
     .auctions__cards, .varieties__cards {
         margin: 10px -9px -20px;
@@ -511,9 +465,6 @@
     }
     .coin-page__info-block .pagination {
         margin: 60px -20px 0;
-    }
-    .auctions {
-        padding: 30px 30px 50px;
     }
 }
 
@@ -550,9 +501,13 @@
         //max-width: 298px;
         padding: 10px 0;
     }
-    .auctions {
-        padding: 30px 16px;
+    .auctions__filter {
+        width: 100%;
     }
+    .auctions__filter+.auctions__filter:not(:last-of-type) {
+        box-shadow: inset 0 -1px 0 0 #fff;
+    }
+
 
 
 }
@@ -569,10 +524,6 @@
         position: relative;
         width: 100%;
         margin: 10px 0 0 0;
-    }
-    .auctions__filter:not(:last-of-type) .auctions__filter-wrap,
-    .auctions__filter:last-of-type .auctions__filter-wrap {
-        column-gap: 20px;
     }
 }
 

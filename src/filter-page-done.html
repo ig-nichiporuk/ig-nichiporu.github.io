@@ -288,6 +288,30 @@
 						<input type="checkbox" class="checkbox__label-check">
 						<span class="checkbox__label-text">Inactive</span>
 					</label>
+					<label class="filter__checkbox checkbox__label hidden">
+						<input type="checkbox" class="checkbox__label-check">
+						<span class="checkbox__label-text">Inactive</span>
+					</label>
+					<label class="filter__checkbox checkbox__label hidden">
+						<input type="checkbox" class="checkbox__label-check">
+						<span class="checkbox__label-text">Inactive</span>
+					</label>
+					<label class="filter__checkbox checkbox__label hidden">
+						<input type="checkbox" class="checkbox__label-check">
+						<span class="checkbox__label-text">Inactive</span>
+					</label>
+					<label class="filter__checkbox checkbox__label hidden">
+						<input type="checkbox" class="checkbox__label-check">
+						<span class="checkbox__label-text">Inactive</span>
+					</label>
+					<label class="filter__checkbox checkbox__label hidden">
+						<input type="checkbox" class="checkbox__label-check">
+						<span class="checkbox__label-text">Inactive</span>
+					</label>
+					<label class="filter__checkbox checkbox__label hidden">
+						<input type="checkbox" class="checkbox__label-check">
+						<span class="checkbox__label-text">Inactive</span>
+					</label>
 				</div>
 			</div>
 			<div class="filter__see js-filter-show">
@@ -566,15 +590,17 @@
 					<div class="filter-page__result js-result-content">
 						<div class="filter-page__result-controls">
 							<div class="filter-page__result-select select-style js-dropdown-wrap">
-								<span class="select-style__btn js-dropdown-btn">Все</span>
+								<div class="select-style__btn js-dropdown-btn">
+									<input type="text" placeholder="Все" readonly>
+								</div>
 								<ul class="select-style__body js-dropdown-body">
-									<li class="select-style__item js-info-btn active" data-info="expensive">
+									<li class="select-style__item">
 										<span class="select-style__option">По цене</span>
 									</li>
-									<li class="select-style__item js-info-btn active" data-info="expensive">
+									<li class="select-style__item">
 										<span class="select-style__option">По популярности</span>
 									</li>
-									<li class="select-style__item js-info-btn" data-info="popular">
+									<li class="select-style__item">
 										<span class="select-style__option">По аукционам</span>
 									</li>
 								</ul>
@@ -588,8 +614,9 @@
 								</svg>
 							</div>
 							<div class="filter__btn-mob js-filter-mob-btn">
+								<span>Фильтр</span>
 								<svg>
-								    <use xlink:href="#settings"></use>
+									<use xlink:href="#settings"></use>
 								</svg>
 							</div>
 						</div>
