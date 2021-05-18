@@ -16,7 +16,7 @@ gulp.task('img-build', function (done) {
 	done();
 });
 gulp.task('fonts-build', function (done) {
-	gulp.src('./src/fonts/**/*.*').pipe(cleancss( {level: { 1: { specialComments: 0 } } })).pipe(gulp.dest('./site/fonts/'));
+	gulp.src('./src/fonts/**/*.*').pipe(gulp.dest('./site/fonts/'));
 	done();
 });
 gulp.task('js-build', function (done) {
