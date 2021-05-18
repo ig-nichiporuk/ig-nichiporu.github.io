@@ -10,10 +10,17 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+	<link href="fonts/lightgallery/stylesheet.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/lightgallery/lightgallery.min.css">
+	<link rel="stylesheet" href="css/lightgallery/lg-transitions.min.css">
+	<link rel="stylesheet" href="css/lightgallery/lg-fb-comment-box.min.css">
+
 	<link rel="stylesheet" href="css/coin-page.css?v.1">
 	<script src="js/jquery-3.6.0.js"></script>
 <script src="js/scroll-lock.min.js"></script>
 <script src="js/global_svg_localstorage.js"></script>
+	<script src="js/lightgallery/lightgallery-all.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/header.js"></script>
 </head>
@@ -1021,7 +1028,9 @@
 <nav class="sidebar mob">
 	<span class="sidebar__mob-title">Выберите категорию</span>
 	<div class="sidebar__mob-select select-style js-dropdown-wrap">
-		<span class="select-style__btn js-dropdown-btn">Все</span>
+		<div class="select-style__btn js-dropdown-btn">
+			<input type="text" placeholder="Все" readonly>
+		</div>
 		<ul class="sidebar__wrap select-style__body js-dropdown-body">
 			<li class="sidebar__item">
 			<span class="sidebar__item-btn js-sidebar-btn" data-button="main-btn">
@@ -1805,25 +1814,22 @@
 				<div class="content__block-wrap">
 					<div class="coin-page">
 						<div class="coin-page__img">
-							<div class="coin-page__img-wrap">
-								<div class="coin-page__img-item">
+							<div class="coin-page__img-wrap js-lot-zoom">
+								<a href="img/webp/lot-coin.webp" class="coin-page__img-item" rel="group" data-fancybox-group="gallery">
 									<img src="img/webp/lot-coin.webp" alt="coin">
-								</div>
-								<div class="coin-page__img-item">
+								</a>
+								<a href="img/webp/lot-coin-back.webp" class="coin-page__img-item" rel="group" data-fancybox-group="gallery">
 									<img src="img/webp/lot-coin-back.webp" alt="coin">
-								</div>
-
+								</a>
 							</div>
 							<div class="coin-page__img-desc">
 								<p>Photo by: <span class="text-gray">Poznański Dom Aukcyjny & Podlaski Gabinet Numizmatyczny</span></p>
 							</div>
 						</div>
-
-
 						<div class="coin-page__specification">
 							<div class="coin-page__specification-item">
 								<span class="coin-page__specification-title text-medium">Техническая информация</span>
-								<span class="coin-page__specification-title mob text-medium js-pecification-title">Техническая информация <span class="specification-close"></span> </span>
+								<span class="coin-page__specification-title mob text-medium js-specification-title">Техническая информация <span class="specification-close"></span> </span>
 								<ul class="coin-page__specification-list">
 										<li>
 											<span class="left">Металл</span>
@@ -1857,7 +1863,7 @@
 							</div>
 							<div class="coin-page__specification-item">
 								<span class="coin-page__specification-title text-medium">Описание</span>
-								<span class="coin-page__specification-title mob text-medium js-pecification-title">Описание <span class="specification-close"></span> </span>
+								<span class="coin-page__specification-title mob text-medium js-specification-title">Описание <span class="specification-close"></span> </span>
 								<ul class="coin-page__specification-list">
 										<li>
 											<span class="left">Страна</span>
@@ -1891,7 +1897,7 @@
 							</div>
 							<div class="coin-page__specification-item">
 								<span class="coin-page__specification-title text-medium">Ссылки на каталоги</span>
-								<span class="coin-page__specification-title mob text-medium js-pecification-title">Ссылки на каталоги <span class="specification-close"></span> </span>
+								<span class="coin-page__specification-title mob text-medium js-specification-title">Ссылки на каталоги <span class="specification-close"></span> </span>
 								<ul class="coin-page__specification-list">
 										<li>
 											<span class="left">
@@ -1939,8 +1945,6 @@
 
 							</div>
 						</div>
-
-
 					</div>
 				</div>
 				<div class="content__block-wrap">
@@ -2043,26 +2047,27 @@
 								<div class="auctions__select">
 									<label class="auctions__select-label text-medium">Аукционы</label>
 									<div class="auctions__select-wrap js-dropdown-wrap">
-										<input type="text">
-										<span class="select-style__btn js-dropdown-btn">Все аукционы</span>
+										<div class="select-style__btn js-dropdown-btn">
+											<input type="text" placeholder="Все аукционы" readonly>
+										</div>
 										<ul class="select-style__body js-dropdown-body">
-											<li class="select-style__item js-info-btn active" data-info="expensive">
-												<span class="select-style__option">Аукционы1</span>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(3)</span></span>
 											</li>
-											<li class="select-style__item js-info-btn active" data-info="expensive">
-												<span class="select-style__option">Аукционы2</span>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(5)</span></span>
 											</li>
-											<li class="select-style__item js-info-btn" data-info="popular">
-												<span class="select-style__option">Аукционы3</span>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(3)</span></span>
 											</li>
-											<li class="select-style__item js-info-btn" data-info="news">
-												<span class="select-style__option">Аукционы4</span>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(3)</span></span>
 											</li>
-											<li class="select-style__item js-info-btn active" data-info="expensive">
-												<span class="select-style__option">Аукционы5</span>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(3)</span></span>
 											</li>
-											<li class="select-style__item js-info-btn active" data-info="expensive">
-												<span class="select-style__option">Аукционы6</span>
+											<li class="select-style__item">
+												<span class="select-style__option">Аукционы <span class="text-gray">(3)</span></span>
 											</li>
 										</ul>
 									</div>
@@ -2174,7 +2179,7 @@
 				<span class="left">Сохранность</span>
 				<span class="right">MS62 <span class="active-color">ANACS</span></span>
 			</li>
-			<li class="bg-color">
+			<li class="">
 				<span class="left">Цена</span>
 				<span class="right with-helper">
 					 152 USD
@@ -2215,7 +2220,7 @@
 				<span class="left">Сохранность</span>
 				<span class="right">MS62 <span class="active-color">ANACS</span></span>
 			</li>
-			<li class="bg-color">
+			<li class="">
 				<span class="left">Цена</span>
 				<span class="right with-helper">
 					 152 USD
@@ -2338,7 +2343,7 @@
 				<span class="left">Сохранность</span>
 				<span class="right">MS62 <span class="active-color">ANACS</span></span>
 			</li>
-			<li class="bg-color">
+			<li class="">
 				<span class="left">Цена</span>
 				<span class="right with-helper">
 					 152 USD
@@ -2379,7 +2384,7 @@
 				<span class="left">Сохранность</span>
 				<span class="right">MS62 <span class="active-color">ANACS</span></span>
 			</li>
-			<li class="bg-color">
+			<li class="">
 				<span class="left">Цена</span>
 				<span class="right with-helper">
 					 152 USD
@@ -2442,25 +2447,26 @@
 								<div class="auctions__select">
 									<label class="auctions__select-label text-medium">Года</label>
 									<div class="auctions__select-wrap js-dropdown-wrap">
-										<input type="text">
-										<span class="select-style__btn js-dropdown-btn">1865-1935</span>
+										<div class="select-style__btn js-dropdown-btn">
+											<input type="text" placeholder="1865-1935" readonly>
+										</div>
 										<ul class="select-style__body js-dropdown-body">
-											<li class="select-style__item js-info-btn active" data-info="expensive">
+											<li class="select-style__item">
 												<span class="select-style__option">1865-1935</span>
 											</li>
-											<li class="select-style__item js-info-btn active" data-info="expensive">
+											<li class="select-style__item">
 												<span class="select-style__option">1865-1935</span>
 											</li>
-											<li class="select-style__item js-info-btn" data-info="popular">
+											<li class="select-style__item">
 												<span class="select-style__option">1865-1935</span>
 											</li>
-											<li class="select-style__item js-info-btn" data-info="news">
+											<li class="select-style__item">
 												<span class="select-style__option">1865-1935</span>
 											</li>
-											<li class="select-style__item js-info-btn active" data-info="expensive">
+											<li class="select-style__item">
 												<span class="select-style__option">1865-1935</span>
 											</li>
-											<li class="select-style__item js-info-btn active" data-info="expensive">
+											<li class="select-style__item">
 												<span class="select-style__option">1865-1935</span>
 											</li>
 										</ul>
@@ -2672,7 +2678,6 @@
 							</div>
 						</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -2725,6 +2730,28 @@
 </footer>
 </body>
 <script>
+	if($('body').hasClass('touch')){
+		check_device = true
+	}
+	else {
+		check_device = false
+	}
+	$('.js-lot-zoom').lightGallery({
+		speed: 200,
+		preload: 3,
+		swipeThreshold: 10,
+		enableDrag:false,
+		thumbnail: false,
+		autoplayControls: false,
+		hash: false,
+		share: false,
+		rotate:false,
+		download: false,
+		zoom: false,
+		actualSize: false,
+
+		controls: check_device ? false : true,
+	});
 	$('.js-coin-info-tab').on('click', function () {
 		if(!$(this).hasClass('active')){
 			$('.js-coin-info-block').addClass('hidden');
@@ -2733,15 +2760,23 @@
 			$('.js-coin-info-content').find("div[data-block='" + $(this).attr('data-info') +"-block']").removeClass('hidden');
 		}
 	});
-	$('.js-pecification-title').on('click', function () {
+	$('.js-specification-title').on('click', function () {
 		if($(this).hasClass('open')){
-			$(this).removeClass('open');
-			$(this).next().slideUp(200, 'linear');
+			$('.js-specification-title').removeClass('open');
+			$('.js-specification-title').next().slideUp(200, 'linear');
 		}
 		else {
+			$('.js-specification-title').removeClass('open');
+			$('.js-specification-title').next().slideUp(200, 'linear');
 			$(this).addClass('open');
 			$(this).addClass('open').next().slideDown(200, 'linear');
 		}
-	})
+	});
+	$(window).resize(function() {
+		if($(window).width() > 1299) {
+			$('.js-specification-title').removeClass('open');
+			$('.js-specification-title').next().removeAttr('style');
+		}
+	});
 </script>
 </html>
