@@ -90,6 +90,10 @@ $(document).ready(function() {
 
 
 	$('.js-finder-open-input').on('click', function() {
+		setTimeout(function () {
+			$('.js-finder-input').focus();
+		}, 0)
+
 		$('.js-finder-animate-block').addClass('open');
 		$('body').addClass('overlay-open mob-finder-open');
 		close_finder_body();

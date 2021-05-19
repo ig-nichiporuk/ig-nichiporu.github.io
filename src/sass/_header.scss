@@ -38,18 +38,11 @@ header {
             min-width: 40px;
             height: 40px;
             margin: 0 0 0 auto;
-            & > * {
-                /*width: 100%;
-                height: 100%;
-                fill: $dark-color;*/
-            }
 
-
-            /*новое*/
             .btn-wrap {
                 margin: auto;
                 width: 30px;
-                height: 16px;
+                height: 14px;
                 position: relative;
                 & > * {
                     position: absolute;
@@ -270,47 +263,28 @@ header {
     &__catalog {
         display: block;
         position: absolute;
-        //z-index: 11;
         width: 100%;
-
-        /*новое*/
         z-index: -1;
-        transform: translate3d(0, -120%, 0);
+        transform: translateY(-120%);
         will-change: transform;
         transition: transform .3s;
-        //animation: .3s linear mob-menu-animation-visible ;
+        will-change: transform;
         &.open {
             visibility: visible;
             opacity: 1;
-            transform: translate3d(0, 0, 0);
-            transition: transform .45s cubic-bezier(0.42,0,0.58,1);
-            //transition: transform .45s ease-in-out;
-            //transition: transform 0s cubic-bezier(0.42,0,0.58,1);
+            transform: translateY(0);
+            transition: transform .25s ease-in-out;
         }
         &.close {
             visibility: hidden;
             opacity: 0;
         }
-        /*новое*/
-
-
-
-        /*&-wrap {
-            position: relative;
-            display: flex;
-            min-height: 520px;
-            background-color: #fff;
-            box-shadow: inset 0 1px 0 0 #EDEDED, 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 40px 33px rgba(0, 0, 0, 0.05), 0px 22px 17px rgba(0, 0, 0, 0.04), 0px 12px 10px rgba(0, 0, 0, 0.03), 0px 6px 5px rgba(0, 0, 0, 0.02), 0px 2px 2px rgba(0, 0, 0, 0.02);
-        }*/
-
-
-        /*новое*/
         &-wrap {
             position: relative;
             display: flex;
             min-height: 520px;
             background-color: #fff;
-            box-shadow: inset 0 0 0 0 #EDEDED, 0 0 0 rgba(0, 0, 0, 0.07), 0 0 0 rgba(0, 0, 0, 0.05), 0 0 0 rgba(0, 0, 0, 0.04), 0 0 0 rgba(0, 0, 0, 0.03), 0 0 0 rgba(0, 0, 0, 0.02), 0 0 0 rgba(0, 0, 0, 0.02);
+            box-shadow: none;
             transition: box-shadow 0.3s;
             border-bottom-right-radius: $bdrs-6;
             border-bottom-left-radius: $bdrs-6;
@@ -324,7 +298,6 @@ header {
                         0 12px 10px rgba(0, 0, 0, 0.03),
                         0 6px 5px rgba(0, 0, 0, 0.02),
                         0 2px 2px rgba(0, 0, 0, 0.02);
-            transition: box-shadow .45s cubic-bezier(0.42,0,0.58,1);
         }
 
         /*новое*/
