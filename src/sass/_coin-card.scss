@@ -169,7 +169,6 @@
         &.card-horizontal {
             flex-direction: row;
             align-items: flex-start;
-            padding: 25px 25px 15px;
         }
         &__img {
             .card-horizontal &-item {
@@ -202,15 +201,7 @@
 @media (min-width: 1540px) {
     .coin-card {
         &.card-horizontal {
-            padding: 30px;
-        }
-        &__img {
-            .card-horizontal &-item {
-                img {
-                    min-width: 240px;
-                    min-height: 240px;
-                }
-            }
+            padding: 25px 25px 15px;
         }
         .card-horizontal &__text {
             margin: 0 0 0 40px;
