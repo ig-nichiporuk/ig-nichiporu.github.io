@@ -18,7 +18,7 @@
     }
     &__item {
         box-shadow: inset 0 1px 0 0 #F8F8F8;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
     }
     &__label {
         padding-bottom: 13px;
@@ -53,9 +53,11 @@
         letter-spacing: -0.2px;
     }
     &__input {
-        margin: 20px 0 0;
+        margin: 15px 0 0;
     }
-    &__title + &__checkboxes,
+    &__title + &__checkboxes {
+        padding: 20px 0;
+    }
     &__title + &__range {
         margin: 25px 0 0;
     }
