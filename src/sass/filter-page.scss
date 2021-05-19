@@ -138,10 +138,13 @@
             flex-wrap: wrap;
             margin: 15px 0 20px;
         }
-        &-hashtag {
+        &-hashtag,
+        &-cleaner {
             padding: 5px;
+            flex-grow: 1;
+            max-width: 300px;
             span {
-                background: rgba(50, 50, 93, 0.3);
+                background: $dark-color;
                 border-radius: $bdrs-4;
                 display: flex;
                 align-items: center;
@@ -152,7 +155,6 @@
                 color: #fff;
                 &:hover {
                     cursor: pointer;
-                    background-color: rgba(50, 50, 93, 1);
                 }
             }
             svg {
@@ -160,6 +162,12 @@
                 width: 9px;
                 height: 9px;
                 fill: #fff;
+            }
+        }
+        &-cleaner {
+            span {
+                background: rgba(50, 50, 93, 0.1);
+                color: $dark-color;
             }
         }
         &-body {

@@ -73,10 +73,26 @@
 								</svg>
 							</div>
 						</div>
-						<div class="filter-page__result-hashtags">
+						<div class="filter-page__result-hashtags hidden">
 							<div class="filter-page__result-hashtag">
 								<span>
-									Золото
+									Великобритания
+									<svg>
+									    <use xlink:href="#close"></use>
+									</svg>
+								</span>
+							</div>
+							<div class="filter-page__result-hashtag">
+								<span>
+									Николай II
+									<svg>
+									    <use xlink:href="#close"></use>
+									</svg>
+								</span>
+							</div>
+							<div class="filter-page__result-hashtag">
+								<span>
+									18 грош
 									<svg>
 									    <use xlink:href="#close"></use>
 									</svg>
@@ -92,74 +108,79 @@
 							</div>
 							<div class="filter-page__result-hashtag">
 								<span>
-									Золото
+									Металл
 									<svg>
 									    <use xlink:href="#close"></use>
 									</svg>
 								</span>
 							</div>
-							<div class="filter-page__result-hashtag">
+							<div class="filter-page__result-cleaner js-filter-reset">
 								<span>
-									Золото
-									<svg>
-									    <use xlink:href="#close"></use>
-									</svg>
-								</span>
-							</div>
-							<div class="filter-page__result-hashtag">
-								<span>
-									Золото
-									<svg>
-									    <use xlink:href="#close"></use>
-									</svg>
-								</span>
-							</div>
-							<div class="filter-page__result-hashtag">
-								<span>
-									Золото
-									<svg>
-									    <use xlink:href="#close"></use>
-									</svg>
+									Очистить
 								</span>
 							</div>
 						</div>
 						<div class="filter-page__result-body js-result-body" data-block="column">
 							<div class="filter-page__result-item">
 								@@include('../components/card-horizontal.html', {
-								"pass-active": "active",
-								"pass": "6"
+									"this-auctions": "",
+									"country-item": "",
+									"period-item": "",
+									"edition-item": "hidden",
+									"pass-active": "active",
+									"pass": "6"
 								})
 							</div>
 							<div class="filter-page__result-item">
 								@@include('../components/card-horizontal.html', {
-								"pass-active": "",
-								"pass": "0"
+									"this-auctions": "",
+									"country-item": "",
+									"period-item": "",
+									"edition-item": "hidden",
+									"pass-active": "",
+									"pass": "0"
 								})
 							</div>
 							<div class="filter-page__result-item">
 								@@include('../components/card-horizontal.html', {
-								"pass-active": "",
-								"pass": "0"
+									"this-auctions": "",
+									"country-item": "",
+									"period-item": "",
+									"edition-item": "hidden",
+									"pass-active": "",
+									"pass": "0"
 								})
 							</div>
 						</div>
 						<div class="filter-page__result-body row js-result-body hidden" data-block="row">
 							<div class="filter-page__result-item">
 								@@include('../components/card-two-images.html', {
-								"pass-active": "active",
-								"pass": "6"
+									"this-auctions": "",
+									"country-item": "",
+									"period-item": "",
+									"edition-item": "hidden",
+									"pass-active": "active",
+									"pass": "6"
 								})
 							</div>
 							<div class="filter-page__result-item">
 								@@include('../components/card-two-images.html', {
-								"pass-active": "",
-								"pass": "0"
+									"this-auctions": "",
+									"country-item": "",
+									"period-item": "",
+									"edition-item": "hidden",
+									"pass-active": "",
+									"pass": "0"
 								})
 							</div>
 							<div class="filter-page__result-item">
 								@@include('../components/card-two-images.html', {
-								"pass-active": "",
-								"pass": "0"
+									"this-auctions": "",
+									"country-item": "",
+									"period-item": "",
+									"edition-item": "hidden",
+									"pass-active": "",
+									"pass": "0"
 								})
 							</div>
 						</div>
@@ -187,6 +208,7 @@
 	$(".checkbox__label-check").each(function () {
 		$(this).change(function () {
 			if($(".checkbox__label-check").filter(":checked").length > 0) {
+				$('.filter-page__result-hashtags').removeClass('hidden');
 				$('.js-filter-reset').removeClass('hidden');
 				$('.js-filter-show-btn').text('Показать результат (15)').removeAttr('disabled');
 				$('.js-filter-wrap').addClass('checked');
@@ -232,6 +254,7 @@
 
 	$('.js-filter-reset').on('click', function () {
 		$(this).addClass('hidden');
+		$('.filter-page__result-hashtags').addClass('hidden');
 		$('.js-filter-btns').removeClass('fix');
 		$('.js-filter-wrap').removeClass('checked');
 		$(".checkbox__label-check").prop('checked', false);
