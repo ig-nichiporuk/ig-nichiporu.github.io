@@ -1,5 +1,6 @@
 @import "variables";
 .sidebar {
+    font-family: 'PT Root UI';
     border-radius: $bdrs-6;
     background-color: #fff;
     &:not(.mob) {
@@ -30,10 +31,7 @@
                 transform: scale(0);
             }
             &.open {
-                color: $active-color;
-                .text-gray {
-                    color: $active-color;
-                }
+                font-weight: bold;
                 svg {
                     @include svg-rotate-open
                 }
@@ -61,11 +59,10 @@
 
 
 
-    &__item &__item-btn:hover,
-    .no-touch &__subitem &__item-btn:hover,
+    &__item &__item-btn:not(.open):hover,
+    .no-touch &__subitem &__item-btn:not(.open):hover,
     &__subitem &__item-btn.open,
     &__link:hover{
-        color: $active-color;
         @include hover-bgc;
     }
 
@@ -79,7 +76,6 @@
         padding: 12px 40px 12px 20px;
         font-size: 14px;
         line-height: 21px;
-        font-weight: 500;
         color: $main-color;
         cursor: pointer;
         position: relative;
@@ -103,7 +99,7 @@
         padding: 12px 15px 12px 50px;
         background-color: #f2f2f2;
         &.active {
-            font-weight: 600;
+            font-weight: bold;
             letter-spacing: 0.2px;
         }
         &-wrap {

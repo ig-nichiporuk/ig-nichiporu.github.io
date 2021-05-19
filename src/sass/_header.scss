@@ -2,7 +2,7 @@
 
 header {
     position: relative;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 21px;
     z-index: 3;
 }
@@ -25,6 +25,7 @@ header {
         }
     }
     &__menu {
+        font-family: 'PT Root UI';
         $transition-s: 0.2s;
         margin: 0 0 0 80px;
         color: $dark-color;
@@ -184,6 +185,7 @@ header {
     }
 
     &__link {
+        font-family: 'PT Root UI';
         margin: 0 0 0 auto;
         cursor: pointer;
         position: relative;
@@ -378,11 +380,12 @@ header {
             margin: 20px 0 0 0;
             li {
                 display: block;
-                padding: 12px 0;
+                padding: 10px 0;
                 & > * {
-                    display: inline-block;
+                    font-family: 'PT Root UI';
+                    display: block;
                     font-size: 18px;
-                    line-height: 21px;
+                    line-height: 20px;
                     letter-spacing: 0.2px;
                     position: relative;
                     &.sublist {
@@ -426,7 +429,6 @@ header {
             li {
                 & > * {
                     font-size: 15px;
-                    line-height: 21px;
                     @include hover-link($dark-color);
                 }
             }
