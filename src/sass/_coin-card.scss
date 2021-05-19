@@ -168,22 +168,33 @@
     .coin-card {
         &.card-horizontal {
             flex-direction: row;
-            align-items: center;
-            padding: 30px 25px;
+            align-items: flex-start;
+            padding: 25px 25px 15px;
         }
         &__img {
             .card-horizontal &-item {
                 img {
                     max-width: 100%;
                     max-height: 100%;
-                    min-width: 230px;
-                    min-height: 230px;
+                    min-width: 210px;
+                    min-height: 210px;
                 }
             }
+        }
+        .card-horizontal &__desc {
+            margin: 5px 0 15px 0;
+        }
+        .card-horizontal &__title {
+            font-size: 20px;
         }
         .card-horizontal &__text {
             width: 100%;
             margin: 0 0 0 25px;
+        }
+        .card-horizontal &__info{
+            li {
+                min-height: 40px;
+            }
         }
     }
 

@@ -141,8 +141,6 @@
         &-hashtag,
         &-cleaner {
             padding: 5px;
-            flex-grow: 1;
-            max-width: 300px;
             span {
                 background: $dark-color;
                 border-radius: $bdrs-4;
@@ -152,6 +150,8 @@
                 padding: 0 10px;
                 font-size: 14px;
                 line-height: 30px;
+                font-effect: none;
+                letter-spacing: normal;
                 color: #fff;
                 &:hover {
                     cursor: pointer;
