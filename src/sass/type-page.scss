@@ -26,11 +26,11 @@
             }
         }
     }
-    &__row:not(.table__header):hover,
-    &__row:not(.table__header):hover + &__row:not(.table__header):not(:last-of-type) {
+    &__row:not(.table__header):hover .table__cell,
+    &__row:not(.table__header):hover + &__row:not(.table__header):not(:last-of-type) .table__cell {
         box-shadow: inset 0 1px 0 0 transparent;
     }
-    &__row:not(.table__header):hover + &__row:not(.table__header):last-of-type {
+    &__row:not(.table__header):hover + &__row:not(.table__header):last-of-type .table__cell{
         box-shadow: inset 0 1px 0 0 transparent,
                     inset 0 -1px 0 0 #EDEDED;
     }
