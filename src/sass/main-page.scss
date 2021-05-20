@@ -1,8 +1,5 @@
 @import "variables";
-@import "variables";
-@import "global";
-@import "header";
-@import "footer";
+@import "feedback";
 .fast-find,
 .statistic,
 .main-page__title{
@@ -351,7 +348,7 @@
                     &:before {
                         content: '2';
                     }
-                    &:after {
+                    .line {
                         left: -26px;
                     }
                 }

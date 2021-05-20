@@ -150,16 +150,16 @@
             display: none;
             justify-content: center;
             align-items: center;
-            margin: 0 0 0 10px;
+            margin: 0 0 0 15px;
             svg {
-                width: 20px;
-                height: 20px;
-                margin-left: 5px;
+                width: 40px;
+                height: 40px;
+                padding: 8px;
                 fill: $main-color;
             }
             span {
-                font-size: 16px;
-                line-height: 30px;
+                font-size: 15px;
+                line-height: 21px;
             }
             &:hover {
                 span {

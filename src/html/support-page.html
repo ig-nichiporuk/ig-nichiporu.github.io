@@ -3,6 +3,7 @@
 <head>
 	@@include('../components/head-meta.html', {"title": "Support-page"})
 	<link href="fonts/stylesheet.css" rel="stylesheet">
+	@@include('../components/head-global-style.html')
 	<link rel="stylesheet" href="css/support-page.css?v.2">
 	@@include('../components/head-scripts.html')
 	<script src="js/script.js"></script>
@@ -87,34 +88,7 @@
 					</div>
 				</div>
 				<div class="support-page__body-form">
-					<span class="feedback__title text-medium">Форма обратной связи</span>
-					<form class="feedback">
-						<div class="feedback__item">
-							<label>Email <span class="red-star">*</span></label>
-							<input type="email" placeholder="Электронный адрес">
-						</div>
-						<div class="feedback__item">
-							<label>Имя</label>
-							<input type="text" placeholder="Как к вам обращаться">
-						</div>
-						<div class="feedback__item">
-							<label>Напишите ваш вопрос <span class="red-star">*</span></label>
-							<textarea class="input-style service-date__input" placeholder="Введите текст вопроса в это поле"></textarea>
-						</div>
-						<div class="feedback__item">
-							<label>Прикрепить файл</label>
-							<label class="feedback__load-wrap">
-								<input name="file" type="file" name="file" id="feedback-add-file">
-								<span class="feedback__load-btn">Выбрать файл</span>
-								<span class="feedback__load-file js-feadback-loaded-file"></span>
-							</label>
-						</div>
-						<button class="feedback__btn btn-style">Отправить вопрос</button>
-						<p class="feedback__footnote">
-							Нажимая кнопку «Отправить» я даю свое согласие
-							<span>на обработку персональных данных</span>
-						</p>
-					</form>
+					@@include('../components/feedback.html')
 				</div>
 			</div>
 		</div>
@@ -134,9 +108,6 @@
 			$(this).addClass('open').closest('.js-faq-wrap').addClass('open');
 			$(this).addClass('open').next('.js-faq-body').slideDown(200, 'linear');
 		}
-	})
-	$('#feedback-add-file').change(function(e){
-		$('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
 	});
 </script>
 </html>

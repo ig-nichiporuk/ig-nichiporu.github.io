@@ -540,9 +540,65 @@ input[type=number] {
     }
 }
 
+.modal {
+    display: block;
+    position: relative;
+    width: 500px;
+    min-width: 288px;
+    margin: 0 auto;
+    z-index: 100000;
+    transform: translate3d(0, 300px, 0);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    &__container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        pointer-events: none;
+        visibility: hidden;
+    }
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.18302 4.0664L9.36663 10.25L3.18302 16.4336C2.93877 16.6779 2.93921 17.0732 3.18302 17.317C3.42684 17.5608 3.82214 17.5612 4.0664 17.317L10.25 11.1334L16.4336 17.317C16.6774 17.5608 17.0727 17.5612 17.317 17.317C17.5612 17.0727 17.5608 16.6774 17.317 16.4336L11.1334 10.25L17.317 4.0664C17.5612 3.82214 17.5608 3.42684 17.317 3.18302C17.0732 2.93921 16.6779 2.93877 16.4336 3.18302L10.25 9.36663L4.0664 3.18302C3.82258 2.93921 3.42728 2.93877 3.18302 3.18302C2.93877 3.42728 2.93921 3.82258 3.18302 4.0664Z' fill='%23A8A8A8'/%3E%3C/svg%3E%0A");
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    &__body {
+        padding: 40px 60px;
+        background-color: #fff;
+        border-radius: $bdrs-6;
+        box-shadow: inset 0 0 0 6px #F6F6F6,
+        0 4px 34px rgba(0, 0, 0, 0.08),
+        0 0 4px rgba(0, 0, 0, 0.04);
+    }
+}
 
+.modal-open .modal__container {
+    visibility: visible;
+    overflow: visible;
+    z-index: auto;
+    pointer-events: all;
+}
 
-
+.modal-open .modal.open {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
 
 @media (max-width: 1539px) {
     .container {
@@ -651,9 +707,23 @@ input[type=number] {
             box-shadow: inset 0 1px 0 0 #f0f0f0;
         }
     }
+    .modal {
+        width: calc(100% - 32px);
+        &__body {
+            padding: 40px 30px;
+        }
+    }
 }
 
 @media (max-width: 479px) {
+    .modal {
+        &__body {
+            padding: 40px 25px;
+        }
+        &__close {
+            top: 15px;
+        }
+    }
 }
 
 

@@ -8,6 +8,7 @@
 <title>Filter-page</title>
 
 	<link href="fonts/stylesheet.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/global-style.css?v.2">
 	<link rel="stylesheet" href="css/filter-page.css?v.2">
 	<script src="js/jquery-3.6.0.js"></script>
 <script src="js/scroll-lock.min.js"></script>
@@ -621,11 +622,52 @@
 						<li><a href="#" class="footer__nav-link">Служба поддержки</a></li>
 						<li><a href="#" class="footer__nav-link">Cookies</a></li>
 					</ul>
-					<span class="btn-style">Связаться с нами</span>
+					<a href="#feedback" class="btn-style js-open-modal">Связаться с нами</a>
 				</div>
 			</nav>
 		</div>
 	</div>
 </footer>
+<div class="modal__container js-modal-container">
+	<div class="modal js-modal" id="feedback">
+		<span class="modal__close js-close-modal"></span>
+		<div class="modal__body">
+			<span class="feedback__title text-medium">Форма обратной связи</span>
+<form class="feedback">
+	<div class="feedback__item">
+		<label>Email <span class="red-star">*</span></label>
+		<input type="email" placeholder="Электронный адрес">
+	</div>
+	<div class="feedback__item">
+		<label>Имя</label>
+		<input type="text" placeholder="Как к вам обращаться">
+	</div>
+	<div class="feedback__item">
+		<label>Напишите ваш вопрос <span class="red-star">*</span></label>
+		<textarea class="input-style service-date__input" placeholder="Введите текст вопроса в это поле"></textarea>
+	</div>
+	<div class="feedback__item">
+		<label>Прикрепить файл</label>
+		<label class="feedback__load-wrap">
+			<input name="file" type="file" name="file" id="feedback-add-file">
+			<span class="feedback__load-btn">Выбрать файл</span>
+			<span class="feedback__load-file js-feadback-loaded-file"></span>
+		</label>
+	</div>
+	<button class="feedback__btn btn-style">Отправить вопрос</button>
+	<p class="feedback__footnote">
+		Нажимая кнопку «Отправить» я даю свое согласие
+		<span>на обработку персональных данных</span>
+	</p>
+</form>
+
+<script>
+	$('#feedback-add-file').change(function(e){
+		$('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
+	});
+</script>
+		</div>
+	</div>
+</div>
 </body>
 </html>
