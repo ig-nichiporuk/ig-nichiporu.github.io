@@ -1421,6 +1421,9 @@
 	<div class="feedback__item">
 		<label>Email <span class="red-star">*</span></label>
 		<input type="email" placeholder="Электронный адрес">
+		<div class="error-message hidden">
+			<p>dgfdgh@gm имеет неправильный формат</p>
+		</div>
 	</div>
 	<div class="feedback__item">
 		<label>Имя</label>
@@ -1428,7 +1431,10 @@
 	</div>
 	<div class="feedback__item">
 		<label>Напишите ваш вопрос <span class="red-star">*</span></label>
-		<textarea class="input-style service-date__input" placeholder="Введите текст вопроса в это поле"></textarea>
+		<textarea class="input-style service-date__input error" placeholder="Введите текст вопроса в это поле"></textarea>
+		<div class="error-message">
+			<p>Сообщение: обязательно к заполнению</p>
+		</div>
 	</div>
 	<div class="feedback__item">
 		<label>Прикрепить файл</label>
