@@ -37,14 +37,6 @@ $(document).ready(function() {
 	});
 
 
-
-
-
-
-
-
-
-
 	$('.js-catalog-menu').on('click', function() {
 		if($(this).hasClass('open')){
 			close_catalog_menu();
@@ -78,7 +70,6 @@ $(document).ready(function() {
 	});
 
 
-
 	$('.js-continent-btn').on('click', function() {
 		$('.js-continent-btn').removeClass('active');
 		$(this).addClass('active');
@@ -86,7 +77,6 @@ $(document).ready(function() {
 		$('.js-countries-list').addClass('open');
 		$('.js-countries-sublist').removeClass('open');
 	});
-
 
 
 	$('.js-finder-open-input').on('click', function() {
@@ -105,7 +95,6 @@ $(document).ready(function() {
 		$('.js-finder-animate-block').removeClass('open');
 		$('body').removeClass('overlay-open mob-finder-open');
 	});
-
 
 
 	function mob_control() {

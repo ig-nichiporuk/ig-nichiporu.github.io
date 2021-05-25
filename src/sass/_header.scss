@@ -520,8 +520,15 @@ header {
         width: 100%;
         margin: 0 50px 0 30px;
     }
+
+    .header__catalog {
+        position: fixed;
+        height: 100%;
+    }
+
     .header__catalog .container {
         padding: 0;
+        height: inherit;
     }
     .header__catalog-continents .header__catalog-title,
     .header__catalog-continents .header__catalog-list {
@@ -530,8 +537,8 @@ header {
     .header__catalog-wrap {
         box-shadow: none;
         min-height: auto;
-        height: 100vh;
-        max-height: calc(100vh - 60px);
+        height: 100%;
+        max-height: calc(100% - 60px);
         border-radius: 0;
     }
     .header__catalog-continents,
@@ -587,7 +594,7 @@ header {
     }
     .header__catalog-list,
     .header__catalog-countries .header__catalog-links{
-        max-height: calc(100% - 115px);
+        max-height: calc(100% - 50px);
         overflow-y: auto;
     }
     .header__catalog-countries .header__catalog-list {
