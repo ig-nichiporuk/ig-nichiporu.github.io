@@ -1,14 +1,8 @@
 @import "variables";
-@import "global";
-@import "header";
-@import "footer";
 @import "sidebar";
 @import "stamping";
 @import "breadcrumbs";
 @import "coin-card";
-@import "dop-info-block";
-@import "news";
-
 .year-page {
     &__container {
         .content__block-wrap {
