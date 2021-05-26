@@ -18,6 +18,7 @@
         display: flex;
         &-logo {
             display: flex;
+            margin: 0 25px 0 0;
             width: 200px;
             min-width: 200px;
             height: 110px;
@@ -36,7 +37,6 @@
             }
         }
         &-info {
-            margin: 0 0 0 25px;
             & > * {
                 display: block;
             }
@@ -273,9 +273,6 @@ button.pswp__button--arrow--right {
     .lot-page__header-info .title,
     .lot-page__header-info .date {
         text-align: center;
-    }
-    .lot-page__header-info {
-        margin: 10px 0 0 0;
     }
     .lot-page__header-info .title {
         max-width: 425px;
