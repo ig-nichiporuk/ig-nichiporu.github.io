@@ -5,21 +5,20 @@ $(document).ready(function() {
 	else {
 		check_device = false
 	}
-	$('.js-lot-zoom').lightGallery({
-		speed: 200,
-		preload: 3,
-		swipeThreshold: 10,
-		enableDrag:false,
-		thumbnail: false,
-		autoplayControls: false,
-		hash: false,
-		share: false,
-		rotate:false,
-		download: false,
-		zoom: false,
-		actualSize: false,
-
-		controls: check_device ? false : true,
+	$('.js-lot-zoom').jqPhotoSwipe({
+		loop: true,
+		closeEl:true,
+		captionEl: true,
+		fullscreenEl: true,
+		zoomEl: false,
+		shareEl: false,
+		counterEl: true,
+		arrowEl: true,
+		preloadFirstSlide: true,
+		closeOnScroll: false,
+		preload: [1, 2],
+		allowPanToNext: true,  // разрешает свайп даже при увеличенной картинке
+		maxSpreadZoom: 3, // максимальное увеличение картинки
 	});
 
 	$('.js-coin-info-tab').on('click', function () {

@@ -10,19 +10,19 @@
 	<link href="fonts/stylesheet.css" rel="stylesheet">
 
 
-	<!--<link rel="stylesheet" href="css/photoswipe/photoswipe.css">
-	<link rel="stylesheet" href="css/photoswipe/default-skin.css">-->
-	<link rel="stylesheet" href="css/lightgallery/lightgallery.min.css">
+	<link rel="stylesheet" href="css/photoswipe/photoswipe.css">
+	<link rel="stylesheet" href="css/photoswipe/default-skin.css">
+	<!--<link rel="stylesheet" href="css/lightgallery/lightgallery.min.css">
 	<link rel="stylesheet" href="css/lightgallery/lg-transitions.min.css">
-	<link rel="stylesheet" href="css/lightgallery/lg-fb-comment-box.min.css">
+	<link rel="stylesheet" href="css/lightgallery/lg-fb-comment-box.min.css">-->
 
 
 	<link rel="stylesheet" href="css/slick-slider/slick.css">
 	<link rel="stylesheet" href="css/slick-slider/slick-theme.css">
 
 
-	<link rel="stylesheet" href="css/global-style.css?v.2">
-	<link rel="stylesheet" href="css/lot-page.css?v.2">
+	<link rel="stylesheet" href="css/global-style.css?v.3">
+	<link rel="stylesheet" href="css/lot-page.css?v.3">
 
 
 	<script src="js/jquery-3.6.0.js"></script>
@@ -30,11 +30,11 @@
 <script src="js/global_svg_localstorage.js"></script>
 
 
-	<!--<script src="js/photoswipe/photoswipe.min.js"></script>
+	<script src="js/photoswipe/photoswipe.min.js"></script>
 	<script src="js/photoswipe/jqPhotoSwipe.min.js"></script>
-	<script src="js/photoswipe/photoswipe-ui-default.min.js"></script>-->
+	<script src="js/photoswipe/photoswipe-ui-default.min.js"></script>
 
-	<script src="js/lightgallery/lightgallery-all.min.js"></script>
+<!--	<script src="js/lightgallery/lightgallery-all.min.js"></script>-->
 
 
 	<script src="js/slick-slider/slick-slider.min.js"></script>
@@ -55,7 +55,75 @@
 						<use xlink:href="#logo"></use>
 					</svg>
 				</a>
-				<span class="header__menu js-catalog-menu">Каталог</span>
+				<div class="header__menu js-catalog-menu">
+					<a href="#" class="js-catalog-menu-btn">Каталог</a>
+					<span class="header__menu-mob js-catalog-menu">
+						<span class="btn-wrap js-catalog-menu-btn">
+							<span class="top"></span>
+							<span class="middle"></span>
+							<span class="bottom"></span>
+						</span>
+					</span>
+					<nav class="header__catalog container js-catalog">
+						<div class="header__catalog-wrap js-catalog-wrap">
+								<div class="header__catalog-continents">
+									<span class="header__catalog-title text-medium">Континенты</span>
+									<ul class="header__catalog-list" data-scroll-lock-scrollable>
+										<li><a href="#" class="js-continent-btn <!--active-->">Европа</a></li>
+										<li><a href="#" class="js-continent-btn">Азия</a></li>
+										<li><a href="#" class="js-continent-btn">Австралия и Океания</a></li>
+										<li><a href="#" class="js-continent-btn">Африка</a></li>
+										<li><a href="#" class="js-continent-btn">Северная Америка</a></li>
+										<li><a href="#" class="js-continent-btn">Южная Америка</a></li>
+									</ul>
+								</div>
+								<div class="header__catalog-countries js-countries-wrap">
+									<div class="header__catalog-content open js-countries-list">
+										<span class="header__catalog-title text-medium">Страны</span>
+										<span class="header__catalog-title mob js-catalog-back-countries">Страны Европы</span>
+										<div class="header__catalog-links" data-scroll-lock-scrollable>
+											<ul class="header__catalog-list">
+												<li><a href="#">Беларусь</a></li>
+												<li><a href="#">Франция</a></li>
+												<li><a href="#">Италия</a></li>
+												<li><a href="#">Великобритания</a></li>
+												<li><a href="#">Эстония</a></li>
+												<li><a href="#">Австрия</a></li>
+												<li><span class="sublist js-country-btn">Германия после 1871</span></li>
+												<li><a href="#">Германия</a></li>
+												<li><a href="#">Ирландия</a></li>
+												<li><a href="#">Польша</a></li>
+												<li><a href="#">Нидерланды</a></li>
+												<li><a href="#">Швейцария</a></li>
+												<li><a href="#">Россия</a></li>
+												<li><a href="#">Финляндия</a></li>
+												<li><a href="#">Швеция</a></li>
+												<li><a href="#">Беларусь</a></li>
+												<li><a href="#">Франция</a></li>
+												<li><a href="#">Италия</a></li>
+												<li><a href="#">Великобритания</a></li>
+												<li><a href="#">Эстония</a></li>
+												<li><a href="#">Австрия</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="header__catalog-subcontent js-countries-sublist">
+										<span class="header__catalog-title js-catalog-back">Германия до 1871</span>
+										<div class="header__catalog-links" data-scroll-lock-scrollable>
+											<ul class="header__catalog-list">
+												<li><a href="#">Финляндия</a></li>
+												<li><a href="#">Италия</a></li>
+												<li><a href="#">Австрия</a></li>
+												<li><a href="#">Ирландия</a></li>
+												<li><a href="#">Швейцария</a></li>
+												<li><a href="#">Швеция</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+					</nav>
+				</div>
 				<div class="header__finder">
 					<div class="finder__wrap js-finder-wrap">
 	<div class="finder__input">
@@ -119,7 +187,6 @@
 
 				</div>
 				<!--mobile finder block end-->
-
 				<a href="#" class="header__link">Поддержка</a>
 				<div class="header__currency dropdown js-dropdown-wrap">
 					<span class="header__currency-btn dropdown__btn js-dropdown-btn">
@@ -174,79 +241,9 @@
 						</li>
 					</ul>
 				</div>
-				<span class="header__menu-mob js-catalog-menu">
-					<span class="btn-wrap">
-						<span class="top"></span>
-						<span class="middle"></span>
-						<span class="bottom"></span>
-					</span>
-				</span>
 			</div>
 		</div>
 	</div>
-
-	<nav class="header__catalog js-catalog">
-		<div class="container">
-			<div class="header__catalog-wrap js-catalog-wrap">
-				<div class="header__catalog-continents">
-					<span class="header__catalog-title text-medium">Континенты</span>
-					<ul class="header__catalog-list" data-scroll-lock-scrollable>
-						<li><a href="#" class="js-continent-btn active">Европа</a></li>
-						<li><a href="#" class="js-continent-btn">Азия</a></li>
-						<li><a href="#" class="js-continent-btn">Австралия и Океания</a></li>
-						<li><a href="#" class="js-continent-btn">Африка</a></li>
-						<li><a href="#" class="js-continent-btn">Северная Америка</a></li>
-						<li><a href="#" class="js-continent-btn">Южная Америка</a></li>
-					</ul>
-				</div>
-				<div class="header__catalog-countries js-countries-wrap">
-					<div class="header__catalog-content open js-countries-list">
-						<span class="header__catalog-title text-medium">Страны</span>
-						<span class="header__catalog-title mob js-catalog-back-countries">Страны Европы</span>
-						<div class="header__catalog-links" data-scroll-lock-scrollable>
-							<ul class="header__catalog-list">
-								<li><a href="#">Беларусь</a></li>
-								<li><a href="#">Франция</a></li>
-								<li><a href="#">Италия</a></li>
-								<li><a href="#">Великобритания</a></li>
-								<li><a href="#">Эстония</a></li>
-								<li><a href="#">Австрия</a></li>
-								<li><span class="sublist js-country-btn">Германия после 1871</span></li>
-								<li><a href="#">Германия</a></li>
-								<li><a href="#">Ирландия</a></li>
-								<li><a href="#">Польша</a></li>
-								<li><a href="#">Нидерланды</a></li>
-								<li><a href="#">Швейцария</a></li>
-								<li><a href="#">Россия</a></li>
-								<li><a href="#">Финляндия</a></li>
-								<li><a href="#">Швеция</a></li>
-								<li><a href="#">Беларусь</a></li>
-								<li><a href="#">Франция</a></li>
-								<li><a href="#">Италия</a></li>
-								<li><a href="#">Великобритания</a></li>
-								<li><a href="#">Эстония</a></li>
-								<li><a href="#">Австрия</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="header__catalog-subcontent js-countries-sublist">
-						<span class="header__catalog-title js-catalog-back">Германия до 1871</span>
-						<div class="header__catalog-links" data-scroll-lock-scrollable>
-							<ul class="header__catalog-list">
-							<li><a href="#">Финляндия</a></li>
-							<li><a href="#">Италия</a></li>
-							<li><a href="#">Австрия</a></li>
-							<li><a href="#">Ирландия</a></li>
-							<li><a href="#">Швейцария</a></li>
-							<li><a href="#">Швеция</a></li>
-						</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-
 </header>
 
 <main class="lot-page">
@@ -260,9 +257,9 @@
 </ul>
 		<div class="lot-page__content">
 			<div class="lot-page__header">
-				<div class="lot-page__header-logo">
+				<!--<div class="lot-page__header-logo">
 					<span>Логотип</span>
-				</div>
+				</div>-->
 				<div class="lot-page__header-info">
 					<span class="auction">Аукцион</span>
 					<span class="title text-medium">Antykwariat Numizmatyczny - Niemczyk Michal (Auction 18)</span>
@@ -271,23 +268,23 @@
 			</div>
 			<div class="lot-page__body">
 				<div class="lot-page__slider">
-					<div class="lot-page__slider-wrap js-lot-slider js-lot-zoom">
-						<a href="img/webp/lot-coin.webp" class="lot-page__slider-item" alt="Coin1" title="Coin1" rel="group" data-fancybox-group="gallery">
+					<div class="lot-page__slider-wrap js-lot-slider">
+						<a href="img/webp/lot-coin.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin1" title="Coin1" rel="group" data-fancybox-group="gallery">
 							<img src="img/webp/lot-coin.webp" alt="Coin1" title="Coin1" class="lot-page__slider-img">
 						</a>
-						<a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item" alt="Coin2" title="Coin2" rel="group" data-fancybox-group="gallery">
+						<a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin2" title="Coin2" rel="group" data-fancybox-group="gallery">
 							<img src="img/webp/lot-coin-back.webp" alt="Coin2" title="Coin2" class="lot-page__slider-img">
 						</a>
-						<a href="img/webp/lot-coin.webp" class="lot-page__slider-item" alt="Coin3" title="Coin3" rel="group" data-fancybox-group="gallery">
+						<a href="img/webp/lot-coin.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin3" title="Coin3" rel="group" data-fancybox-group="gallery">
 							<img src="img/webp/lot-coin.webp" alt="Coin3" title="Coin3" class="lot-page__slider-img">
 						</a>
-						<a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item" alt="Coin4" title="Coin4" rel="group" data-fancybox-group="gallery">
+						<a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin4" title="Coin4" rel="group" data-fancybox-group="gallery">
 							<img src="img/webp/lot-coin-back.webp" alt="Coin4" title="Coin4" class="lot-page__slider-img">
 						</a>
-						<a href="img/webp/lot-coin.webp" class="lot-page__slider-item" alt="Coin5" title="Coin5" rel="group" data-fancybox-group="gallery">
+						<a href="img/webp/lot-coin.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin5" title="Coin5" rel="group" data-fancybox-group="gallery">
 							<img src="img/webp/lot-coin.webp" alt="Coin5" title="Coin5" class="lot-page__slider-img">
 						</a>
-						<a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item" alt="Coin6" title="Coin6" rel="group" data-fancybox-group="gallery">
+						<a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin6" title="Coin6" rel="group" data-fancybox-group="gallery">
 							<img src="img/webp/lot-coin-back.webp" alt="Coin6" title="Coin6" class="lot-page__slider-img">
 						</a>
 					</div>

@@ -8,11 +8,12 @@
 <title>Catalog-page</title>
 
 	<link href="fonts/stylesheet.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/global-style.css?v.2">
-	<link rel="stylesheet" href="css/catalog-page.css?v.2">
+	<link rel="stylesheet" href="css/global-style.css?v.3">
+	<link rel="stylesheet" href="css/catalog-page.css?v.3">
 	<script src="js/jquery-3.6.0.js"></script>
 <script src="js/scroll-lock.min.js"></script>
 <script src="js/global_svg_localstorage.js"></script>
+	<script src="js/continents_svg_localstorage.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/header.js"></script>
 </head>
@@ -27,7 +28,75 @@
 						<use xlink:href="#logo"></use>
 					</svg>
 				</a>
-				<span class="header__menu js-catalog-menu">Каталог</span>
+				<div class="header__menu js-catalog-menu">
+					<a href="#" class="js-catalog-menu-btn">Каталог</a>
+					<span class="header__menu-mob js-catalog-menu">
+						<span class="btn-wrap js-catalog-menu-btn">
+							<span class="top"></span>
+							<span class="middle"></span>
+							<span class="bottom"></span>
+						</span>
+					</span>
+					<nav class="header__catalog container js-catalog">
+						<div class="header__catalog-wrap js-catalog-wrap">
+								<div class="header__catalog-continents">
+									<span class="header__catalog-title text-medium">Континенты</span>
+									<ul class="header__catalog-list" data-scroll-lock-scrollable>
+										<li><a href="#" class="js-continent-btn <!--active-->">Европа</a></li>
+										<li><a href="#" class="js-continent-btn">Азия</a></li>
+										<li><a href="#" class="js-continent-btn">Австралия и Океания</a></li>
+										<li><a href="#" class="js-continent-btn">Африка</a></li>
+										<li><a href="#" class="js-continent-btn">Северная Америка</a></li>
+										<li><a href="#" class="js-continent-btn">Южная Америка</a></li>
+									</ul>
+								</div>
+								<div class="header__catalog-countries js-countries-wrap">
+									<div class="header__catalog-content open js-countries-list">
+										<span class="header__catalog-title text-medium">Страны</span>
+										<span class="header__catalog-title mob js-catalog-back-countries">Страны Европы</span>
+										<div class="header__catalog-links" data-scroll-lock-scrollable>
+											<ul class="header__catalog-list">
+												<li><a href="#">Беларусь</a></li>
+												<li><a href="#">Франция</a></li>
+												<li><a href="#">Италия</a></li>
+												<li><a href="#">Великобритания</a></li>
+												<li><a href="#">Эстония</a></li>
+												<li><a href="#">Австрия</a></li>
+												<li><span class="sublist js-country-btn">Германия после 1871</span></li>
+												<li><a href="#">Германия</a></li>
+												<li><a href="#">Ирландия</a></li>
+												<li><a href="#">Польша</a></li>
+												<li><a href="#">Нидерланды</a></li>
+												<li><a href="#">Швейцария</a></li>
+												<li><a href="#">Россия</a></li>
+												<li><a href="#">Финляндия</a></li>
+												<li><a href="#">Швеция</a></li>
+												<li><a href="#">Беларусь</a></li>
+												<li><a href="#">Франция</a></li>
+												<li><a href="#">Италия</a></li>
+												<li><a href="#">Великобритания</a></li>
+												<li><a href="#">Эстония</a></li>
+												<li><a href="#">Австрия</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="header__catalog-subcontent js-countries-sublist">
+										<span class="header__catalog-title js-catalog-back">Германия до 1871</span>
+										<div class="header__catalog-links" data-scroll-lock-scrollable>
+											<ul class="header__catalog-list">
+												<li><a href="#">Финляндия</a></li>
+												<li><a href="#">Италия</a></li>
+												<li><a href="#">Австрия</a></li>
+												<li><a href="#">Ирландия</a></li>
+												<li><a href="#">Швейцария</a></li>
+												<li><a href="#">Швеция</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+					</nav>
+				</div>
 				<div class="header__finder">
 					<div class="finder__wrap js-finder-wrap">
 	<div class="finder__input">
@@ -91,7 +160,6 @@
 
 				</div>
 				<!--mobile finder block end-->
-
 				<a href="#" class="header__link">Поддержка</a>
 				<div class="header__currency dropdown js-dropdown-wrap">
 					<span class="header__currency-btn dropdown__btn js-dropdown-btn">
@@ -146,79 +214,9 @@
 						</li>
 					</ul>
 				</div>
-				<span class="header__menu-mob js-catalog-menu">
-					<span class="btn-wrap">
-						<span class="top"></span>
-						<span class="middle"></span>
-						<span class="bottom"></span>
-					</span>
-				</span>
 			</div>
 		</div>
 	</div>
-
-	<nav class="header__catalog js-catalog">
-		<div class="container">
-			<div class="header__catalog-wrap js-catalog-wrap">
-				<div class="header__catalog-continents">
-					<span class="header__catalog-title text-medium">Континенты</span>
-					<ul class="header__catalog-list" data-scroll-lock-scrollable>
-						<li><a href="#" class="js-continent-btn active">Европа</a></li>
-						<li><a href="#" class="js-continent-btn">Азия</a></li>
-						<li><a href="#" class="js-continent-btn">Австралия и Океания</a></li>
-						<li><a href="#" class="js-continent-btn">Африка</a></li>
-						<li><a href="#" class="js-continent-btn">Северная Америка</a></li>
-						<li><a href="#" class="js-continent-btn">Южная Америка</a></li>
-					</ul>
-				</div>
-				<div class="header__catalog-countries js-countries-wrap">
-					<div class="header__catalog-content open js-countries-list">
-						<span class="header__catalog-title text-medium">Страны</span>
-						<span class="header__catalog-title mob js-catalog-back-countries">Страны Европы</span>
-						<div class="header__catalog-links" data-scroll-lock-scrollable>
-							<ul class="header__catalog-list">
-								<li><a href="#">Беларусь</a></li>
-								<li><a href="#">Франция</a></li>
-								<li><a href="#">Италия</a></li>
-								<li><a href="#">Великобритания</a></li>
-								<li><a href="#">Эстония</a></li>
-								<li><a href="#">Австрия</a></li>
-								<li><span class="sublist js-country-btn">Германия после 1871</span></li>
-								<li><a href="#">Германия</a></li>
-								<li><a href="#">Ирландия</a></li>
-								<li><a href="#">Польша</a></li>
-								<li><a href="#">Нидерланды</a></li>
-								<li><a href="#">Швейцария</a></li>
-								<li><a href="#">Россия</a></li>
-								<li><a href="#">Финляндия</a></li>
-								<li><a href="#">Швеция</a></li>
-								<li><a href="#">Беларусь</a></li>
-								<li><a href="#">Франция</a></li>
-								<li><a href="#">Италия</a></li>
-								<li><a href="#">Великобритания</a></li>
-								<li><a href="#">Эстония</a></li>
-								<li><a href="#">Австрия</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="header__catalog-subcontent js-countries-sublist">
-						<span class="header__catalog-title js-catalog-back">Германия до 1871</span>
-						<div class="header__catalog-links" data-scroll-lock-scrollable>
-							<ul class="header__catalog-list">
-							<li><a href="#">Финляндия</a></li>
-							<li><a href="#">Италия</a></li>
-							<li><a href="#">Австрия</a></li>
-							<li><a href="#">Ирландия</a></li>
-							<li><a href="#">Швейцария</a></li>
-							<li><a href="#">Швеция</a></li>
-						</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-
 </header>
 
 <main class="content catalog-page__container">

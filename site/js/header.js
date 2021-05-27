@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 	$('.js-finder-input').on('keyup', function() {
 		if($(this).val().length >= 1) {
 			/*$('.js-finder-input').val($(this).val());*/
@@ -16,7 +15,7 @@ $(document).ready(function() {
 	});
 	$('.js-finder-clean').on('click', function () {
 		close_finder_body();
-	})
+	});
 
 
 	$(document).mousedown(function(e){
@@ -37,13 +36,13 @@ $(document).ready(function() {
 	});
 
 
-	$('.js-catalog-menu').on('click', function() {
+	$('.touch .js-catalog-menu-btn').on('click', function() {
 		if($(this).hasClass('open')){
 			close_catalog_menu();
 		}
 		else {
+			$(this).addClass('open');
 			$('.js-catalog-menu').addClass('open');
-			// $('.js-catalog').slideDown(400);
 			$('.js-catalog').removeClass('close').addClass('open');
 		}
 
@@ -54,7 +53,12 @@ $(document).ready(function() {
 				enableScroll();
 			}
 		}
-	})
+	});
+
+	$('.js-catalog-menu-btn').hover( function() {
+		close_dropdown();
+		close_finder_body();
+	});
 
 
 	$('.js-country-btn').on('click', function() {
