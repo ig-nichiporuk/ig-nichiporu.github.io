@@ -301,9 +301,10 @@ header {
             }
         }
         &-title {
+            font-family: 'PT Root UI';
             display: block;
             position: relative;
-            font-size: 13px;
+            font-size: 14px;
             line-height: 16px;
             text-transform: uppercase;
             color: #9595AF;
@@ -336,6 +337,9 @@ header {
         &-countries &-subcontent &-title {
             color: $main-color;
             text-align: center;
+            &:hover {
+                font-weight: 700;
+            }
         }
         &-list li > *.sublist:after,
         &-countries &-subcontent &-title:after,
