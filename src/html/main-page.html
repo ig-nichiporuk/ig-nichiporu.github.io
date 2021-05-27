@@ -161,15 +161,13 @@
 
 <script>
 	$('.js-delete-first-step .select-style__item').on('click', function () {
-		$('.js-delete-first-step input').val($(this).find('.select-style__option').text());
-		close_dropdown();
 		$('.js-delete-second-step').removeAttr('disabled');
 	});
+
 	$('.js-delete-second-step .select-style__item').on('click', function () {
-		$('.js-delete-first-step input').val($(this).find('.select-style__option').text());
-		close_dropdown();
 		$('.js-delete-second-step').next('.fast-find__form-btn').removeAttr('disabled');
 	});
+
 	$('.js-delete-second-step input').on('keyup', function () {
 		$('.js-delete-second-step .select-style__item').each(function () {
 			console.log(typeof (+($(this).children().text())));

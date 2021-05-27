@@ -106,7 +106,7 @@
                 background-color: #EDEDED;
                 margin: 0;
                 &.slick-active {
-                    background-color: $dark-color;
+                    background-color: $active-color;
                 }
                 button {
                     display: none;
@@ -175,8 +175,7 @@
     }
 }
 
-button.pswp__button--arrow--left,
-button.pswp__button--arrow--right,
+
 button.slick-prev,
 button.slick-next{
     width: 40px;
@@ -185,6 +184,7 @@ button.slick-next{
     border-radius: 50%;
     transform: none;
     &:before {
+        background: none;
         background-color: transparent;
         content: '';
         display: block;
@@ -200,35 +200,14 @@ button.slick-next{
     &:hover,
     &:active,
     &:focus {
-        @include hover-bgc;
+        background-color: $active-color;
+        &:before {
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2357 5L13 5.80292L8.49044 10.5L13 15.1971L12.2357 16L7 10.5L12.2357 5Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+        }
     }
 }
-button.pswp__button--arrow--left,
-button.pswp__button--arrow--right {
-    margin-top: 0;
-}
-button.pswp__button--arrow--right,
 button.slick-next {
     transform: rotate(180deg);
-}
-button.pswp__button--arrow--left {
-    left: 20px;
-}
-button.pswp__button--arrow--right {
-    right: 20px;
-}
-.pswp__ui--idle button.pswp__button--arrow--left,
-.pswp__ui--idle button.pswp__button--arrow--right {
-    opacity: 1;
-}
-.pswp__caption__center {
-    text-align: center;
-    max-width: 420px;
-    margin: 0 auto;
-    font-size: 16px;
-    padding: 10px;
-    line-height: 20px;
-    color: #CCC;
 }
 
 @media (max-width: 1539px) {

@@ -5,7 +5,8 @@ $(document).ready(function() {
 	else {
 		check_device = false
 	}
-	/*$('.js-lot-zoom').jqPhotoSwipe({
+	$('.js-lot-zoom').jqPhotoSwipe({
+		loop: true,
 		closeEl:true,
 		captionEl: true,
 		fullscreenEl: true,
@@ -13,18 +14,14 @@ $(document).ready(function() {
 		shareEl: false,
 		counterEl: true,
 		arrowEl: true,
-		preloaderEl: true,
-		clickToCloseNonZoomable: true,
-		tapToClose: true,
-		tapToToggleControls: true,
+		preloadFirstSlide: true,
 		closeOnScroll: false,
-		loop: true,
+		preload: [1, 2],
+		allowPanToNext: true,  // разрешает свайп даже при увеличенной картинке
+		maxSpreadZoom: 3, // максимальное увеличение картинки
+	});
 
-		// getDoubleTapZoom : false,
-		// forceSingleGallery: true
-	});*/
-
-	$('.js-lot-zoom').lightGallery({
+	/*$('.js-lot-zoom').lightGallery({
 		speed: 200,
 		preload: 3,
 		swipeThreshold: 10,
@@ -37,9 +34,8 @@ $(document).ready(function() {
 		download: false,
 		zoom: false,
 		actualSize: false,
-
 		controls: check_device ? false : true,
-	});
+	});*/
 
 	$('.js-lot-slider').on('breakpoint init', function () {
 		$('.js-lot-slider-controls').empty();

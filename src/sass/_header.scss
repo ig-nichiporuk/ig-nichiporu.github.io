@@ -25,21 +25,28 @@ header {
         }
     }
     &__menu {
-        font-family: 'PT Root UI';
-        $transition-s: 0.2s;
-        margin: 0 0 0 80px;
-        color: $dark-color;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin: 0 0 0 40px;
+        padding: 0 30px 0 40px;
         cursor: pointer;
-        min-width: 61px;
-        position: relative;
-        @include hover-link($dark-color);
+        a {
+            font-family: 'PT Root UI';
+            color: $dark-color;
+        }
+        .no-touch &:hover,
+        &.open {
+            & > a {
+                font-weight: 700;
+            }
+        }
         &-mob {
             display: none;
             width: 40px;
             min-width: 40px;
             height: 40px;
             margin: 0 0 0 auto;
-
             .btn-wrap {
                 margin: auto;
                 width: 30px;
@@ -53,7 +60,7 @@ header {
                     border-radius: $bdrs-4;
                     background-color: $dark-color;
                     margin-top: -1px;
-                    transition: opacity 0s $transition-s, top $transition-s ease-in-out $transition-s, transform $transition-s ease-in-out;
+                    transition: opacity 0s 0.2s, top 0.2s ease-in-out 0.2s, transform 0.2s ease-in-out;
                     transform-origin: 50% 50%;
                 }
                 .top {
@@ -85,7 +92,7 @@ header {
                         margin-top: -1px;*/
                         width: 24px;
                         top: 50%;
-                        transition: top $transition-s ease-in-out, opacity 0s $transition-s, width $transition-s ease-in-out $transition-s, transform $transition-s ease-in-out $transition-s;
+                        transition: top 0.2s ease-in-out, opacity 0s 0.2s, width 0.2s ease-in-out 0.2s, transform 0.2s ease-in-out 0.2s;
                     }
                     .top {
                         transform: rotate(45deg);
@@ -115,13 +122,8 @@ header {
             }*/
         }
     }
-
-
-
-
     &__finder {
         position: relative;
-        margin: 0 0 0 30px;
         width: 480px;
         &.mob {
             display: none;
@@ -183,7 +185,6 @@ header {
 
         }
     }
-
     &__link {
         font-family: 'PT Root UI';
         margin: 0 0 0 auto;
@@ -265,18 +266,13 @@ header {
     &__catalog {
         display: block;
         position: absolute;
-        width: 100%;
+        left: 0;
+        right: 0;
+        top: 100%;
         z-index: -1;
-        transform: translateY(-120%);
+        transform: translateY(-150%);
         will-change: transform;
-        transition: transform .3s;
-        will-change: transform;
-        &.open {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
-            transition: transform .3s ease-in-out;
-        }
+        transition: transform .45s;
         &.close {
             visibility: hidden;
             opacity: 0;
@@ -292,20 +288,6 @@ header {
             border-bottom-left-radius: $bdrs-6;
             overflow: hidden;
         }
-        &.open &-wrap {
-            box-shadow: inset 0 1px 0 0 #EDEDED,
-                        0 100px 80px rgba(0, 0, 0, 0.07),
-                        0 40px 33px rgba(0, 0, 0, 0.05),
-                        0 22px 17px rgba(0, 0, 0, 0.04),
-                        0 12px 10px rgba(0, 0, 0, 0.03),
-                        0 6px 5px rgba(0, 0, 0, 0.02),
-                        0 2px 2px rgba(0, 0, 0, 0.02);
-        }
-
-        /*новое*/
-
-
-
         &-content,
         &-subcontent {
             position: absolute;
@@ -317,7 +299,6 @@ header {
                 opacity: 1;
             }
         }
-
         &-title {
             display: block;
             position: relative;
@@ -345,7 +326,6 @@ header {
                 background-color: #616188;
             }
         }
-
         &-countries &-subcontent &-title,
         &-countries  &-title.mob {
             cursor: pointer;
@@ -446,6 +426,23 @@ header {
             padding: 45px 40px 80px 60px;
         }
     }
+    .no-touch &__menu:hover &__catalog,
+    &__catalog.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform .3s ease-in-out;
+    }
+    .no-touch &__menu:hover &__catalog-wrap,
+    &__catalog.open &__catalog-wrap {
+        box-shadow: inset 0 1px 0 0 #EDEDED,
+        0 100px 80px rgba(0, 0, 0, 0.07),
+        0 40px 33px rgba(0, 0, 0, 0.05),
+        0 22px 17px rgba(0, 0, 0, 0.04),
+        0 12px 10px rgba(0, 0, 0, 0.03),
+        0 6px 5px rgba(0, 0, 0, 0.02),
+        0 2px 2px rgba(0, 0, 0, 0.02);
+    }
 }
 
 .mob-finder-open header {
@@ -457,12 +454,13 @@ header {
 
 @media (max-width: 1299px) {
     .header__menu {
-        margin: 0 0 0 40px;
+        margin: 0;
+        padding: 0 20px 0 40px;
     }
     .header__finder {
         width: 340px;
     }
-    .header__currency, .header__lang, .header__finder {
+    .header__currency, .header__lang {
         margin: 0 0 0 20px;
     }
     .header__catalog-countries {
@@ -476,9 +474,6 @@ header {
     .header__catalog-countries .header__catalog-title{
         max-width: 100%;
     }
-    /*.header__catalog-countries .header__catalog-list {
-        max-width: 440px;
-    }*/
     .header__catalog-countries .header__catalog-links {
         max-height: 460px;
         overflow-y: auto;
@@ -493,12 +488,16 @@ header {
         width: 105px;
         height: 30px;
     }
-    .header__menu, .header__link, .header__currency, .header__lang {
+    .header__link, .header__currency, .header__lang {
         display: none;
     }
-    .header__finder {
-        margin: 0 0 0 30px;
-        width: 480px;
+    .header__menu {
+        order: 1;
+        margin: 0 0 0 auto;
+        padding: 0;
+    }
+    .header__menu  > a {
+        display: none;
     }
     .header__menu-mob {
         display: flex;
@@ -513,6 +512,11 @@ header {
         column-gap: 20px;
     }
 
+    .header__finder {
+        margin: 0 0 0 30px;
+        width: 480px;
+    }
+
 }
 
 @media (max-width: 779px) {
@@ -524,6 +528,9 @@ header {
     .header__catalog {
         position: fixed;
         height: 100%;
+        top: 60px;
+        left: 0;
+        padding: 0;
     }
 
     .header__catalog .container {
@@ -612,7 +619,7 @@ header {
     .header__finder.mob {
         display: flex;
     }
-    .header__menu-mob {
+    .header__menu {
         margin: 0;
     }
 }

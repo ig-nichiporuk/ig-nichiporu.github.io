@@ -4,13 +4,14 @@
 	@@include('../components/head-meta.html', {"title": "Coin-page"})
 	<link href="fonts/stylesheet.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/lightgallery/lightgallery.min.css">
-	<link rel="stylesheet" href="css/lightgallery/lg-transitions.min.css">
-	<link rel="stylesheet" href="css/lightgallery/lg-fb-comment-box.min.css">
+	<link rel="stylesheet" href="css/photoswipe/photoswipe.css">
+	<link rel="stylesheet" href="css/photoswipe/default-skin.css">
 	@@include('../components/head-global-style.html')
 	<link rel="stylesheet" href="css/coin-page.css?v.2">
 	@@include('../components/head-scripts.html')
-	<script src="js/lightgallery/lightgallery-all.min.js"></script>
+	<script src="js/photoswipe/photoswipe.min.js"></script>
+	<script src="js/photoswipe/jqPhotoSwipe.min.js"></script>
+	<script src="js/photoswipe/photoswipe-ui-default.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/coin-page.js"></script>
@@ -42,11 +43,11 @@
 				<div class="content__block-wrap">
 					<div class="coin-page">
 						<div class="coin-page__img">
-							<div class="coin-page__img-wrap js-lot-zoom">
-								<a href="img/webp/lot-coin.webp" class="coin-page__img-item" rel="group" data-fancybox-group="gallery">
+							<div class="coin-page__img-wrap">
+								<a href="img/webp/lot-coin.webp" class="coin-page__img-item js-lot-zoom" alt="Coin1" title="Coin1" rel="group" data-fancybox-group="gallery">
 									<img src="img/webp/lot-coin.webp" alt="coin">
 								</a>
-								<a href="img/webp/lot-coin-back.webp" class="coin-page__img-item" rel="group" data-fancybox-group="gallery">
+								<a href="img/webp/lot-coin-back.webp" class="coin-page__img-item js-lot-zoom" alt="Coin1" title="Coin1" rel="group" data-fancybox-group="gallery">
 									<img src="img/webp/lot-coin-back.webp" alt="coin">
 								</a>
 							</div>
