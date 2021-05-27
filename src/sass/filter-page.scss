@@ -374,6 +374,11 @@
                 padding: 10px 0 ;
             }
         }
+        &__finder {
+            .finder__body-list li:first-of-type {
+                box-shadow: none;
+            }
+        }
         &__not-found {
             p {
                 text-align: center;
