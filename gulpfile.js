@@ -91,6 +91,16 @@ gulp.task('sprite', function (done) {
 			}
 		))
 		.pipe(gulp.dest('src/img'));
+	gulp.src('./src/svg/continents/*.svg')
+		.pipe(svgSprite({
+				mode: "symbols",
+				preview: false,
+				svg: {
+					symbols: './continents-sprite.html'
+				}
+			}
+		))
+		.pipe(gulp.dest('src/img'));
 	done();
 });
 
