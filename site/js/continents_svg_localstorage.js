@@ -3,7 +3,7 @@
 
 	/* ну да прямой урл а по другому js не хотел делать GET и получить этот файл - можно толькое если в шаблоны бросить */
 	var file = 'img/continents-sprite.html',
-	revision = 12;
+	revision = 1;
 
 	if (!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect)
 		return true;
@@ -19,8 +19,8 @@
 			else document.addEventListener('DOMContentLoaded', insertIT);
 		};
 
-	if (isLocalStorage && localStorage.getItem('inlineSVGrev-global') == revision) {
-		data = localStorage.getItem('inlineSVGdata-global');
+	if (isLocalStorage && localStorage.getItem('inlineSVGrev-continents') == revision) {
+		data = localStorage.getItem('inlineSVGdata-continents');
 		if (data) {
 			insert();
 			return true;
@@ -35,8 +35,8 @@
 				data = request.responseText;
 				insert();
 				if (isLocalStorage) {
-					localStorage.setItem('inlineSVGdata-global', data);
-					localStorage.setItem('inlineSVGrev-global', revision);
+					localStorage.setItem('inlineSVGdata-continents', data);
+					localStorage.setItem('inlineSVGrev-continents', revision);
 				}
 			}
 		}
