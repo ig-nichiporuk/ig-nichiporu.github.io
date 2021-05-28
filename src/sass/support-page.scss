@@ -118,6 +118,15 @@
             .finder__sort {
                 display: none;
             }
+            .finder__input {
+                padding: 0;
+            }
+            .finder__body {
+                box-shadow: 0 3px 2px rgba(0,0,0,.04),
+                            0 7px 5px rgba(0,0,0,.02),
+                            0 13px 10px rgba(0,0,0,.02),
+                            0 22px 17px rgba(0,0,0,.02);
+            }
         }
     }
     &__body {

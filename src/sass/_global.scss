@@ -448,7 +448,7 @@ input[type=number] {
         input {
             width: 100%;
             height: 100%;
-            padding: 0 20px 0 15px;
+            padding: 0 15px;
             font-size: 15px;
             line-height: 21px;
             color: $main-color;
@@ -748,13 +748,18 @@ button.pswp__button--arrow--left {
 @media(max-width: 639px) {
     .finder {
         .header__finder-animate &__body {
+            position: fixed;
+            width: 100%;
+            top: 60px;
+            left: 0;
             border: none;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
+            max-height: calc(100% - 60px);
+            overflow-y: auto;
             &-list {
-                padding-bottom: 30px;
-                height: 100vh;
-                max-height: calc(100vh - 105px);
+                height: auto;
+                max-height: 100%;
             }
         }
         &__body-list li {
