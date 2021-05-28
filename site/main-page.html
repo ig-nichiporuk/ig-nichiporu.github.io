@@ -18,11 +18,18 @@
 </head>
 <style>
 	.main-page {
-		background-image: url('img/webp/main-background.webp');
+
+		background-image: url('img/webp/main-background-mob-1024.webp');
 	}
-	@media (max-width: 639px) {
+
+	@media (min-width: 640px) {
 		.main-page {
-			background-image: url('img/webp/main-background-mob.webp');
+			background-image: url('img/webp/main-background-2k.webp');
+		}
+	}
+	@media (min-width: 1921px) {
+		.main-page {
+			background-image: url('img/webp/main-background-4k.webp');
 		}
 	}
 </style>
@@ -129,7 +136,7 @@
 	</a>
 </div>
 
-					<div class="finder__body js-finder-body">
+					<div class="finder__body js-finder-body" data-scroll-lock-scrollable>
 	<ul class="finder__body-list">
 		<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
 		<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
@@ -152,7 +159,7 @@
 									<use xlink:href="#close"></use>
 								</svg>
 							</div>
-							<div class="finder__body js-finder-body">
+							<div class="finder__body js-finder-body" data-scroll-lock-scrollable>
 	<ul class="finder__body-list">
 		<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
 		<li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
@@ -453,6 +460,7 @@
 		</div>
 	</div>
 </div>
+
 </body>
 </html>
 
