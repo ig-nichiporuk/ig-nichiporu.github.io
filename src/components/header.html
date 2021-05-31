@@ -97,7 +97,8 @@
 				</div>
 				<!--mobile finder block-->
 				<div class="header__finder mob">
-						<div class="header__finder-animate js-finder-animate-block">
+					<div class="header__finder-animate js-finder-animate-block">
+						<div class="container">
 							<div class="header__finder-wrap js-finder-wrap">
 								<svg class="find-icon">
 									<use xlink:href="#search"></use>
@@ -108,12 +109,14 @@
 								</svg>
 							</div>
 							@@include('../components/finder-list.html', {
-								"link-to-filter-page": "",
+							"link-to-filter-page": "",
 							})
 						</div>
-						<svg class="finder__btn-icon js-finder-open-input">
-							<use xlink:href="#search"></use>
-						</svg>
+
+					</div>
+					<svg class="finder__btn-icon js-finder-open-input">
+						<use xlink:href="#search"></use>
+					</svg>
 
 				</div>
 				<!--mobile finder block end-->
