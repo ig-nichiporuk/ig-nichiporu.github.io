@@ -128,6 +128,7 @@ gulp.task('clear-css', function (done) {
 });
 gulp.task('clear-img', function (done) {
 	del(['./src/img/*']);
+	del(['./src/svg/*']);
 	done();
 });
 

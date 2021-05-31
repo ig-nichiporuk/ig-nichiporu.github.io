@@ -81,21 +81,26 @@ $(document).ready(function() {
 		$('.js-countries-list').addClass('open');
 		$('.js-countries-sublist').removeClass('open');
 	});
-
-
 	$('.js-finder-open-input').on('click', function() {
+		$('.js-finder-open-input').addClass('active');
 		setTimeout(function () {
-			$('.js-finder-input').focus();
-		}, 0)
-
-		$('.js-finder-animate-block').addClass('open');
-		$('body').addClass('overlay-open mob-finder-open');
-		close_finder_body();
-		disableScroll();
+			$('.js-finder-input').focus($('.js-finder-wrap').addClass('focus-in'));
+		}, 100);
+		if($(window).width() < 640) {
+			$('.js-finder-open-input').addClass('active');
+			$('.js-toolbar-content').removeClass('open');
+			$('.js-toolbar-block').addClass('hidden');
+			$('.js-toolbar-btn').removeClass('active');
+			$('.js-finder-animate-block').addClass('open');
+			$('body').addClass('overlay-open mob-finder-open');
+			close_finder_body();
+			disableScroll();
+		}
 	});
 	$('.js-finder-animate-close').on('click', function () {
 		enableScroll();
 		close_finder_body();
+		$('.js-finder-open-input').removeClass('active');
 		$('.js-finder-animate-block').removeClass('open');
 		$('body').removeClass('overlay-open mob-finder-open');
 	});
