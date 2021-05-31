@@ -3,9 +3,6 @@
     font-family: 'PT Root UI';
     border-radius: $bdrs-6;
     background-color: #fff;
-    &:not(.mob) {
-        overflow: hidden;
-    }
     &__item {
         &-btn {
             position: relative;
@@ -74,7 +71,7 @@
     &__link {
         display: block;
         padding: 12px 40px 12px 20px;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 21px;
         color: $main-color;
         cursor: pointer;
@@ -101,6 +98,9 @@
         &.active {
             font-weight: bold;
             letter-spacing: 0.2px;
+        }
+        &:active {
+            color: $active-color;
         }
         &-wrap {
             border-top: 1px solid #e4e4e4;

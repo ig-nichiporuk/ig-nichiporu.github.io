@@ -22,7 +22,7 @@
 
 
 	<link rel="stylesheet" href="css/global-style.css?v.3">
-	<link rel="stylesheet" href="css/lot-page.css?v.3">
+	<link rel="stylesheet" href="css/lot-page.css?v.1">
 
 
 	<script src="js/jquery-3.6.0.js"></script>
@@ -56,17 +56,21 @@
 					</svg>
 				</a>
 				<div class="header__menu js-catalog-menu">
-					<a href="#" class="js-catalog-menu-btn">Каталог</a>
-					<span class="header__menu-mob js-catalog-menu">
-						<span class="btn-wrap js-catalog-menu-btn">
-							<span class="top"></span>
-							<span class="middle"></span>
-							<span class="bottom"></span>
+					<a href="#" class="js-catalog-menu-btn">
+						<span class="menu-desctop">Каталог</span>
+						<span class="menu-mob">
+							<span class="btn-wrap">
+								<span class="top"></span>
+								<span class="middle"></span>
+								<span class="bottom"></span>
+							</span>
 						</span>
-					</span>
+					</a>
+
 					<nav class="header__catalog container js-catalog">
 						<div class="header__catalog-wrap js-catalog-wrap">
-								<div class="header__catalog-continents">
+							<div class="header__catalog-continents">
+								<div class="container">
 									<span class="header__catalog-title text-medium">Континенты</span>
 									<ul class="header__catalog-list" data-scroll-lock-scrollable>
 										<li><a href="#" class="js-continent-btn <!--active-->">Европа</a></li>
@@ -77,8 +81,11 @@
 										<li><a href="#" class="js-continent-btn">Южная Америка</a></li>
 									</ul>
 								</div>
-								<div class="header__catalog-countries js-countries-wrap">
-									<div class="header__catalog-content open js-countries-list">
+
+							</div>
+							<div class="header__catalog-countries js-countries-wrap">
+								<div class="header__catalog-content open js-countries-list">
+									<div class="container">
 										<span class="header__catalog-title text-medium">Страны</span>
 										<span class="header__catalog-title mob js-catalog-back-countries">Страны Европы</span>
 										<div class="header__catalog-links" data-scroll-lock-scrollable>
@@ -107,7 +114,9 @@
 											</ul>
 										</div>
 									</div>
-									<div class="header__catalog-subcontent js-countries-sublist">
+								</div>
+								<div class="header__catalog-subcontent js-countries-sublist">
+									<div class="container">
 										<span class="header__catalog-title js-catalog-back">Германия до 1871</span>
 										<div class="header__catalog-links" data-scroll-lock-scrollable>
 											<ul class="header__catalog-list">
@@ -122,6 +131,7 @@
 									</div>
 								</div>
 							</div>
+						</div>
 					</nav>
 				</div>
 				<div class="header__finder">
