@@ -260,7 +260,7 @@ header {
         z-index: -1;
         transform: translateY(-150%);
         will-change: transform;
-        //transition: transform .45s;
+        transition: transform .3s;
         &.close {
             visibility: hidden;
             opacity: 0;
@@ -296,6 +296,7 @@ header {
             text-transform: uppercase;
             color: #9595AF;
             padding: 0 0 13px 0;
+            text-align: center;
             &:before {
                 content: '';
                 display: block;
@@ -323,7 +324,6 @@ header {
         }
         &-countries &-subcontent &-title {
             color: $main-color;
-            text-align: center;
             &:hover {
                 font-weight: 700;
             }
@@ -347,6 +347,45 @@ header {
             top: -2px;
             transform: rotate(-180deg);
         }
+        &-main {
+            & > a,
+            & select {
+                display: block;
+                font-size: 18px;
+                line-height: 45px;
+                color: #fff;
+                transform: translateZ(1px);
+            }
+            & select {
+                option {
+                    color: #000;
+                }
+            }
+            .header__catalog-currency,
+            .header__catalog-lang {
+                .header__catalog-select {
+                    display: inline-block;
+                    position: relative;
+                    padding: 0 20px 0 0;
+                }
+                svg {
+                    position: absolute;
+                    top: 13px;
+                    right: 0;
+                    width: 20px;
+                    height: 20px;
+                    fill: #9595AF;
+                }
+            }
+            & > a,
+            .header__catalog-currency,
+            .header__catalog-lang {
+                display: none;
+            }
+        }
+        &-list + a {
+            margin: 50px 0 0;
+        }
         &-list {
             position: relative;
             margin: 20px 0 0 0;
@@ -360,12 +399,10 @@ header {
                     letter-spacing: 0.2px;
                     position: relative;
                     padding: 10px 0;
-                    transform: translateZ(1px);
                     &.sublist {
                         cursor: pointer;
                         position: relative;
                         margin: 0 25px 0 0;
-                        font-size: 15px;
                         &:after {
                             top: 10px;
                             right: -25px;
@@ -376,11 +413,16 @@ header {
             }
         }
         &-continents &-list {
-            &:before {
-                background-color: #fff;
-            }
-            & * {
-                color: #fff;
+            &  {
+                * {
+                    color: #fff;
+                    &.all-continents {
+                        display: none;
+                    }
+                }
+                .sublist {
+                    display: block;
+                }
             }
         }
         &-continents &-title,
@@ -402,7 +444,6 @@ header {
             column-gap: 40px;
             li {
                 & > * {
-                    font-size: 15px;
                     @include hover-link($dark-color);
                 }
             }
@@ -515,16 +556,6 @@ header {
     .header__menu .menu-mob {
         display: flex;
     }
-
-
-
-
-
-
-
-
-
-
     .header__catalog{
         position: fixed;
         height: 100%;
@@ -538,7 +569,6 @@ header {
         height: inherit;
         width: 100%;
         max-width: 780px;
-        padding: 0;
     }
     .header__catalog-continents .header__catalog-title,
     .header__catalog-continents .header__catalog-list {
@@ -596,9 +626,10 @@ header {
             display: block;
         }
     }
-    .header__catalog-list,
+    .header__catalog-main,
     .header__catalog-countries .header__catalog-links{
-        max-height: calc(100% - 50px);
+        height: 100%;
+        max-height: calc(100% - 44px);
         overflow-y: auto;
     }
     .header__catalog-countries .header__catalog-list {
@@ -608,10 +639,23 @@ header {
         column-gap: 40px;
     }
 
+    .header__catalog-continents .header__catalog-list {
+        margin: 15px 0 0;
+    }
+
+    .header__catalog-continents .header__catalog-list *.all-continents {
+        display: block;
+    }
+    .header__catalog-main>a, .header__catalog-main .header__catalog-currency, .header__catalog-main .header__catalog-lang {
+        display: block;
+    }
+
 }
 
-@media (max-width: 779px) {
-
+@media (max-width: 859px) {
+    .header__catalog .container {
+        padding: 0;
+    }
 
 }
 

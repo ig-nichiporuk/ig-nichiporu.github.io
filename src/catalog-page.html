@@ -45,14 +45,47 @@
 							<div class="header__catalog-continents">
 								<div class="container">
 									<span class="header__catalog-title text-medium">Континенты</span>
-									<ul class="header__catalog-list" data-scroll-lock-scrollable>
-										<li><a href="#" class="js-continent-btn <!--active-->">Европа</a></li>
-										<li><a href="#" class="js-continent-btn">Азия</a></li>
-										<li><a href="#" class="js-continent-btn">Австралия и Океания</a></li>
-										<li><a href="#" class="js-continent-btn">Африка</a></li>
-										<li><a href="#" class="js-continent-btn">Северная Америка</a></li>
-										<li><a href="#" class="js-continent-btn">Южная Америка</a></li>
-									</ul>
+									<div class="header__catalog-main" data-scroll-lock-scrollable>
+										<ul class="header__catalog-list" >
+											<li><a href="#" class="all-continents">Все континенты</a></li>
+											<li><span class="js-continent-btn sublist <!--active-->">Европа</span></li>
+											<li><span class="js-continent-btn sublist">Азия</span></li>
+											<li><span class="js-continent-btn sublist">Австралия и Океания</span></li>
+											<li><span class="js-continent-btn sublist">Африка</span></li>
+											<li><span class="js-continent-btn sublist">Северная Америка</span></li>
+											<li><span class="js-continent-btn sublist">Южная Америка</span></li>
+										</ul>
+										<a href="#">Поддержка</a>
+										<div class="header__catalog-currency">
+											<div class="header__catalog-select">
+												<select name="currency">
+													<option>USD</option>
+													<option>EUR</option>
+													<option>GBP</option>
+													<option>CHF</option>
+													<option>PLN</option>
+													<option>RUB</option>
+												</select>
+												<svg>
+													<use xlink:href="#arrow-down"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="header__catalog-lang">
+											<div class="header__catalog-select">
+												<select name="lang">
+													<option>ENG</option>
+													<option>RUS</option>
+													<option>DE</option>
+													<option>PL</option>
+													<option>UA</option>
+												</select>
+												<svg>
+													<use xlink:href="#arrow-down"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
 								</div>
 
 							</div>

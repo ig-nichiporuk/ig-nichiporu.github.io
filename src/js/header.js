@@ -9,18 +9,21 @@ $(document).ready(function() {
 			$('.js-finder-wrap').removeClass('open');
 		}
 	});
+
+
 	$('.js-finder-input').focusin(function () {
 		close_finder_body();
 	});
+
+
 	$('.js-finder-clean').on('click', function () {
 		close_finder_body();
 	});
 
 
 	$(document).mousedown(function(e){
-		if(!$('.js-catalog-menu').is(e.target) && !$('.js-catalog-wrap').is(e.target)
+		if(!$('.js-catalog-menu').is(e.target)
 			&& $('.js-catalog-menu').has(e.target).length === 0
-			&& $('.js-catalog-wrap').has(e.target).length === 0
 			&& $('.js-catalog-menu').hasClass('open')) {
 			close_catalog_menu();
 			enableScroll();
@@ -38,10 +41,9 @@ $(document).ready(function() {
 	$('.touch .js-catalog-menu-btn').on('click', function() {
 		if($(this).hasClass('open')){
 			close_catalog_menu();
+			enableScroll();
 		}
 		else {
-
-			$('body').addClass('menu-open');
 			$(this).addClass('open');
 			$('.js-catalog-menu').addClass('open');
 			$('.js-catalog').removeClass('close').addClass('open');
@@ -49,13 +51,9 @@ $(document).ready(function() {
 				$('body').addClass('menu-open');
 				if ($('.js-catalog-menu').hasClass('open')) {
 					disableScroll();
-				} else {
-					enableScroll();
 				}
 			}
 		}
-
-
 	});
 
 	$('.js-catalog-menu-btn').hover( function() {
@@ -68,10 +66,14 @@ $(document).ready(function() {
 		$('.js-countries-list').removeClass('open');
 		$('.js-countries-sublist').addClass('open');
 	});
+
+
 	$('.js-catalog-back').on('click', function() {
 		$('.js-countries-list').addClass('open');
 		$('.js-countries-sublist').removeClass('open');
 	});
+
+
 	$('.js-catalog-back-countries').on('click', function () {
 		$('.js-countries-list, .js-countries-wrap').removeClass('open');
 	});
@@ -84,6 +86,8 @@ $(document).ready(function() {
 		$('.js-countries-list').addClass('open');
 		$('.js-countries-sublist').removeClass('open');
 	});
+
+
 	$('.js-finder-open-input').on('click', function() {
 		if($(this).hasClass('active')){
 			enableScroll();
@@ -93,9 +97,9 @@ $(document).ready(function() {
 			$('body').removeClass('overlay-open mob-finder-open');
 		}
 		else {
-			$('.js-finder-open-input').addClass('active');
+			// $('.js-finder-open-input').addClass('active');
 			setTimeout(function () {
-				$('.js-finder-input').focus($('.js-finder-wrap'));
+				$('.js-finder-input').focus();
 			}, 300);
 			if($(window).width() < 960) {
 				$('.js-finder-open-input').addClass('active');
@@ -108,8 +112,9 @@ $(document).ready(function() {
 				disableScroll();
 			}
 		}
-
 	});
+
+
 	$('.js-finder-animate-close').on('click', function () {
 		enableScroll();
 		close_finder_body();
@@ -129,10 +134,6 @@ $(document).ready(function() {
 			}
 		}
 		else {
-			/*if ($('.js-catalog-menu').hasClass('open')) {
-				$('body').addClass('menu-open');
-				disableScroll();
-			}*/
 			if (!$('body').hasClass('menu-open')) {
 				close_catalog_menu();
 			}
@@ -144,7 +145,11 @@ $(document).ready(function() {
 			enableScroll();
 		}
 	}
+
+
 	mob_control();
+
+
 	$( window ).resize(function() {
 		mob_control();
 

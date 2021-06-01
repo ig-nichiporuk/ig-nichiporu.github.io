@@ -125,6 +125,9 @@ $(document).ready(function () {
 	else {
 		device_check = false;
 	}
+
+	$('body').addClass(device_check ? 'touch' : 'no-touch');
+
 	var iOS = (/iPad|iPhone|iPod/.test(navigator.platform) ||
 		(navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) &&
 		!window.MSStream
@@ -135,9 +138,6 @@ $(document).ready(function () {
 	else {
 		$('body').addClass('no-ios');
 	}
-	$('body').addClass(device_check ? 'touch' : 'no-touch');
-
-
 
 
 	/*-----Stamping----*/
