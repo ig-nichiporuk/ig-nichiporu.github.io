@@ -9,7 +9,7 @@
 
 	<link href="fonts/stylesheet.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/global-style.css?v.3">
-	<link rel="stylesheet" href="css/main-page.css?v.3">
+	<link rel="stylesheet" href="css/main-page.css?v.1">
 	<script src="js/jquery-3.6.0.js"></script>
 <script src="js/scroll-lock.min.js"></script>
 <script src="js/global_svg_localstorage.js"></script>
@@ -45,29 +45,69 @@
 					</svg>
 				</a>
 				<div class="header__menu js-catalog-menu">
-					<a href="#" class="js-catalog-menu-btn">Каталог</a>
-					<span class="header__menu-mob js-catalog-menu">
-						<span class="btn-wrap js-catalog-menu-btn">
-							<span class="top"></span>
-							<span class="middle"></span>
-							<span class="bottom"></span>
+					<a href="#" class="js-catalog-menu-btn">
+						<span class="menu-desctop">Каталог</span>
+						<span class="menu-mob">
+							<span class="btn-wrap">
+								<span class="top"></span>
+								<span class="middle"></span>
+								<span class="bottom"></span>
+							</span>
 						</span>
-					</span>
+					</a>
+
 					<nav class="header__catalog container js-catalog">
 						<div class="header__catalog-wrap js-catalog-wrap">
-								<div class="header__catalog-continents">
+							<div class="header__catalog-continents">
+								<div class="container">
 									<span class="header__catalog-title text-medium">Континенты</span>
-									<ul class="header__catalog-list" data-scroll-lock-scrollable>
-										<li><a href="#" class="js-continent-btn <!--active-->">Европа</a></li>
-										<li><a href="#" class="js-continent-btn">Азия</a></li>
-										<li><a href="#" class="js-continent-btn">Австралия и Океания</a></li>
-										<li><a href="#" class="js-continent-btn">Африка</a></li>
-										<li><a href="#" class="js-continent-btn">Северная Америка</a></li>
-										<li><a href="#" class="js-continent-btn">Южная Америка</a></li>
-									</ul>
+									<div class="header__catalog-main" data-scroll-lock-scrollable>
+										<ul class="header__catalog-list" >
+											<li><a href="#" class="all-continents">Все континенты</a></li>
+											<li><span class="js-continent-btn sublist <!--active-->">Европа</span></li>
+											<li><span class="js-continent-btn sublist">Азия</span></li>
+											<li><span class="js-continent-btn sublist">Австралия и Океания</span></li>
+											<li><span class="js-continent-btn sublist">Африка</span></li>
+											<li><span class="js-continent-btn sublist">Северная Америка</span></li>
+											<li><span class="js-continent-btn sublist">Южная Америка</span></li>
+										</ul>
+										<a href="#">Поддержка</a>
+										<div class="header__catalog-currency">
+											<div class="header__catalog-select">
+												<select name="currency">
+													<option>USD</option>
+													<option>EUR</option>
+													<option>GBP</option>
+													<option>CHF</option>
+													<option>PLN</option>
+													<option>RUB</option>
+												</select>
+												<svg>
+													<use xlink:href="#arrow-down"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="header__catalog-lang">
+											<div class="header__catalog-select">
+												<select name="lang">
+													<option>ENG</option>
+													<option>RUS</option>
+													<option>DE</option>
+													<option>PL</option>
+													<option>UA</option>
+												</select>
+												<svg>
+													<use xlink:href="#arrow-down"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="header__catalog-countries js-countries-wrap">
-									<div class="header__catalog-content open js-countries-list">
+
+							</div>
+							<div class="header__catalog-countries js-countries-wrap">
+								<div class="header__catalog-content open js-countries-list">
+									<div class="container">
 										<span class="header__catalog-title text-medium">Страны</span>
 										<span class="header__catalog-title mob js-catalog-back-countries">Страны Европы</span>
 										<div class="header__catalog-links" data-scroll-lock-scrollable>
@@ -96,7 +136,9 @@
 											</ul>
 										</div>
 									</div>
-									<div class="header__catalog-subcontent js-countries-sublist">
+								</div>
+								<div class="header__catalog-subcontent js-countries-sublist">
+									<div class="container">
 										<span class="header__catalog-title js-catalog-back">Германия до 1871</span>
 										<div class="header__catalog-links" data-scroll-lock-scrollable>
 											<ul class="header__catalog-list">
@@ -111,6 +153,7 @@
 									</div>
 								</div>
 							</div>
+						</div>
 					</nav>
 				</div>
 				<div class="header__finder">
@@ -149,7 +192,8 @@
 				</div>
 				<!--mobile finder block-->
 				<div class="header__finder mob">
-						<div class="header__finder-animate js-finder-animate-block">
+					<div class="header__finder-animate js-finder-animate-block">
+						<div class="container">
 							<div class="header__finder-wrap js-finder-wrap">
 								<svg class="find-icon">
 									<use xlink:href="#search"></use>
@@ -170,9 +214,11 @@
 	<a href="#" class="finder__more-settings ">Расширенный поиск</a>
 </div>
 						</div>
-						<svg class="finder__btn-icon js-finder-open-input">
-							<use xlink:href="#search"></use>
-						</svg>
+
+					</div>
+					<svg class="finder__btn-icon js-finder-open-input">
+						<use xlink:href="#search"></use>
+					</svg>
 
 				</div>
 				<!--mobile finder block end-->

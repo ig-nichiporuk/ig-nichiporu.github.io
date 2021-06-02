@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	$('.js-finder-input').on('keyup', function() {
 		if($(this).val().length >= 1) {
-			/*$('.js-finder-input').val($(this).val());*/
 			$(this).closest('.js-finder-wrap').addClass('open');
 			$(this).closest('.js-finder-wrap').next('.js-finder-body').slideDown(200, 'linear');
 		}
@@ -10,18 +9,21 @@ $(document).ready(function() {
 			$('.js-finder-wrap').removeClass('open');
 		}
 	});
+
+
 	$('.js-finder-input').focusin(function () {
 		close_finder_body();
 	});
+
+
 	$('.js-finder-clean').on('click', function () {
 		close_finder_body();
 	});
 
 
 	$(document).mousedown(function(e){
-		if(!$('.js-catalog-menu').is(e.target) && !$('.js-catalog-wrap').is(e.target)
+		if(!$('.js-catalog-menu').is(e.target)
 			&& $('.js-catalog-menu').has(e.target).length === 0
-			&& $('.js-catalog-wrap').has(e.target).length === 0
 			&& $('.js-catalog-menu').hasClass('open')) {
 			close_catalog_menu();
 			enableScroll();
@@ -39,18 +41,17 @@ $(document).ready(function() {
 	$('.touch .js-catalog-menu-btn').on('click', function() {
 		if($(this).hasClass('open')){
 			close_catalog_menu();
+			enableScroll();
 		}
 		else {
 			$(this).addClass('open');
 			$('.js-catalog-menu').addClass('open');
 			$('.js-catalog').removeClass('close').addClass('open');
-		}
-
-		if($(window).width() < 780) {
-			if ($('.js-catalog-menu').hasClass('open')) {
-				disableScroll();
-			} else {
-				enableScroll();
+			if($(window).width() < 960) {
+				$('body').addClass('menu-open');
+				if ($('.js-catalog-menu').hasClass('open')) {
+					disableScroll();
+				}
 			}
 		}
 	});
@@ -65,10 +66,14 @@ $(document).ready(function() {
 		$('.js-countries-list').removeClass('open');
 		$('.js-countries-sublist').addClass('open');
 	});
+
+
 	$('.js-catalog-back').on('click', function() {
 		$('.js-countries-list').addClass('open');
 		$('.js-countries-sublist').removeClass('open');
 	});
+
+
 	$('.js-catalog-back-countries').on('click', function () {
 		$('.js-countries-list, .js-countries-wrap').removeClass('open');
 	});
@@ -84,42 +89,67 @@ $(document).ready(function() {
 
 
 	$('.js-finder-open-input').on('click', function() {
-		setTimeout(function () {
-			$('.js-finder-input').focus();
-		}, 0)
-
-		$('.js-finder-animate-block').addClass('open');
-		$('body').addClass('overlay-open mob-finder-open');
-		close_finder_body();
-		disableScroll();
+		if($(this).hasClass('active')){
+			enableScroll();
+			close_finder_body();
+			$('.js-finder-open-input').removeClass('active');
+			$('.js-finder-animate-block').removeClass('open');
+			$('body').removeClass('overlay-open mob-finder-open');
+		}
+		else {
+			// $('.js-finder-open-input').addClass('active');
+			setTimeout(function () {
+				$('.js-finder-input').focus();
+			}, 300);
+			if($(window).width() < 960) {
+				$('.js-finder-open-input').addClass('active');
+				$('.js-toolbar-content').removeClass('open');
+				$('.js-toolbar-block').addClass('hidden');
+				$('.js-toolbar-btn').removeClass('active');
+				$('.js-finder-animate-block').addClass('open');
+				$('body').addClass('overlay-open mob-finder-open');
+				close_finder_body();
+				disableScroll();
+			}
+		}
 	});
+
+
 	$('.js-finder-animate-close').on('click', function () {
 		enableScroll();
 		close_finder_body();
+		$('.js-finder-open-input').removeClass('active');
 		$('.js-finder-animate-block').removeClass('open');
 		$('body').removeClass('overlay-open mob-finder-open');
 	});
 
 
 	function mob_control() {
-		if($(window).width() >= 780) {
+		if($(window).width() > 959) {
 			$('.js-countries-list').addClass('open');
 			$('.js-countries-sublist').removeClass('open');
-			enableScroll();
+			if ($('.js-catalog-menu').hasClass('open')) {
+				$('body').removeClass('menu-open');
+				enableScroll();
+			}
 		}
 		else {
-			if ($('.js-catalog-menu').hasClass('open')) {
-				disableScroll();
+			if (!$('body').hasClass('menu-open')) {
+				close_catalog_menu();
 			}
 			$('.js-countries-list').removeClass('open');
 		}
-		if($(window).width() > 639 && $('.js-finder-animate-block').hasClass('open')) {
+		if($(window).width() > 959 && $('.js-finder-animate-block').hasClass('open')) {
 			$('.js-finder-animate-block').removeClass('open');
 			$('body').removeClass('overlay-open mob-finder-open');
 			enableScroll();
 		}
 	}
+
+
 	mob_control();
+
+
 	$( window ).resize(function() {
 		mob_control();
 

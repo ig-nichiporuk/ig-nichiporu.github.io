@@ -4,14 +4,31 @@
 			<img src="img/webp/flag.webp" alt="flag">
 		</div>
 		<div class="stamping__country">
-			<span class="stamping__country-text text-medium">Великобритания</span>
+			<span class="stamping__country-text">Великобритания</span>
+			<div class="stamping__country-text mob">
+				<select name="country">
+					<option>Великобритания</option>
+					<option>Польша</option>
+					<option>Германия</option>
+					<option>Испания</option>
+					<option>Италия</option>
+					<option>Греция</option>
+					<option>Исландия</option>
+				</select>
+				<svg>
+					<use xlink:href="#arrow-down"></use>
+				</svg>
+			</div>
 			<span class="stamping__country-year dropdown">
-				<span class="text-gray">Год чеканки: </span>
+				<span>Год чеканки:</span>
 				<span class="stamping__country-btn js-stamping-btn">
 					2020-2020
 					<svg>
 					    <use xlink:href="#arrow-down"></use>
 					</svg>
+				</span>
+				<span class="stamping__country-btn text-gray mob ">
+					2020-2020
 				</span>
 			</span>
 
@@ -39,18 +56,26 @@
 			<li><a href="#">1835</a></li>
 		</ul>
 	</div>
+	<div class="stamping__find mob">
+		<div class="stamping__find-wrap">
+			<div class="stamping__find-input">
+				<svg>
+					<use xlink:href="#search"></use>
+				</svg>
+				<input type="text" placeholder="Поиск">
+			</div>
+		</div>
+		<ul class="stamping__find-list" data-scroll-lock-scrollable>
+			<li><a href="#">1835</a></li>
+			<li><a href="#">1835</a></li>
+			<li><a href="#">1835</a></li>
+			<li><a href="#">1835</a></li>
+			<li><a href="#">1835</a></li>
+			<li><a href="#">1835</a></li>
+			<li><a href="#">1835</a></li>
+			<li><a href="#">1835</a></li>
+			<li><a href="#">1835</a></li>
+			<li><a href="#">1835</a></li>
+		</ul>
+	</div>
 </div>
-
-<script>
-	$('.js-stamping-btn').on('click', function () {
-		if($(this).hasClass('open')) {
-			$(this).removeClass('open');
-			$('.js-stamping-list').slideUp(200, 'linear');
-		}
-		else {
-			close_all()
-			$(this).addClass('open');
-			$('.js-stamping-list').slideDown(200, 'linear');
-		}
-	})
-</script>
