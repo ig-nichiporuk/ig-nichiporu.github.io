@@ -10,7 +10,15 @@ body {
     min-width: 320px;
     color: $main-color;
     background: #F0F0F0;
+    &.menu-open {
+        position: fixed;
+        width: 100%;
+    }
+    &.toolbar-show {
+        padding: 0 0 60px 0;
+    }
 }
+
 
 
 h1, h2, h3, h4, h5, h6, p, ul, button, input, textarea html, legend, li, ol, td, th, figure {
