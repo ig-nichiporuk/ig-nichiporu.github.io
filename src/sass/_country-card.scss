@@ -103,6 +103,9 @@
         height: 46px;
         border: 4px solid #fff;
     }
+    .country-card__title {
+        margin: 1px 0 0 0;
+    }
 }
 @media (max-width: 479px) {
     .country-card__year, .country-card__title {
