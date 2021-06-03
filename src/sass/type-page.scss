@@ -27,15 +27,15 @@
             }
         }
     }
-    &__row:not(.table__header):hover .table__cell,
-    &__row:not(.table__header):hover + &__row:not(.table__header):not(:last-of-type) .table__cell {
+    .no-touch &__row:not(.table__header):hover .table__cell,
+    .no-touch &__row:not(.table__header):hover + &__row:not(.table__header):not(:last-of-type) .table__cell {
         box-shadow: inset 0 1px 0 0 transparent;
     }
-    &__row:not(.table__header):hover + &__row:not(.table__header):last-of-type .table__cell{
+    .no-touch &__row:not(.table__header):hover + &__row:not(.table__header):last-of-type .table__cell{
         box-shadow: inset 0 1px 0 0 transparent,
                     inset 0 -1px 0 0 #EDEDED;
     }
-    &__row:not(.table__header):hover &__cell{
+    .no-touch &__row:not(.table__header):hover &__cell{
         @include hover-bgc;
         color: $active-color;
         &:first-of-type{
@@ -72,7 +72,7 @@
     &__row:not(.table__header) &__cell{
         position: relative;
         padding: 12px 0;
-        &:first-of-type {
+        &:not(:only-child):first-of-type {
             color: $dark-color;
             font-size: 20px;
             line-height: 24px;
@@ -91,18 +91,18 @@
         }
         & > * {
             &:not(.pass) {
+                display: flex;
                 min-height: 40px;
             }
-            &.pass {
+            .pass {
                 width: 30px;
-                height: 30px;
-                line-height: 15px;
+                line-height: 30px;
                 border-radius: 50%;
                 background-color: $main-color;
                 color: #fff;
                 padding: 0;
                 justify-content: center;
-                margin: 0 20px;
+                margin: auto;
             }
         }
         &:last-of-type{
@@ -161,6 +161,39 @@
     &.scroll:after{
         display: block;
     }
+    .mob &:not(.table__slider-wrap) {
+        width: 75%;
+    }
+    &__slider{
+        width: 25%;
+        &-wrap {
+            display: block;
+            width: 100%;
+        }
+        &-item {
+            .table__row,
+            .table__cell {
+                display: block;
+                width: 100%;
+            }
+        }
+        &-dots {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            &-wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .slick-prev, .slick-next {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
 }
 .type-page {
     &__container {
@@ -206,6 +239,12 @@
     &__table {
         margin: 25px 0 0 0;
         padding: 0 20px 40px;
+        &.mob {
+            display: none;
+            margin: 25px auto 0;
+            position: relative;
+            padding: 0 20px 60px;
+        }
     }
 }
 
@@ -270,9 +309,6 @@
 }
 
 @media (max-width: 779px) {
-    .type-page {
-        padding: 0 0 40px 0;
-    }
     .type-page__header-title {
         margin: 15px 0 0 0;
     }
@@ -286,26 +322,26 @@
         font-size: 16px;
         line-height: 24px;
     }
-    .table__header .table__cell > *.mob {
+    /*.table__header .table__cell > *.mob {
         display: none;
     }
     .table__header .table__cell > *.mob + * {
         display: flex;
-    }
-    .type-page__table {
+    }*/
+    /*.type-page__table {
         width: calc(100vw - 32px);
         overflow-x: auto;
         margin: 25px  0 0 0;
         padding: 0;
-    }
-    .table {
+    }*/
+    /*.table {
         padding: 0 15px;
-    }
+    }*/
     .table__header .table__cell {
         font-size: 14px;
         line-height: 20px;
     }
-    .table__row:not(.table__header) .table__cell:first-of-type {
+    .table__row:not(.table__header) .table__cell:not(:only-child):first-of-type {
         font-size: 18px;
     }
     .table__cell:nth-of-type(3) {
@@ -325,7 +361,85 @@
         min-width: auto;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+    .type-page {
+        padding: 0 0 25px 0;
+    }
+    .type-page__table {
+        display: none;
+    }
+    .type-page__table.mob {
+        display: flex;
+    }
+    .table__header .table__cell > *.mob {
+        display: none;
+    }
+    .table__header .table__cell > *.mob + * {
+        display: flex;
+    }
+    .table__row:not(.table__header) .table__cell>* {
+        height: 42px;
+        overflow: hidden;
+    }
+    .type-page__table {
+        margin: 25px  0 0;
+        padding: 0 15px;
+    }
+    .table__row:not(.table__header) .table__cell:not(:only-child):last-of-type:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+        width: 1px;
+        height: calc(100% - 24px);
+        background-color: #EDEDED;
+    }
+    .table__slider-wrap .table__row:not(.table__header) .table__cell:not(only-child):last-of-type:before {
+        display: none;
+    }
+    .table__row:not(.table__header) .table__cell {
+        padding: 11px 0;
+    }
+    .table__cell:nth-of-type(3) {
+        min-width: 110px;
+    }
 }
+
+
+
+
+
+
+/*
+@media (max-width: 559px) {
+    .type-page__table.mob {}
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 479px) {
     .table__header .table__cell {
@@ -343,5 +457,29 @@
     .table__header .table__cell > *,
     .table__row:not(.table__header) .table__cell > * {
         padding: 0px 10px;
+    }
+
+
+
+    .type-page__table.mob {
+        padding: 0 8px 60px;
+    }
+    .table__row:not(.table__header) .table__cell>*:not(.pass) {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 359px) {
+    .type-page__table.mob {
+        padding: 0 6px 60px;
+    }
+    .table__row:not(.table__header) .table__cell:not(:only-child):first-of-type {
+        font-size: 16px;
+    }
+    .table__row:not(.table__header) .table__cell>* {
+        padding: 0px 5px;
+    }
+    .table__cell:nth-of-type(3) {
+        min-width: 100px;
     }
 }
