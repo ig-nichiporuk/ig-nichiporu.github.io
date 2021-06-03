@@ -631,7 +631,9 @@ input[type=number] {
 
 
 button.pswp__button--arrow--left,
-button.pswp__button--arrow--right{
+button.pswp__button--arrow--right,
+button.slick-prev,
+button.slick-next{
     width: 40px;
     height: 40px;
     background-color: #F6F6F6;
@@ -662,16 +664,43 @@ button.pswp__button--arrow--right{
         }
     }
 }
-
-button.pswp__button--arrow--right {
+button.pswp__button--arrow--right,
+button.slick-next {
     transform: rotate(180deg);
+}
+button.pswp__button--arrow--right {
     right: 20px;
 }
 
 button.pswp__button--arrow--left {
     left: 20px;
 }
-
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.slick-dots {
+    display: flex;
+    width: auto;
+    position: relative;
+    bottom: 0;
+    margin: 0 25px;
+    li {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #EDEDED;
+        margin: 0;
+        &.slick-active {
+            background-color: $active-color;
+        }
+        button {
+            display: none;
+        }
+    }
+    li + li {
+        margin: 0 0 0 5px;
+    }
+}
 .pswp__caption__center {
     text-align: center;
     max-width: 420px;
