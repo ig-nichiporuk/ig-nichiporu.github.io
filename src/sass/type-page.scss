@@ -35,12 +35,15 @@
         box-shadow: inset 0 1px 0 0 transparent,
                     inset 0 -1px 0 0 #EDEDED;
     }
-    .no-touch &__row:not(.table__header):hover &__cell{
-        @include hover-bgc;
+    .no-touch &__row:not(.table__header):hover &__cell,
+    .no-touch &__row:not(.table__header):hover &__cell .text-gray{
         color: $active-color;
         &:first-of-type{
             color: $active-color;
         }
+    }
+    .no-touch &__row:not(.table__header):hover &__cell{
+        @include hover-bgc;
         &:first-of-type{
             border-top-left-radius: $bdrs-6;
             border-bottom-left-radius: $bdrs-6;
