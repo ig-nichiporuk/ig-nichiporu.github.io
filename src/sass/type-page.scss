@@ -393,6 +393,7 @@
     }
     .table__row:not(.table__header) .table__cell>* {
         height: 42px;
+        min-height: auto;
         overflow: hidden;
     }
     .type-page__table {
