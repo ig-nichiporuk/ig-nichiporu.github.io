@@ -53,17 +53,12 @@
     &__item + &__item {
         @include list-border;
     }
-
-
-
     &__item &__item-btn:not(.open):hover,
     .no-touch &__subitem &__item-btn:not(.open):hover,
     &__subitem &__item-btn.open,
     &__link:hover{
         @include hover-bgc;
     }
-
-
     &__links {
         display: none;
     }
@@ -77,7 +72,6 @@
         cursor: pointer;
         position: relative;
     }
-
     &__subitem &__item-btn {
         padding: 12px 40px;
         @include list-border;
@@ -125,7 +119,11 @@
     }
 }
 
-
-@media (max-width: 959px) {}
-
-@media(max-width: 639px) {}
+@media (max-width: 1539px) and (min-width: 960px) {
+    .sidebar {
+        &__item-btn,
+        &__link {
+            font-size: 15px;
+        }
+    }
+}
