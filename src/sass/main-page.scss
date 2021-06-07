@@ -178,32 +178,6 @@
         grid-area: statistic;
         align-self: end;
     }
-    &__cookies {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        max-width: 829px;
-        margin: auto auto 20px;
-        padding: 14px 15px;
-        background: #fff;
-        border-radius: $bdrs-6;
-        p{
-            font-size: 12px;
-            line-height: 17px;
-            color: $main-color;
-        }
-        .text-medium {
-            color: $active-color;
-        }
-        .btn-style {
-            flex-grow: 1;
-            margin: 0 0 0 20px;
-            border-radius: 4px;
-            font-size: 12px;
-            line-height: 36px;
-
-        }
-    }
 }
 
 @media (max-width: 1539px) {
@@ -260,13 +234,6 @@
         &__statistic {
             margin: 30px 0 0 0;
         }
-        &__cookies {
-            max-width: 700px;
-            .btn-style {
-                min-width: 110px;
-                margin: 0 0 0 10px;
-            }
-        }
     }
     .fast-find,
     .statistic {
@@ -310,14 +277,7 @@
         &__statistic {
             width: 100%;
         }
-        &__cookies {
-            flex-direction: column;
-            max-width: 700px;
-            .btn-style {
-                margin: 10px 0 0;
-                width: 100%;
-            }
-        }
+
     }
     .fast-find,
     .statistic {

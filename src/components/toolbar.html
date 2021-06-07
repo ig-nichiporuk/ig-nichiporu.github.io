@@ -37,8 +37,10 @@
 				<span>Категории</span>
 				<span class="close js-toolbar-close">Закрыть</span>
 			</div>
-			@@include('../components/stamping.html')
-			@@include('../components/sidebar.html')
+			<div class="toolbar__sidebar-wrap" data-scroll-lock-scrollable>
+				@@include('../components/stamping.html')
+				@@include('../components/sidebar.html')
+			</div>
 		</div>
 	</div>
 </div>

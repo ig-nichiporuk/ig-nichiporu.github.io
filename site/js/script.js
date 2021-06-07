@@ -194,5 +194,13 @@ $(document).ready(function () {
 
 
 
+	/*----Cookies------*/
+	setTimeout(function () {
+		$('.js-cookies').addClass('show')
+	}, 5000); //10 секунд
+	$('.js-cookies-close').on('click' ,function () {
+		$('.js-cookies').removeClass('show');
+	});
+	/*----Cookies-END--*/
 
 })

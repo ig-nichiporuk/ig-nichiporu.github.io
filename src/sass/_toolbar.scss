@@ -98,21 +98,12 @@
         .stamping {
             height: auto;
         }
-        .sidebar {
-            height: 100%;
-            max-height: calc(100% - 135px);
-            overflow-y: auto;
-        }
     }
-    &__stamping {
-        .stamping {
-            height: calc(100% - 45px);
-        }
-        .stamping__find-list {
-            height: 100%;
-            max-height: calc(100% - 157px);
-            overflow-y: auto;
-        }
+    &__sidebar-wrap,
+    &__stamping .stamping{
+        max-height: calc(100% - 45px);
+        height: 100%;
+        overflow-y: auto;
     }
 }
 

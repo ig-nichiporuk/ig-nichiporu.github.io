@@ -8,7 +8,7 @@
 <title>Period-page</title>
 
 	<link href="fonts/stylesheet.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/global-style.css?v.3">
+	<link rel="stylesheet" href="css/global-style.css?v.4">
 	<link rel="stylesheet" href="css/period-page.css?v.2">
 	<script src="js/jquery-3.6.0.js"></script>
 <script src="js/scroll-lock.min.js"></script>
@@ -278,7 +278,7 @@
 			</div>
 			<div class="content__panel">
 				<div class="content__panel-stamping">
-					<div class="stamping js-stamping-wrap">
+					<div class="stamping js-stamping-wrap" data-scroll-lock-scrollable>
 	<div class="stamping__wrap">
 		<div class="stamping__flag">
 			<img src="img/webp/flag.webp" alt="flag">
@@ -345,7 +345,7 @@
 				<input type="text" placeholder="Поиск">
 			</div>
 		</div>
-		<ul class="stamping__find-list" data-scroll-lock-scrollable>
+		<ul class="stamping__find-list" >
 			<li><a href="#">1835</a></li>
 			<li><a href="#">1835</a></li>
 			<li><a href="#">1835</a></li>
@@ -362,7 +362,7 @@
 
 				</div>
 				<div class="content__panel-sidebar">
-					<nav class="sidebar" data-scroll-lock-scrollable>
+					<nav class="sidebar">
 	<ul class="sidebar__wrap">
 		<li class="sidebar__item">
 			<span class="sidebar__item-btn js-sidebar-btn" data-button="main-btn">
@@ -2144,6 +2144,10 @@
 		</div>
 	</div>
 </footer>
+<div class="cookies js-cookies">
+	<p>Продолжая использовать наш сайт, вы даете согласие на обработку <span class="text-medium">файлов cookie</span> и пользовательских данных.</p>
+	<span class="btn-style btn-gray js-cookies-close">Согласен(-на)</span>
+</div>
 <div class="modal__container js-modal-container">
 	<div class="modal js-modal" id="feedback">
 		<span class="modal__close js-close-modal"></span>
@@ -2223,7 +2227,7 @@
 				<span>Года</span>
 				<span class="close js-toolbar-close">Закрыть</span>
 			</div>
-			<div class="stamping js-stamping-wrap">
+			<div class="stamping js-stamping-wrap" data-scroll-lock-scrollable>
 	<div class="stamping__wrap">
 		<div class="stamping__flag">
 			<img src="img/webp/flag.webp" alt="flag">
@@ -2290,7 +2294,7 @@
 				<input type="text" placeholder="Поиск">
 			</div>
 		</div>
-		<ul class="stamping__find-list" data-scroll-lock-scrollable>
+		<ul class="stamping__find-list" >
 			<li><a href="#">1835</a></li>
 			<li><a href="#">1835</a></li>
 			<li><a href="#">1835</a></li>
@@ -2311,7 +2315,8 @@
 				<span>Категории</span>
 				<span class="close js-toolbar-close">Закрыть</span>
 			</div>
-			<div class="stamping js-stamping-wrap">
+			<div class="toolbar__sidebar-wrap" data-scroll-lock-scrollable>
+				<div class="stamping js-stamping-wrap" data-scroll-lock-scrollable>
 	<div class="stamping__wrap">
 		<div class="stamping__flag">
 			<img src="img/webp/flag.webp" alt="flag">
@@ -2378,7 +2383,7 @@
 				<input type="text" placeholder="Поиск">
 			</div>
 		</div>
-		<ul class="stamping__find-list" data-scroll-lock-scrollable>
+		<ul class="stamping__find-list" >
 			<li><a href="#">1835</a></li>
 			<li><a href="#">1835</a></li>
 			<li><a href="#">1835</a></li>
@@ -2393,7 +2398,7 @@
 	</div>
 </div>
 
-			<nav class="sidebar" data-scroll-lock-scrollable>
+				<nav class="sidebar">
 	<ul class="sidebar__wrap">
 		<li class="sidebar__item">
 			<span class="sidebar__item-btn js-sidebar-btn" data-button="main-btn">
@@ -3118,6 +3123,7 @@
 	</ul>
 </nav>
 
+			</div>
 		</div>
 	</div>
 </div>
