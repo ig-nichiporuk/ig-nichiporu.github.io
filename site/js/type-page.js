@@ -27,7 +27,7 @@ $(document).ready(function() {
 			swipeRight:function() {
 				$(this).find('.js-table-slider').slick('slickPrev');
 			},
-			threshold: 65,
+			threshold: 75,
 		});
 	});
 
