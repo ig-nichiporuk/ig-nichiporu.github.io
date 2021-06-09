@@ -169,9 +169,8 @@
             width: 100%;
         }
         &-item {
-            .table__row,
-            .table__cell {
-                display: block;
+            &.slick-slide {
+                display: table;
                 width: 100%;
             }
         }
