@@ -14,9 +14,6 @@ body {
         position: fixed;
         width: 100%;
     }
-    &.toolbar-show {
-        padding: 0 0 60px 0;
-    }
 }
 
 
@@ -710,7 +707,6 @@ button.pswp__button--arrow--left {
     line-height: 20px;
     color: #CCC;
 }
-
 @media (max-width: 1539px) {
     .container {
         width: 1300px;
@@ -726,7 +722,6 @@ button.pswp__button--arrow--left {
     }
 
 }
-
 @media (max-width: 1299px) {
     .container {
         width: 960px;
@@ -747,7 +742,6 @@ button.pswp__button--arrow--left {
         }
     }
 }
-
 @media (max-width: 959px) {
     body.toolbar-show {
         padding: 0 0 60px 0;
@@ -802,7 +796,6 @@ button.pswp__button--arrow--left {
         }
     }
 }
-
 @media (max-width: 779px) {
     .container {
         width: 100%;
@@ -822,9 +815,6 @@ button.pswp__button--arrow--left {
         }
     }
 }
-
-
-
 @media(max-width: 639px) {
 
     .modal {
@@ -834,7 +824,6 @@ button.pswp__button--arrow--left {
         }
     }
 }
-
 @media (max-width: 479px) {
     .modal {
         &__body {
@@ -845,6 +834,3 @@ button.pswp__button--arrow--left {
         }
     }
 }
-
-
-
