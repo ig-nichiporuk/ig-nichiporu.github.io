@@ -91,7 +91,9 @@
             display: flex;
             min-height: 40px;
             .pass {
+                display: flex;
                 width: 30px;
+                height: 30px;
                 line-height: 30px;
                 border-radius: 50%;
                 background-color: $main-color;
