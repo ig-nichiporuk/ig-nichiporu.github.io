@@ -31,10 +31,10 @@
 			&.back{
 				transform: rotateY(180deg);
 			}
-			.coin-card:hover &.front{
+			.no-touch .coin-card:hover &.front{
 				transform: rotateY(180deg);
 			}
-			.coin-card:hover &.back {
+			.no-touch .coin-card:hover &.back {
 				transform: rotateY(0deg);
 			}
             img {
