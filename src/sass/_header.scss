@@ -36,7 +36,6 @@ header {
             color: $dark-color;
             cursor: pointer;
         }
-        .no-touch &:hover,
         &.open {
             & > a {
                 font-weight: 700;
@@ -458,14 +457,14 @@ header {
             padding: 45px 40px 80px 60px;
         }
     }
-    .no-touch &__menu:hover &__catalog,
+    //.no-touch &__menu:hover &__catalog,
     &__catalog.open {
         visibility: visible;
         opacity: 1;
         transform: translateY(0);
         transition: transform .3s ease-in-out;
     }
-    .no-touch &__menu:hover &__catalog-wrap,
+    //.no-touch &__menu:hover &__catalog-wrap,
     &__catalog.open &__catalog-wrap {
         box-shadow: inset 0 1px 0 0 #EDEDED,
         0 100px 80px rgba(0, 0, 0, 0.07),

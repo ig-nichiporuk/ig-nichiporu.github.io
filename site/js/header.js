@@ -56,9 +56,22 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.js-catalog-menu-btn').hover( function() {
+	$('.no-touch .js-catalog-menu-btn').hover(function (){
 		close_dropdown();
 		close_finder_body();
+		if(!$(this).hasClass('open')){
+			$(this).addClass('open');
+			$('.js-catalog-menu').addClass('open');
+			$('.js-catalog').removeClass('close').addClass('open');
+		}
+	});
+	$('.js-countries-wrap a, .js-continents-wrap a').on('click', function () {
+		close_catalog_menu();
+		enableScroll();
+	});
+	$('.js-catalog-menu').mouseleave(function (){
+		close_catalog_menu();
+		enableScroll();
 	});
 
 

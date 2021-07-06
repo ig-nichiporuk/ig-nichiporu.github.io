@@ -29,7 +29,7 @@ function close_catalog_menu() {
 	$('.js-catalog-menu-btn').removeClass('open');
 	setTimeout(function () {
 		$('.js-catalog').addClass('close');
-	},300)
+	},300);
 }
 
 function close_all() {
@@ -111,6 +111,9 @@ $(document).ready(function () {
 
 	$('.js-dropdown-body .select-style__item').on('click', function () {
 		$(this).closest('.js-dropdown-body').prev().find('input').val($(this).find('.select-style__option').text());
+		close_dropdown();
+	});
+	$('.js-dropdown-body a').on('click', function () {
 		close_dropdown();
 	});
 
