@@ -10,30 +10,40 @@
         @include card-hover;
     }
     &__img {
-        display: flex;
-        justify-content: center;
         margin: 0 -2px;
         background-color: #fff;
-		position: relative;
+		.two-imgs &,
+		.big-img &{
+			display: flex;
+			justify-content: center;
+		}
 		.coin-card:not(.two-imgs):not(.big-img) &{
 			min-height: 165px;
+			-webkit-perspective: 1000;
 		}
         &-item {
             padding: 0 2px;
 			&.front,
 			&.back{
 				position: absolute;
+				z-index: 1;
 				width: 100%;
 				height: 100%;
-				will-change: transform;
-				transition: transform 0.75s;
-				backface-visibility:hidden;
+				-webkit-backface-visibility: hidden;
+				-webkit-transform-style: preserve-3d;
+				-webkit-transition: all .5s ease-in-out;
+			}
+			&.front{
+				transform: rotateY(0deg);
 			}
 			&.back{
 				transform: rotateY(180deg);
 			}
+			.coin-card:hover {
+				z-index: 10;
+			}
 			.coin-card:hover &.front{
-				transform: rotateY(180deg);
+				transform: rotateY(-180deg);
 			}
 			.coin-card:hover &.back {
 				transform: rotateY(0deg);
