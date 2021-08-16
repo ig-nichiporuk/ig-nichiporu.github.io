@@ -13,7 +13,8 @@ var gulp = require('gulp'),
 	del = require('del'),
 	sourcemaps = require('gulp-sourcemaps');
 	// uncss = require('gulp-uncss');
-	fileinclude = require('gulp-file-include');
+	fileinclude = require('gulp-file-include'),
+	htmlbeautify = require('gulp-html-beautify');;
 
 
 
@@ -106,7 +107,7 @@ gulp.task('sprite', function (done) {
 
 
 gulp.task('html-src', function (done) {
-	gulp.src('./src/html/*.html').pipe(fileinclude()).pipe(gulp.dest('./src'));
+	gulp.src('./src/html/*.html').pipe(fileinclude()).pipe(htmlbeautify({indentSize: 2, "preserve_newlines": false})).pipe(gulp.dest('./src'));
 	done();
 });
 gulp.task('css-src', function (done) {
