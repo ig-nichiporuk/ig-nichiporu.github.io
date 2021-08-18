@@ -165,8 +165,10 @@ $(document).ready(function() {
 
 	$( window ).resize(function() {
 		mob_control();
-
 	});
+	$('.js-select-mob-menu').on('change', function () {
+		$(this).prev('.js-select-mob-val').text($(this).find('option:selected').val())
+	})
 
 
 })

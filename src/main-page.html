@@ -60,10 +60,12 @@
                             <div class="header__catalog-wrap js-catalog-wrap">
                                 <div class="header__catalog-continents js-continents-wrap">
                                     <div class="container">
-                                        <span class="header__catalog-title text-medium">Континенты</span>
                                         <div class="header__catalog-main" data-scroll-lock-scrollable>
+                                            <span class="header__catalog-title text-medium">Меню</span>
+                                            <a href="#">Континенты</a>
+                                            <a href="#">Поддержка</a>
+                                            <span class="header__catalog-title text-medium">Разделы каталога</span>
                                             <ul class="header__catalog-list">
-                                                <li><a href="#" class="all-continents">Все континенты</a></li>
                                                 <li><span class="js-continent-btn sublist <!--active-->">Европа</span></li>
                                                 <li><span class="js-continent-btn sublist">Азия</span></li>
                                                 <li><span class="js-continent-btn sublist">Австралия и Океания</span></li>
@@ -71,34 +73,35 @@
                                                 <li><span class="js-continent-btn sublist">Северная Америка</span></li>
                                                 <li><span class="js-continent-btn sublist">Южная Америка</span></li>
                                             </ul>
-                                            <a href="#">Поддержка</a>
                                             <div class="header__catalog-currency">
                                                 <div class="header__catalog-select">
-                                                    <select name="currency">
-                                                        <option>USD</option>
-                                                        <option>EUR</option>
-                                                        <option>GBP</option>
-                                                        <option>CHF</option>
-                                                        <option>PLN</option>
-                                                        <option>RUB</option>
-                                                    </select>
-                                                    <svg>
-                                                        <use xlink:href="#arrow-down"></use>
-                                                    </svg>
+                                                    <label>Валюта:</label>
+                                                    <div class="header__catalog-select_wrap">
+                                                        <span class="js-select-mob-val">Доллар США</span>
+                                                        <select name="currency" class="js-select-mob-menu">
+                                                            <option>Доллар США</option>
+                                                            <option>Евро</option>
+                                                            <option>Британский фунт</option>
+                                                            <option>Швейцарский франк</option>
+                                                            <option>Польский злотый</option>
+                                                            <option>Российский рубль</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="header__catalog-lang">
                                                 <div class="header__catalog-select">
-                                                    <select name="lang">
-                                                        <option>ENG</option>
-                                                        <option>RUS</option>
-                                                        <option>DE</option>
-                                                        <option>PL</option>
-                                                        <option>UA</option>
-                                                    </select>
-                                                    <svg>
-                                                        <use xlink:href="#arrow-down"></use>
-                                                    </svg>
+                                                    <label>Язык:</label>
+                                                    <div class="header__catalog-select_wrap">
+                                                        <span class="js-select-mob-val">English</span>
+                                                        <select name="lang" class="js-select-mob-menu">
+                                                            <option>English</option>
+                                                            <option>Русский</option>
+                                                            <option>EnglishEnglishhh</option>
+                                                            <option>PL</option>
+                                                            <option>UA</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,38 +158,7 @@
                             </div>
                         </nav>
                     </div>
-                    <div class="header__finder">
-                        <div class="finder__wrap js-finder-wrap">
-                            <div class="finder__input">
-                                <input class="js-finder-input" type="text" placeholder="Поиск по каталогу">
-                                <a href="#" class="finder__sort">
-                                    <svg class="finder__sort-icon">
-                                        <use xlink:href="#settings"></use>
-                                    </svg>
-                                </a>
-                                <span class="finder__cleaner js-finder-clean">
-                                    <svg class="finder__cleaner-icon">
-                                        <use xlink:href="#close"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                            <a href="#" class="finder__btn">
-                                <svg class="finder__btn-icon">
-                                    <use xlink:href="#search"></use>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="finder__body js-finder-body" data-scroll-lock-scrollable>
-                            <ul class="finder__body-list">
-                                <li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
-                                <li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
-                                <li><a href="#">1835-1872 Золотая монета</a></li>
-                                <li><a href="#">1835</a></li>
-                                <li><a href="#">1835</a></li>
-                            </ul>
-                            <a href="#" class="finder__more-settings ">Расширенный поиск</a>
-                        </div>
-                    </div>
+                    <a href="#" class="header__link">Поддержка</a>
                     <!--mobile finder block-->
                     <div class="header__finder mob">
                         <div class="header__finder-animate js-finder-animate-block">
@@ -217,47 +189,70 @@
                         </svg>
                     </div>
                     <!--mobile finder block end-->
-                    <a href="#" class="header__link">Поддержка</a>
+                    <div class="header__finder">
+                        <div class="finder__wrap js-finder-wrap">
+                            <div class="finder__input">
+                                <input class="js-finder-input" type="text" placeholder="Поиск по каталогу">
+                                <!--<a href="#" class="finder__sort">
+			<svg class="finder__sort-icon">
+				<use xlink:href="#settings"></use>
+			</svg>
+		</a>-->
+                                <span class="finder__cleaner js-finder-clean">
+                                    <svg class="finder__cleaner-icon">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <a href="#" class="finder__btn">
+                                <svg class="finder__btn-icon">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="finder__body js-finder-body" data-scroll-lock-scrollable>
+                            <ul class="finder__body-list">
+                                <li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+                                <li><a href="#"><span class="text-medium">1835-1872</span> Золотая монета</a></li>
+                                <li><a href="#">1835-1872 Золотая монета</a></li>
+                                <li><a href="#">1835</a></li>
+                                <li><a href="#">1835</a></li>
+                            </ul>
+                            <a href="#" class="finder__more-settings ">Расширенный поиск</a>
+                        </div>
+                    </div>
                     <div class="header__currency dropdown js-dropdown-wrap">
                         <span class="header__currency-btn dropdown__btn js-dropdown-btn"> USD <svg class="arrow">
                                 <use xlink:href="#arrow-down"></use>
                             </svg>
                         </span>
                         <ul class="header__currency-list dropdown__body js-dropdown-body">
-                            <li><a href="#">USD</a></li>
-                            <li><a href="#">EUR</a></li>
-                            <li><a href="#">GBP</a></li>
-                            <li><a href="#">CHF</a></li>
-                            <li><a href="#">PLN</a></li>
-                            <li><a href="#">RUB</a></li>
+                            <li><a href="#">USD <span>(Доллар США)</span></a></li>
+                            <li><a href="#">EUR <span>(Евро)</span></a></li>
+                            <li><a href="#">GBP <span>(Британский фунт)</span></a></li>
+                            <li><a href="#">CHF <span>(Швейцарский франк)</span></a></li>
+                            <li><a href="#">PLN <span>(Польский злотый)</span></a></li>
+                            <li><a href="#">RUB <span>(Российский рубль)</span></a></li>
                         </ul>
                     </div>
                     <div class="header__lang dropdown js-dropdown-wrap">
                         <span class="header__lang-btn dropdown__btn js-dropdown-btn">
-                            <span class="header__lang-flag">
-                                <img src="img/webp/flag.webp" alt="country-flag">
-                            </span> ENG <svg class="arrow">
+                            <img src="img/webp/flag.webp" alt="country-flag" class="header__lang-flag"> ENG <svg class="arrow">
                                 <use xlink:href="#arrow-down"></use>
                             </svg>
                         </span>
                         <ul class="header__lang-list dropdown__body js-dropdown-body">
                             <li>
                                 <a href="#">
-                                    <span class="header__lang-flag">
-                                        <img src="img/webp/flag.webp" alt="country-flag">
-                                    </span> ENG </a>
+                                    <img src="img/webp/flag.webp" alt="country-flag" class="header__lang-flag"> English </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="header__lang-flag">
-                                        <img src="img/webp/flag.webp" alt="country-flag">
-                                    </span> RUS </a>
+                                    <img src="img/webp/flag.webp" alt="country-flag" class="header__lang-flag"> Русский </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="header__lang-flag">
-                                        <img src="img/webp/flag.webp" alt="country-flag">
-                                    </span> ENG </a>
+                                    <img src="img/webp/flag.webp" alt="country-flag" class="header__lang-flag"> EnglishEnglishhh </a>
                             </li>
                         </ul>
                     </div>

@@ -754,13 +754,8 @@ button.pswp__button--arrow--left {
             flex-direction: column;
             padding: 0;
         }
-        &__panel {
-            width: 100%;
-            min-width: auto;
-            .toolbar-show &-stamping,
-            .toolbar-show &-sidebar {
-                display: none;
-            }
+        &:not(.filter-page__container) &__panel {
+			display: none;
         }
         &__block {
             padding: 0;

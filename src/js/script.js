@@ -28,6 +28,7 @@ function close_catalog_menu() {
 	$('.js-catalog').removeClass('open');
 	$('.js-catalog-menu-btn').removeClass('open');
 	setTimeout(function () {
+		$('.js-catalog').find('.open').removeClass('open');
 		$('.js-catalog').addClass('close');
 	},300);
 }

@@ -14,7 +14,7 @@
     border-radius: $bdrs-6;
     &__filter {
         width: calc(100% / 3);
-        padding: 30px 60px;
+        padding: 30px 24px;
         &-title {
             display: block;
             font-size: 20px;
@@ -32,7 +32,15 @@
                 &-text {
                     display: inline-block;
                     max-width: 150px;
+					font-size: 14px;
                 }
+				.count {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: 12px;
+					line-height: 14px;
+					color: $gray-text;
+				}
             }
         }
     }
@@ -100,20 +108,12 @@
         }
     }
     &__specification {
-        margin: 55px -40px 0;
+        margin: 55px 0 0;
         display: flex;
+		justify-content: space-between;
         &-item {
-            width: calc(100% / 3);
-        }
-        &-item:first-of-type &-title {
-            margin: 0 0 0 40px;
-        }
-        &-item:nth-of-type(2) &-title {
-            padding-left:40px;
-        }
-        &-item:last-of-type &-title {
-            padding-left:40px;
-            margin: 0 40px 0 0;
+			width: 100%;
+            max-width: 45%;
         }
         &-title {
             display: block;
@@ -122,70 +122,9 @@
             color: $dark-color;
             padding-bottom: 20px;
             box-shadow: inset 0 -1px 0 0 $gray-color;
-            &.mob{
-                display: none;
-                position: relative;
-                padding-right: 25px;
-                cursor: pointer;
-                .specification-close {
-                    position: absolute;
-                    width: 30px;
-                    height: 30px;
-                    top: 15px;
-                    right: 0px;
-                    &:before,
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        background-color: $dark-color;
-                        border-radius: 6px;
-                    }
-                    &:before {
-                        width: 2px;
-                        height: 20px;
-                        margin-top: -10px;
-                        margin-left: -1px;
-                        transform: scaleY(1);
-                        transition: transform 0.2s linear;
-                    }
-                    .open &:before {
-                        transform: scaleY(0);
-                        transition: -webkit-transform 0.2s linear;
-                        transition: transform 0.2s linear;
-                    }
-                    &:after {
-                        width: 20px;
-                        height: 2px;
-                        margin-left: -10px;
-                        margin-top: -1px;
-                    }
-                }
-                &:hover,
-                &.open {
-                    color: $active-color;
-                    box-shadow: inset 0 -1px 0 0 $active-color;
-                }
-                &:hover,
-                &.open {
-                    .specification-close:after,
-                    .specification-close:before {
-                        background-color: $active-color;
-                    }
-                }
-                &.open {
-                    .specification-close:before {
-                        transform: scaleY(0);
-                        transition: -webkit-transform 0.2s linear;
-                        transition: transform 0.2s linear;
-                    }
-                }
-            }
         }
 
         &-list {
-            padding: 0 40px;
             margin: 20px 0 0 0;
             li {
                 display: flex;
@@ -283,25 +222,12 @@
         width: 430px;
         height: 425px;
     }
-    .coin-page__specification {
-        margin: 55px -20px 0;
-    }
+	.coin-page__specification-item {
+		max-width: 47%;
+	}
     .coin-page__specification-title {
         font-size: 18px;
         letter-spacing: 0.2px;
-    }
-    .coin-page__specification-item:first-of-type .coin-page__specification-title {
-        margin: 0 0 0 20px;
-    }
-    .coin-page__specification-item:nth-of-type(2) .coin-page__specification-title {
-        padding-left: 20px;
-    }
-    .coin-page__specification-item:last-of-type .coin-page__specification-title {
-        padding-left: 20px;
-        margin: 0 20px 0 0;
-    }
-    .coin-page__specification-list {
-        padding: 0 20px;
     }
     .coin-page__info-block {
         padding: 30px 30px 0;
@@ -337,40 +263,6 @@
     .coin-page__img-desc {
         margin: 20px 0 0;
     }
-    .coin-page__specification {
-        margin: 30px 0 0;
-        flex-direction: column;
-    }
-    .coin-page__specification-item {
-        width: 100%;
-    }
-    .coin-page__specification-item:nth-of-type(1) .coin-page__specification-title,
-    .coin-page__specification-item:nth-of-type(2) .coin-page__specification-title,
-    .coin-page__specification-item:nth-of-type(3) .coin-page__specification-title {
-        margin: 0;
-        padding-left: 0;
-    }
-    .coin-page__specification-title {
-        display: none;
-        padding: 15px 0;
-        font-size: 20px;
-        line-height: 25px;
-    }
-    .coin-page__specification-title.mob {
-        display: block;
-    }
-    .coin-page__specification-list {
-        display: none;
-        padding: 0;
-        margin: 0;
-        padding-bottom: 30px;
-    }
-    .coin-page__specification-list li {
-        box-shadow: none;
-    }
-    .coin-page__specification-list li + li{
-        box-shadow: inset 0 1px 0 0 #ededed;
-    }
     .coin-page__info-block {
         padding: 30px 20px 0;
     }
@@ -391,10 +283,7 @@
         line-height: 39px;
         letter-spacing: 0.2px;
     }
-    .coin-page__specification-list li .left .helper__body {
-        right: auto;
-        left: 0;
-    }
+
     .auctions__filter {
         width: 50%;
         padding: 20px 20px 40px;
@@ -439,8 +328,6 @@
         width: 50%;
         padding: 20px 10px;
     }
-
-
 }
 
 @media (max-width: 779px) {
@@ -477,6 +364,27 @@
     .coin-page__img-desc p{
         text-align: center;
     }
+	.coin-page__specification {
+		margin: 40px 0 0;
+		flex-direction: column;
+	}
+	.coin-page__specification-item {
+		max-width: 100%;
+	}
+	.coin-page__specification-item + .coin-page__specification-item {
+		margin-top: 32px;
+	}
+
+	.coin-page__specification-list li {
+		box-shadow: none;
+	}
+	.coin-page__specification-list li + li{
+		box-shadow: inset 0 1px 0 0 #ededed;
+	}
+	.coin-page__specification-list li .left .helper__body {
+		right: auto;
+		left: 0;
+	}
     .coin-page__specification-title {
         font-size: 18px;
     }
