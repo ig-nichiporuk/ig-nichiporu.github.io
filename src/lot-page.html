@@ -57,9 +57,9 @@
                                 <div class="header__catalog-continents js-continents-wrap">
                                     <div class="container">
                                         <div class="header__catalog-main" data-scroll-lock-scrollable>
-                                            <span class="header__catalog-title text-medium">Меню</span>
-                                            <a href="#">Континенты</a>
-                                            <a href="#">Поддержка</a>
+                                            <span class="header__catalog-title mob-title text-medium">Меню</span>
+                                            <a href="#" class="mob-link">Континенты</a>
+                                            <a href="#" class="mob-link">Поддержка</a>
                                             <span class="header__catalog-title text-medium">Разделы каталога</span>
                                             <ul class="header__catalog-list">
                                                 <li><span class="js-continent-btn sublist <!--active-->">Европа</span></li>
@@ -393,8 +393,12 @@
         </div>
     </footer>
     <div class="cookies js-cookies">
-        <p>Продолжая использовать наш сайт, вы даете согласие на обработку <span class="text-medium">файлов cookie</span> и пользовательских данных.</p>
-        <span class="btn-style btn-gray js-cookies-close">Согласен(-на)</span>
+        <div class="container">
+            <div class="cookies__wrap">
+                <p>Продолжая использовать наш сайт, вы даете согласие на обработку <span class="text-medium">файлов cookie</span> и пользовательских данных.</p>
+                <span class="btn-style btn-gray js-cookies-close">Согласен(-на)</span>
+            </div>
+        </div>
     </div>
     <div class="modal__container js-modal-container">
         <div class="modal js-modal" id="feedback">

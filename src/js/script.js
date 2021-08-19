@@ -199,11 +199,11 @@ $(document).ready(function () {
 
 
 	/*----Cookies------*/
-	setTimeout(function () {
+	/*setTimeout(function () {
 		$('.js-cookies').addClass('show')
-	}, 5000); //10 секунд
+	}, 5000); //5 секунд*/
 	$('.js-cookies-close').on('click' ,function () {
-		$('.js-cookies').removeClass('show');
+		$('.js-cookies').hide();
 	});
 	/*----Cookies-END--*/
 
