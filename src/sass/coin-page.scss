@@ -9,12 +9,11 @@
 .auctions {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0 0 0;
-    background: #EDEDED;
-    border-radius: $bdrs-6;
+	justify-content: space-between;
+    margin: 30px -20px 0;
     &__filter {
-        width: calc(100% / 3);
-        padding: 30px 24px;
+		padding: 0 20px;
+		width: auto;
         &-title {
             display: block;
             font-size: 20px;
@@ -24,14 +23,17 @@
             margin: 0 0 20px 0;
         }
         &-wrap {
-            columns: 2;
-            column-gap: 50px;
+            columns: 1;
+			column-gap: 30px;
+			.safety-easy & {
+				columns: 2;
+			}
             .checkbox__label {
+				white-space: nowrap;
                 display: block;
                 margin-bottom: 10px;
                 &-text {
                     display: inline-block;
-                    max-width: 150px;
 					font-size: 14px;
                 }
 				.count {
@@ -44,11 +46,8 @@
             }
         }
     }
-    &__filter + &__filter {
-        box-shadow: inset 1px 0 0 0 #fff;
-    }
     &__select {
-        margin: 30px 0 0 0;
+        margin: 50px 0 0 0;
         display: flex;
         align-items: center;
         &-wrap {
@@ -241,9 +240,6 @@
     .coin-page__info-block .pagination {
         margin: 60px -30px 0;
     }
-    .auctions__filter {
-        padding: 30px 25px;
-    }
 }
 
 @media (max-width: 1299px) {
@@ -283,23 +279,24 @@
         line-height: 39px;
         letter-spacing: 0.2px;
     }
+	.auctions {
+		margin: 15px -15px 0;
+	}
 
-    .auctions__filter {
-        width: 50%;
-        padding: 20px 20px 40px;
-    }
-    .auctions__filter + .auctions__filter:not(:last-of-type) {
-        box-shadow: inset 1px -1px 0 0 #fff;
-    }
-    .auctions__filter:first-of-type {
-        box-shadow: inset 0 -1px 0 0 #fff;
-    }
-    .auctions__filter:last-of-type {
-        box-shadow: none;
-    }
-    .auctions__filter-wrap {
-        column-gap: 30px;
-    }
+	.auctions__filter {
+		width: 52%;
+		padding: 15px;
+	}
+	.auctions__filter.safety,
+	.auctions__filter.suffix {
+		width: 46%;
+	}
+	.auctions__filter-wrap {
+		column-gap: 20px;
+	}
+	.auctions__filter:not(.safety) .auctions__filter-wrap{
+		columns: 2;
+	}
 }
 @media (max-width: 959px) {
     .coin-page {
@@ -328,6 +325,11 @@
         width: 50%;
         padding: 20px 10px;
     }
+	.auctions__filter,
+	.auctions__filter.safety,
+	.auctions__filter.suffix{
+		width: 46%;
+	}
 }
 
 @media (max-width: 779px) {
@@ -351,6 +353,11 @@
     .coin-page__info-block .pagination {
         margin: 60px -20px 0;
     }
+	.auctions__filter,
+	.auctions__filter.safety,
+	.auctions__filter.suffix{
+		width: 49%;
+	}
 }
 
 @media(max-width: 639px) {
@@ -404,15 +411,16 @@
 
     .auctions__card, .varieties__card {
         width: 100%;
-        //max-width: 298px;
         padding: 10px 0;
     }
-    .auctions__filter {
-        width: 100%;
-    }
-    .auctions__filter+.auctions__filter:not(:last-of-type) {
-        box-shadow: inset 0 -1px 0 0 #fff;
-    }
+	.auctions__filter,
+	.auctions__filter.safety,
+	.auctions__filter.suffix {
+		width: 100%;
+	}
+	.auctions__filter-wrap {
+		columns: 2;
+	}
 
 
 
@@ -446,6 +454,17 @@
     .coin-page__specification-title {
         font-size: 16px;
     }
+	.auctions__filter-wrap .checkbox__label-text {
+		padding-left: 20px;
+	}
+	.auctions__filter-wrap .checkbox__label-text {
+		font-size: 13px;
+	}
+	.auctions__filter-wrap .checkbox__label-text:before {
+		top: 2px;
+		width: 16px;
+		height: 16px;
+	}
 }
 
 
