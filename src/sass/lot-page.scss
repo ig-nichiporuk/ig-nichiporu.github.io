@@ -116,6 +116,10 @@
 		}
 		&-nav &-item {
 			opacity: .8;
+			-webkit-tap-highlight-color: transparent;
+			-ms-tap-highlight-color: transparent;
+			-moz-tap-highlight-color: transparent;
+			-o-tap-highlight-color: transparent;
 			.no-touch &:not(.slick-current):hover {
 				cursor: pointer;
 				img {
