@@ -92,7 +92,8 @@
             padding: 0 10px;
             img {
                 width: 520px;
-                height: 512px;
+                height: 520px;
+				object-fit: contain;
             }
         }
         &-desc {
@@ -219,7 +220,7 @@
     }
     .coin-page__img-item img {
         width: 430px;
-        height: 425px;
+        height: 430px;
     }
 	.coin-page__specification-item {
 		max-width: 47%;
@@ -254,7 +255,7 @@
     }
     .coin-page__img-item img {
         width: 278px;
-        height: 275px;
+        height: 278px;
     }
     .coin-page__img-desc {
         margin: 20px 0 0;
@@ -310,7 +311,7 @@
     }
     .coin-page__img-item img {
         width: 348px;
-        height: 344px;
+        height: 348px;
     }
 
     .coin-page__info-block {
@@ -338,7 +339,7 @@
     }
     .coin-page__img-item img {
         width: calc(100vw / 2 - 38px);
-        height: calc(100vw / (2 * 1.01)  - 38px);
+        height: calc(100vw / 2  - 38px);
     }
     .auctions__cards, .varieties__cards {
         margin: 10px -9px -20px;
@@ -366,7 +367,7 @@
     }
     .coin-page__img-item img {
         width: calc(100vw / 2 - 33px);
-        height: calc(100vw / (2 * 1.01)  - 33px);
+        height: calc(100vw / 2  - 33px);
     }
     .coin-page__img-desc p{
         text-align: center;

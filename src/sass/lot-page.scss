@@ -68,7 +68,7 @@
         padding-top: 40px;
         padding-bottom: 50px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
     }
     &__slider {
         display: flex;
@@ -89,15 +89,46 @@
             padding: 5px;
         }
         &-img {
-            height: 422px;
+            height: 430px;
+			object-fit: contain;
         }
-        .slick-prev,
+		.slick-prev,
+		.slick-next {
+			transform: translate(0, -50%);
+			z-index: 1;
+		}
+        .slick-prev {
+			left: 0;
+		}
         .slick-next {
-            top: 0;
-            left: 0;
-            position: relative;
-            z-index: 1;
-        }
+			right: 0;
+			transform: translate(0, -50%) rotate(180deg);
+		}
+		&-nav {
+			width: 360px;
+			margin: 10px auto 0;
+			img {
+				height: 80px;
+				padding: 5px;
+				border-radius: $bdrs-6;
+				box-shadow: 0 0 0 1px #e1e1e1;
+			}
+		}
+		&-nav &-item {
+			opacity: .8;
+			.no-touch &:not(.slick-current):hover {
+				cursor: pointer;
+				img {
+					@include card-hover;
+				}
+			}
+			&.slick-current{
+				opacity: 1;
+				img{
+					box-shadow: 0 0 0 1px $active-color;
+				}
+			}
+		}
     }
     &__info {
         display: flex;
@@ -161,9 +192,6 @@
         width: 710px;
         min-width: 710px;
     }
-    .lot-page__slider-img {
-        height: 344px;
-    }
     .lot-page__info {
         margin: 0 0 0 30px;
     }
@@ -177,9 +205,6 @@
     .lot-page__slider {
         width: 100%;
 		min-width: auto;
-    }
-    .lot-page__slider-img {
-        height: 422px;
     }
     .lot-page__info {
         margin: 40px 0 0 0;
@@ -209,24 +234,12 @@
     .lot-page__body {
         padding: 25px 20px 40px;
     }
-    .lot-page__slider-img {
-        height: 344px;
-    }
     .lot-page__slider-wrap {
         margin: 0;
-    }
-    .lot-page__slider-item {
-        padding: 0;
     }
     .lot-page__info .title {
         font-size: 24px;
         line-height: 34px;
-    }
-}
-
-@media (max-width: 779px) {
-    .lot-page__slider-img {
-        height: calc(100vw  / (2 * 1.017) - 36px);
     }
 }
 
@@ -238,11 +251,28 @@
         padding: 30px 15px;
     }
     .lot-page__slider-img {
-        height: calc(100vw  / (2 * 1.017) - 31px);
+        height: calc(100vw - 62px);
+		max-height: 360px;
     }
     .lot-page__info .btn-style {
         margin: 25px 0 0 0;
     }
+}
+
+@media (max-width: 479px) {
+	.lot-page__slider-img {
+		max-height: 320px;
+	}
+	.lot-page__slider-nav {
+		width: 296px;
+	}
+	.lot-page__slider-item {
+		padding: 2px;
+	}
+	.lot-page__slider-nav img {
+		height: 70px;
+		padding: 3px;
+	}
 }
 
 @media (max-width: 359px) {
@@ -252,6 +282,21 @@
     .lot-page__info .list__item .left {
          min-width: auto;
     }
+
+
+
+
+	/*.lot-page__slider-nav {
+		width: 148px;
+	}*/
+
+
+	.lot-page__slider-nav {
+		width: 256px;
+	}
+	.lot-page__slider-nav img {
+		height: 60px;
+	}
 }
 
 

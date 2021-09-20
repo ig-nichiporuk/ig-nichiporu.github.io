@@ -10,7 +10,7 @@
     &__img {
         display: flex;
         align-items: flex-start;
-        height: 295px;
+        height: 300px;
         border-top-right-radius: $bdrs-6;
         border-top-left-radius: $bdrs-6;
         overflow: hidden;
@@ -56,25 +56,19 @@
 }
 @media (max-width: 1539px) {
     .country-card__img {
-        height: 244px;
-    }
-}
-
-@media (max-width: 1299px) {
-    .country-card__img {
-        height: 244px;
+        height: 260px;
     }
 }
 
 @media (max-width: 959px) {
     .country-card__img {
-        height: 295px;
+        height: 300px;
     }
 }
 
 @media (max-width: 779px) {
     .country-card__img {
-        height: 244px;
+        height: calc(100vw / 2 - 85px);
     }
 }
 
@@ -84,9 +78,9 @@
         padding: 5px;
     }
     .country-card__img {
-        width: 103px;
-        min-width: 103px;
-        height: 98px;
+        width: 102px;
+        min-width: 102px;
+        height: 102px;
         border-radius: $bdrs-6;
     }
     .country-card__desc {

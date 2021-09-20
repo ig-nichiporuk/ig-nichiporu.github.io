@@ -235,10 +235,10 @@
                     }
                 }
             }
-            .table__header .table__cell,
-            .table__row:not(.table__header):not(:first-of-type) .table__cell {
-                border: none;
-            }
+			.table__row:not(.table__header):not(:first-of-type) .table__cell,
+			.table__cell {
+				border-color: transparent;
+			}
 
         }
         &-dots {
