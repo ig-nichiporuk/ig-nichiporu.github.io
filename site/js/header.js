@@ -38,7 +38,7 @@ $(document).ready(function() {
 	});
 
 
-	$('.touch .js-catalog-menu-btn').on('click', function() {
+	$('.js-catalog-menu-btn').on('click', function() {
 		if($(this).hasClass('open')){
 			close_catalog_menu();
 			enableScroll();
@@ -59,19 +59,23 @@ $(document).ready(function() {
 	$('.no-touch .js-catalog-menu-btn').hover(function (){
 		close_dropdown();
 		close_finder_body();
-		if(!$(this).hasClass('open')){
+		if(!$(this).hasClass('open') && !$(this).hasClass('mouseenter')){
 			$(this).addClass('open');
 			$('.js-catalog-menu').addClass('open');
 			$('.js-catalog').removeClass('close').addClass('open');
 		}
+
+		$(this).addClass('mouseenter');
 	});
 	$('.js-countries-wrap a, .js-continents-wrap a').on('click', function () {
 		close_catalog_menu();
 		enableScroll();
+		$('.js-catalog-menu-btn').removeClass('mouseenter');
 	});
 	$('.js-catalog-menu').mouseleave(function (){
 		close_catalog_menu();
 		enableScroll();
+		$('.js-catalog-menu-btn').removeClass('mouseenter');
 	});
 
 

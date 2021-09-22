@@ -275,6 +275,7 @@
             margin: 0 -5px;
             img {
                 min-width: 225px;
+				object-fit: contain;
             }
         }
         &-item {

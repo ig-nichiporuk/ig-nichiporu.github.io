@@ -202,6 +202,7 @@ header {
     &__lang{
         &-list {
             border-radius: $bdrs-6;
+			overflow: hidden;
         }
         &-btn {
             &.open,
@@ -685,6 +686,14 @@ header {
             display: block;
         }
     }
+	.header__catalog-main,
+	.header__catalog-countries .header__catalog-title,
+	.header__catalog-countries .header__catalog-links{
+		padding-right: 20px;
+	}
+	.header__catalog-countries .header__catalog-title:before {
+		width: calc(100% - 20px);
+	}
     .header__catalog-main,
     .header__catalog-countries .header__catalog-links{
         height: 100%;
@@ -720,21 +729,6 @@ header {
     .header__catalog .container {
         padding: 0;
     }
-
-}
-
-@media (max-width: 639px) {
-
-}
-
-@media (max-width: 859px) {
-    .header__catalog .container {
-        padding: 0;
-    }
-
-}
-
-@media (max-width: 639px) {
 
 }
 
