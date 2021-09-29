@@ -15,11 +15,9 @@ $(document).ready(function() {
 		close_finder_body();
 	});
 
-
 	$('.js-finder-clean').on('click', function () {
 		close_finder_body();
 	});
-
 
 	$(document).mousedown(function(e){
 		if(!$('.js-catalog-menu').is(e.target)
@@ -131,8 +129,7 @@ $(document).ready(function() {
 		}
 	});
 
-
-	$('.js-finder-animate-close').on('click', function () {
+	$('.js-finder-animate-close, .js-finder-body a').on('click', function () {
 		enableScroll();
 		close_finder_body();
 		$('.js-finder-open-input').removeClass('active');
