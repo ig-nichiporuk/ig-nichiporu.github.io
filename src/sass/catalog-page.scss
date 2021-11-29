@@ -136,13 +136,16 @@
             column-gap: 30px;
         }
         &-item {
+			display: block;
             margin: 0 0 20px 0;
         }
         &-link {
-            display: flex;
+			display: block;
             cursor: pointer;
             img,
             .circle {
+				display: inline-block;
+				vertical-align: top;
                 width: 45px;
                 height: 45px;
                 border-radius: 50%;
@@ -153,6 +156,8 @@
                 border-radius: 50%;
             }
             .caption {
+				display: inline-block;
+				vertical-align: top;
                 margin: 0 0 0 10px;
                 & > * {
                     display: block;
@@ -182,8 +187,12 @@
                 }
             }
             .circle {
-                display: flex;
                 background-color: #F6F6F6;
+				&__wrap {
+					width: inherit;
+					height: inherit;
+					display: flex;
+				}
                 svg {
                     margin: auto;
                     width: 24px;

@@ -493,8 +493,9 @@ input[type=number] {
         &-list {
             overflow-y: auto;
             li {
-                padding: 12px 20px;
 				a {
+					display: block;
+					padding: 12px 20px;
 					font-size: 15px;
 				}
 				.country {

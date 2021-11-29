@@ -36,7 +36,9 @@ $(document).ready(function() {
 	});
 
 
-	$('.js-catalog-menu-btn').on('click', function() {
+	$('.touch .js-catalog-menu-btn').on('click', function(e) {
+		e.preventDefault();
+
 		if($(this).hasClass('open')){
 			close_catalog_menu();
 			enableScroll();
