@@ -71,6 +71,7 @@
     &__cards {
         display: flex;
         flex-wrap: wrap;
+		padding: 0 0 20px 0;
         margin: 20px -10px -20px;
     }
     &__card {
@@ -144,6 +145,7 @@
                     }
                 }
                 .right{
+					text-align: right;
                     padding: 0 0 0 10px;
                     font-weight: 600;
                     letter-spacing: -0.2px;

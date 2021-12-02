@@ -2,8 +2,8 @@
     margin: 25px 0 0 0;
     &__title {
         display: block;
-        font-size: 32px;
-        line-height: 45px;
+        font-size: 30px;
+        line-height: 42px;
         letter-spacing: 0.1px;
         color: $dark-color;
     }
@@ -173,8 +173,8 @@
 
 @media (max-width: 1299px) {
     .feedback__title{
-        font-size: 26px;
-        line-height: 36px;
+        font-size: 25px;
+        line-height: 34px;
         letter-spacing: 0.2px;
     }
 }
@@ -189,7 +189,7 @@
 
 @media (max-width: 639px) {
     .feedback__title {
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 26px;
+        line-height: 32px;
     }
 }

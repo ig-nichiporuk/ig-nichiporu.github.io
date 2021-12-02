@@ -1,7 +1,6 @@
 @import "variables";
 .period-card {
     @include card-style;
-	height: 100%;
     padding: 25px 0 0;
     &__title,
     &__list {
@@ -16,8 +15,8 @@
         }
         span {
             margin: 0 0 0 10px;
-            font-size: 24px;
-            line-height: 34px;
+            font-size: 22px;
+            line-height: 28px;
             font-weight: 600;
             color: $dark-color;
         }
