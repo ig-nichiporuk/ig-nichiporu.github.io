@@ -65,6 +65,21 @@
         &-links {
             li {
                 margin: 10px 0 0 0;
+				&.social {
+					margin-top: 15px;
+					display: flex;
+					align-items: center;
+					& > a {
+						width: 30px;
+						height: 30px;
+						img {
+							height: inherit;
+						}
+						& + a {
+							margin-left: 15px;
+						}
+					}
+				}
             }
         }
         &-link {
