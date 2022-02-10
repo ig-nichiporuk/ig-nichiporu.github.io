@@ -51,14 +51,14 @@
                     background-color: $main-color;
                 }
             }
-            &[disabled] > span:before {
+            &.disabled > span:before {
                 background-color: #D4D3D3;
             }
             & > span,
             & > .select-style {
                 margin-left: 50px;
             }
-            &[disabled] {
+            &.disabled {
                 pointer-events: none;
             }
         }
@@ -89,7 +89,7 @@
                 }
             }
         }
-        &-item + &-item[disabled] > span .line:before{
+        &-item + &-item.disabled > span .line:before{
             transform: scaleY(0);
 
         }

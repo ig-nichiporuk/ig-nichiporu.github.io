@@ -21,7 +21,7 @@
 	<div class="feedback__item add-file">
 		<label>Прикрепить файл</label>
 		<label class="feedback__load-wrap">
-			<input name="file" type="file" name="file" id="feedback-add-file">
+			<input name="file" type="file" name="file" class="js-feedback-add-file">
 			<span class="feedback__load-btn">Выбрать файл</span>
 			<span class="feedback__load-file js-feadback-loaded-file"></span>
 		</label>
@@ -37,7 +37,9 @@
 </form>
 
 <script>
-	$('#feedback-add-file').change(function(e){
-		$('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
+	$('.js-feedback-add-file').each(function(){
+		$(this).on('change', function (e) {
+			$(this).parent().find('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
+		});
 	});
 </script>

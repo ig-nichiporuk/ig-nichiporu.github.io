@@ -76,7 +76,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="fast-find__form-item js-delete-second-step" disabled="">
+							<div class="fast-find__form-item js-delete-second-step disabled">
 								<span>
 									Год
 									<span class="line"></span>
@@ -168,7 +168,7 @@
 
 <script>
 	$('.js-delete-first-step .select-style__item').on('click', function () {
-		$('.js-delete-second-step').removeAttr('disabled');
+		$('.js-delete-second-step').removeClass('disabled');
 	});
 
 	$('.js-delete-second-step .select-style__item').on('click', function () {

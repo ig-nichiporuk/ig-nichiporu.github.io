@@ -279,22 +279,22 @@
                 <div class="lot-page__body">
                     <div class="lot-page__slider">
                         <div class="lot-page__slider-wrap js-lot-slider">
-                            <a href="img/webp/lot-coin.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin1" title="Coin1" rel="group" data-fancybox-group="gallery">
+                            <a href="img/webp/lot-coin.webp" class="lot-page__slider-item js-lot-zoom" title="Coin1" rel="group" data-fancybox-group="gallery">
                                 <img src="img/webp/lot-coin.webp" alt="Coin1" title="Coin1" class="lot-page__slider-img">
                             </a>
-                            <a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin2" title="Coin2" rel="group" data-fancybox-group="gallery">
+                            <a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item js-lot-zoom" title="Coin2" rel="group" data-fancybox-group="gallery">
                                 <img src="img/webp/lot-coin-back.webp" alt="Coin2" title="Coin2" class="lot-page__slider-img">
                             </a>
-                            <a href="img/webp/lot-coin.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin3" title="Coin3" rel="group" data-fancybox-group="gallery">
+                            <a href="img/webp/lot-coin.webp" class="lot-page__slider-item js-lot-zoom" title="Coin3" rel="group" data-fancybox-group="gallery">
                                 <img src="img/webp/lot-coin.webp" alt="Coin3" title="Coin3" class="lot-page__slider-img">
                             </a>
-                            <a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin4" title="Coin4" rel="group" data-fancybox-group="gallery">
-                                <img src="img/webp/lot-coin-back.webp" alt="Coin4" title="Coin4" class="lot-page__slider-img">
+                            <a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item js-lot-zoom" title="Coin4" rel="group" data-fancybox-group="gallery">
+                                <img src="img/webp/lot-coin-back.webp" title="Coin4" class="lot-page__slider-img">
                             </a>
-                            <a href="img/webp/lot-coin.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin5" title="Coin5" rel="group" data-fancybox-group="gallery">
+                            <a href="img/webp/lot-coin.webp" class="lot-page__slider-item js-lot-zoom" title="Coin5" rel="group" data-fancybox-group="gallery">
                                 <img src="img/webp/lot-coin.webp" alt="Coin5" title="Coin5" class="lot-page__slider-img">
                             </a>
-                            <a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item js-lot-zoom" alt="Coin6" title="Coin6" rel="group" data-fancybox-group="gallery">
+                            <a href="img/webp/lot-coin-back.webp" class="lot-page__slider-item js-lot-zoom" title="Coin6" rel="group" data-fancybox-group="gallery">
                                 <img src="img/webp/lot-coin-back.webp" alt="Coin6" title="Coin6" class="lot-page__slider-img">
                             </a>
                         </div>
@@ -341,23 +341,23 @@
                             </li>
                             <li class="list__item">
                                 <span class="left">Цена</span>
-                                <span class="right text-medium"> 2452 EUR <div class="helper dropdown js-dropdown-wrap">
+                                <div class="right text-medium"> 2452 EUR <div class="helper dropdown js-dropdown-wrap">
                                         <svg class="helper__btn dropdown__btn js-dropdown-btn">
                                             <use xlink:href="#help-info"></use>
                                         </svg>
                                         <div class="helper__body dropdown__body js-dropdown-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At! </div>
                                     </div>
-                                </span>
+                                </div>
                             </li>
                             <li class="list__item">
                                 <span class="left">Оценка</span>
-                                <span class="right text-medium"> 2452 EUR <div class="helper dropdown js-dropdown-wrap">
+                                <div class="right text-medium"> 2452 EUR <div class="helper dropdown js-dropdown-wrap">
                                         <svg class="helper__btn dropdown__btn js-dropdown-btn">
                                             <use xlink:href="#help-info"></use>
                                         </svg>
                                         <div class="helper__body dropdown__body js-dropdown-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At! </div>
                                     </div>
-                                </span>
+                                </div>
                             </li>
                         </ul>
                         <a href="#" class="btn-style">Подробнее</a>
@@ -455,7 +455,7 @@
                     <div class="feedback__item add-file">
                         <label>Прикрепить файл</label>
                         <label class="feedback__load-wrap">
-                            <input name="file" type="file" name="file" id="feedback-add-file">
+                            <input name="file" type="file" name="file" class="js-feedback-add-file">
                             <span class="feedback__load-btn">Выбрать файл</span>
                             <span class="feedback__load-file js-feadback-loaded-file"></span>
                         </label>
@@ -468,8 +468,10 @@
                     </p>
                 </form>
                 <script>
-                    $('#feedback-add-file').change(function(e) {
-                        $('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
+                    $('.js-feedback-add-file').each(function() {
+                        $(this).on('change', function(e) {
+                            $(this).parent().find('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
+                        });
                     });
                 </script>
             </div>

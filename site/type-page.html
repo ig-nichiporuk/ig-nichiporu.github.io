@@ -10,8 +10,8 @@
     <link href="fonts/stylesheet.css" rel="stylesheet">
     <link rel="stylesheet" href="css/slick-slider/slick.css">
     <link rel="stylesheet" href="css/slick-slider/slick-theme.css">
-    <link rel="stylesheet" href="css/global-style.css?v.16">
-    <link rel="stylesheet" href="css/type-page.css?v.15">
+    <link rel="stylesheet" href="css/global-style.css?v.20">
+    <link rel="stylesheet" href="css/type-page.css?v.20">
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/scroll-lock.min.js"></script>
     <script src="js/global_svg_localstorage.js"></script>
@@ -163,7 +163,7 @@
                                 <div class="finder__body js-finder-body" data-scroll-lock-scrollable>
                                     <ul class="finder__body-list">
                                         <li><a href="#">1835-1872 Золотая монета <span class="country">(Польша)</span></a></li>
-                                        <li><a href="#">1835-1872 Золотая монета <span class="country">(Польша)</a></li>
+                                        <li><a href="#">1835-1872 Золотая монета <span class="country">(Польша)</span></a></li>
                                         <li><a href="#">1835-1872 Золотая монета <span class="country">(Германия)</span></a></li>
                                         <li><a href="#">1835 <span class="country">(Германия)</span></a></li>
                                         <li><a href="#">1835 <span class="country">(Германия)</span></a></li>
@@ -201,7 +201,7 @@
                         <div class="finder__body js-finder-body" data-scroll-lock-scrollable>
                             <ul class="finder__body-list">
                                 <li><a href="#">1835-1872 Золотая монета <span class="country">(Польша)</span></a></li>
-                                <li><a href="#">1835-1872 Золотая монета <span class="country">(Польша)</a></li>
+                                <li><a href="#">1835-1872 Золотая монета <span class="country">(Польша)</span></a></li>
                                 <li><a href="#">1835-1872 Золотая монета <span class="country">(Германия)</span></a></li>
                                 <li><a href="#">1835 <span class="country">(Германия)</span></a></li>
                                 <li><a href="#">1835 <span class="country">(Германия)</span></a></li>
@@ -2313,7 +2313,7 @@
                     <div class="feedback__item add-file">
                         <label>Прикрепить файл</label>
                         <label class="feedback__load-wrap">
-                            <input name="file" type="file" name="file" id="feedback-add-file">
+                            <input name="file" type="file" name="file" class="js-feedback-add-file">
                             <span class="feedback__load-btn">Выбрать файл</span>
                             <span class="feedback__load-file js-feadback-loaded-file"></span>
                         </label>
@@ -2326,8 +2326,10 @@
                     </p>
                 </form>
                 <script>
-                    $('#feedback-add-file').change(function(e) {
-                        $('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
+                    $('.js-feedback-add-file').each(function() {
+                        $(this).on('change', function(e) {
+                            $(this).parent().find('.js-feadback-loaded-file').text(e.target.files[0].name).addClass('show');
+                        });
                     });
                 </script>
             </div>
