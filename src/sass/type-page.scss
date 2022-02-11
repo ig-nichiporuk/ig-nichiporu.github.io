@@ -277,7 +277,8 @@
             justify-content: center;
             margin: 0 -5px;
             img {
-                max-width: 225px;
+                width: 225px;
+                height: 225px;
 				object-fit: contain;
             }
         }
@@ -416,7 +417,8 @@
         padding: 25px 15px 0;
     }
     .type-page__header-img img {
-        min-width: auto;
+        width: 145px;
+        height: 145px;
     }
     .type-page {
         padding: 0 0 25px 0;

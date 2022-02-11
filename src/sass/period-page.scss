@@ -24,10 +24,12 @@
         background-color: $dark-color;
         border-radius: $bdrs-6 $bdrs-6 0 0;
         &-img {
-            width: 180px;
-            height: 180px;
             border-radius: 50%;
             overflow: hidden;
+            img {
+                width: 180px;
+                height: 180px;
+            }
         }
         &-desc {
             margin: 0 0 0 40px;
@@ -127,8 +129,10 @@
         }
         &__header {
             &-img {
-                width: 160px;
-                height: 160px;
+                img {
+                    width: 160px;
+                    height: 160px;
+                }
             }
         }
     }

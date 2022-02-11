@@ -78,11 +78,17 @@
         padding: 5px;
     }
     .country-card__img {
-        width: 102px;
-        min-width: 102px;
-        height: 102px;
+		width: auto;
+		height: auto;
         border-radius: $bdrs-6;
     }
+
+	.country-card__img img,
+	.no-img .country-card__img {
+		width: 102px;
+		height: 102px;
+	}
+
     .country-card__desc {
         align-items: flex-start;
         justify-content: center;
