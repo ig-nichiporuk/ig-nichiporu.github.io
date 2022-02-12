@@ -342,7 +342,8 @@ input[type=number] {
         color: $gray-text;
     }
     &:not([disabled]):not(.btn-white):hover,
-    &:not([disabled]):not(.btn-white):active {
+    &:not([disabled]):not(.btn-white):active,
+    &:not([disabled]):not(.btn-white):focus {
         color: #fff;
         background-color: $active-color;
         transition: background-color .1s linear;
