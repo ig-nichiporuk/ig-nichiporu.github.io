@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
 	gulpIf = require('gulp-if'),
-	sass = require('gulp-sass'),
+	sass = require('gulp-sass')(require('sass')),
 	cleancss = require('gulp-clean-css'),
 	browserSync = require('browser-sync').create(), //Подключаем browser-sync-пакет
 	svgSprite = require('gulp-svg-sprites'),
